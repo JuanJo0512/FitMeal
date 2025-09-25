@@ -24,20 +24,6 @@ namespace FitMeal.Vista
             InitializeComponent();
             cn = new cConexion();
         }
-        Form activeForm = null;
-        private void AbrirForm(Form frmHijo)
-        {
-            if (activeForm != null && !activeForm.IsDisposed)
-            {
-                activeForm.Close();
-            }
-
-            activeForm = frmHijo;
-            frmHijo.StartPosition = FormStartPosition.CenterScreen;
-            frmHijo.Show();
-            this.Hide();
-        }
-
 
         private void btnCrearPerfil_Click(object sender, EventArgs e)
         {
@@ -112,7 +98,7 @@ namespace FitMeal.Vista
 
                         cmdInsertar.ExecuteNonQuery();
                         MessageBox.Show("Usuario registrado correctamente.");
-                        AbrirForm(new FrmLoggin());
+                        FrmLoggin.AbrirForm(new FrmLoggin(),this);
                         
                     }
                 }
@@ -126,7 +112,7 @@ namespace FitMeal.Vista
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            AbrirForm(new FrmLoggin());
+            FrmLoggin.AbrirForm(new FrmLoggin(), this);
         }
     }
 }

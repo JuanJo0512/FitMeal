@@ -111,6 +111,7 @@
             this.btnIngreso.TabIndex = 6;
             this.btnIngreso.Text = "Entrar";
             this.btnIngreso.UseVisualStyleBackColor = false;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // btnCrearCuenta
             // 
