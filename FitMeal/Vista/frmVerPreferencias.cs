@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace FitMeal.Vista
 {
-    public partial class FrmLlenarPreferencias : Form
+    public partial class frmVerPreferencias : Form
     {
-        public FrmLlenarPreferencias()
+        public frmVerPreferencias()
         {
             InitializeComponent();
         }
-
     }
 }

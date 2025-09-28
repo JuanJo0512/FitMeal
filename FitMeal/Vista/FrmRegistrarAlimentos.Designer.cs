@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.totCarb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totProt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button6.Location = new System.Drawing.Point(-1, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(286, 155);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Mi Perfil";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -158,14 +171,16 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.comida,
@@ -177,7 +192,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 417);
             this.dataGridView1.TabIndex = 4;
             // 
             // comida
@@ -185,7 +200,7 @@
             this.comida.HeaderText = "Comida";
             this.comida.MinimumWidth = 6;
             this.comida.Name = "comida";
-            this.comida.Width = 125;
+            this.comida.Width = 185;
             // 
             // totCal
             // 
@@ -214,19 +229,6 @@
             this.Selec.MinimumWidth = 6;
             this.Selec.Name = "Selec";
             this.Selec.Width = 125;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // FrmRegistrarAlimentos
             // 
@@ -258,11 +260,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridViewTextBoxColumn comida;
         private System.Windows.Forms.DataGridViewTextBoxColumn totCal;
         private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;
         private System.Windows.Forms.DataGridViewTextBoxColumn totProt;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selec;
-        private System.Windows.Forms.Button button6;
     }
 }

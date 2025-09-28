@@ -1,6 +1,6 @@
 ﻿namespace FitMeal.Vista
 {
-    partial class FrmMiPlan
+    partial class frmVerPreferencias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiPlan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerPreferencias));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnIngreso = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totCal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totCarb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totProt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.alergiaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alimentoExcluido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preferenciaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,23 +66,10 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
-            this.panel1.TabIndex = 4;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.panel1.TabIndex = 2;
             // 
             // button5
             // 
@@ -154,14 +144,27 @@
             this.panel2.Size = new System.Drawing.Size(284, 10);
             this.panel2.TabIndex = 3;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button6.Location = new System.Drawing.Point(-1, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(286, 155);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Mi Perfil";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(336, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(334, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
             // label3
@@ -169,119 +172,147 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Location = new System.Drawing.Point(464, 95);
+            this.label3.Location = new System.Drawing.Point(462, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 24);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Mi Plan";
+            this.label3.Size = new System.Drawing.Size(166, 24);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Mis Preferencias";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Miskan", 18F);
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(461, 58);
+            this.label2.Location = new System.Drawing.Point(459, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 37);
-            this.label2.TabIndex = 31;
+            this.label2.TabIndex = 25;
             this.label2.Text = "Nombre aqui";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Todos",
-            "Desayuno",
-            "Almuerzo ",
-            "Cena",
-            "Snack"});
-            this.comboBox1.Location = new System.Drawing.Point(615, 180);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(307, 24);
-            this.comboBox1.TabIndex = 34;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Miskan", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(342, 180);
+            this.label1.Location = new System.Drawing.Point(397, 188);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 24);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Elige el momento del dia";
+            this.label1.Size = new System.Drawing.Size(161, 28);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Preferencias";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Miskan", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.Location = new System.Drawing.Point(812, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 28);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Alergias";
+            // 
+            // btnIngreso
+            // 
+            this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIngreso.Location = new System.Drawing.Point(769, 43);
+            this.btnIngreso.Name = "btnIngreso";
+            this.btnIngreso.Size = new System.Drawing.Size(230, 42);
+            this.btnIngreso.TabIndex = 34;
+            this.btnIngreso.Text = "Editar Preferencias";
+            this.btnIngreso.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Goldenrod;
+            this.button7.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button7.Location = new System.Drawing.Point(758, 96);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(250, 42);
+            this.button7.TabIndex = 35;
+            this.button7.Text = "Eliminar Preferencias";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.comida,
-            this.totCal,
-            this.totCarb,
-            this.totProt});
-            this.dataGridView1.Location = new System.Drawing.Point(346, 235);
+            this.preferenciaAlimento});
+            this.dataGridView1.GridColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView1.Location = new System.Drawing.Point(347, 232);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(631, 354);
+            this.dataGridView1.Size = new System.Drawing.Size(257, 345);
             this.dataGridView1.TabIndex = 36;
             // 
-            // comida
+            // dataGridView2
             // 
-            this.comida.HeaderText = "Comida";
-            this.comida.MinimumWidth = 6;
-            this.comida.Name = "comida";
-            this.comida.Width = 185;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.alergiaNombre,
+            this.alimentoExcluido});
+            this.dataGridView2.GridColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView2.Location = new System.Drawing.Point(683, 232);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(363, 345);
+            this.dataGridView2.TabIndex = 37;
             // 
-            // totCal
+            // alergiaNombre
             // 
-            this.totCal.HeaderText = "Calorias";
-            this.totCal.MinimumWidth = 6;
-            this.totCal.Name = "totCal";
-            this.totCal.Width = 125;
+            this.alergiaNombre.HeaderText = "Alergia";
+            this.alergiaNombre.MinimumWidth = 6;
+            this.alergiaNombre.Name = "alergiaNombre";
+            this.alergiaNombre.Width = 110;
             // 
-            // totCarb
+            // alimentoExcluido
             // 
-            this.totCarb.HeaderText = "Carbohidratos";
-            this.totCarb.MinimumWidth = 6;
-            this.totCarb.Name = "totCarb";
-            this.totCarb.Width = 125;
+            this.alimentoExcluido.HeaderText = "Alimentos excluidos";
+            this.alimentoExcluido.MinimumWidth = 6;
+            this.alimentoExcluido.Name = "alimentoExcluido";
+            this.alimentoExcluido.Width = 200;
             // 
-            // totProt
+            // preferenciaAlimento
             // 
-            this.totProt.HeaderText = "Proteinas";
-            this.totProt.MinimumWidth = 6;
-            this.totProt.Name = "totProt";
-            this.totProt.Width = 125;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.preferenciaAlimento.DefaultCellStyle = dataGridViewCellStyle1;
+            this.preferenciaAlimento.HeaderText = "Alimentos excluidos";
+            this.preferenciaAlimento.MinimumWidth = 10;
+            this.preferenciaAlimento.Name = "preferenciaAlimento";
+            this.preferenciaAlimento.Width = 200;
             // 
-            // FrmMiPlan
+            // frmVerPreferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1085, 633);
+            this.ClientSize = new System.Drawing.Size(1093, 630);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnIngreso);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmMiPlan";
-            this.Text = "FrmMiPlan";
+            this.Name = "frmVerPreferencias";
+            this.Text = "frmVerPreferencias";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,12 +331,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnIngreso;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn comida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totCal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totProt;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alergiaNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alimentoExcluido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preferenciaAlimento;
     }
 }

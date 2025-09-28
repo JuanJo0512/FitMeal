@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCalificar = new System.Windows.Forms.Button();
             this.btnProgreso = new System.Windows.Forms.Button();
             this.btnPlan = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.chbDeportes = new System.Windows.Forms.CheckBox();
             this.chbActividadesAireLibre = new System.Windows.Forms.CheckBox();
             this.chbActividadDiaria = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(286, 155);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Mi Perfil";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnCalificar
             // 
@@ -148,11 +161,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Miskan", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(337, 50);
+            this.label2.Location = new System.Drawing.Point(338, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(507, 51);
+            this.label2.Size = new System.Drawing.Size(480, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "Registro Nueva Actividad";
             // 
@@ -237,7 +250,7 @@
             // 
             this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button6.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Cornsilk;
             this.button6.Location = new System.Drawing.Point(346, 526);
             this.button6.Name = "button6";
@@ -321,19 +334,6 @@
             this.chbActividadDiaria.TabIndex = 25;
             this.chbActividadDiaria.Text = "Actividad diaria ocacional";
             this.chbActividadDiaria.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 155);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Mi Perfil";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmRegistrarActividad
             // 
