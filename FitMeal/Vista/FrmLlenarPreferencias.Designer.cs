@@ -53,9 +53,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Location = new System.Drawing.Point(35, 104);
+            this.label3.Location = new System.Drawing.Point(26, 84);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(504, 44);
+            this.label3.Size = new System.Drawing.Size(419, 36);
             this.label3.TabIndex = 25;
             this.label3.Text = "Ahora por favor, indicamos que alimentos preferirias no comer\r\nLos veras lo menos" +
     " posible en tu plan de comidas";
@@ -63,11 +64,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miskan", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(30, 22);
+            this.label1.Location = new System.Drawing.Point(22, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(352, 53);
+            this.label1.Size = new System.Drawing.Size(271, 39);
             this.label1.TabIndex = 45;
             this.label1.Text = "Casi Acabamos!";
             // 
@@ -81,11 +83,12 @@
             this.categoriaAlimento,
             this.excluirAlimento});
             this.dataGridView1.GridColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 223);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 181);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(426, 195);
+            this.dataGridView1.Size = new System.Drawing.Size(436, 158);
             this.dataGridView1.TabIndex = 46;
             // 
             // nombreAlimento
@@ -114,24 +117,27 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(35, 171);
+            this.label2.Location = new System.Drawing.Point(26, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.Size = new System.Drawing.Size(63, 18);
             this.label2.TabIndex = 47;
             this.label2.Text = "Buscar: ";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 171);
+            this.textBox1.Location = new System.Drawing.Point(88, 139);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 22);
+            this.textBox1.Size = new System.Drawing.Size(262, 20);
             this.textBox1.TabIndex = 48;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 506);
+            this.textBox2.Location = new System.Drawing.Point(88, 411);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 22);
+            this.textBox2.Size = new System.Drawing.Size(262, 20);
             this.textBox2.TabIndex = 52;
             // 
             // label4
@@ -139,9 +145,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(35, 506);
+            this.label4.Location = new System.Drawing.Point(26, 411);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(63, 18);
             this.label4.TabIndex = 51;
             this.label4.Text = "Buscar: ";
             // 
@@ -155,11 +162,12 @@
             this.descripcionAlergia,
             this.checkAlergia});
             this.dataGridView2.GridColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView2.Location = new System.Drawing.Point(39, 558);
+            this.dataGridView2.Location = new System.Drawing.Point(29, 453);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(426, 195);
+            this.dataGridView2.Size = new System.Drawing.Size(427, 158);
             this.dataGridView2.TabIndex = 50;
             // 
             // nombreAlergia
@@ -190,9 +198,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(35, 439);
+            this.label5.Location = new System.Drawing.Point(26, 357);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(549, 44);
+            this.label5.Size = new System.Drawing.Size(451, 36);
             this.label5.TabIndex = 49;
             this.label5.Text = "Por ultimo, incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que " +
     "se excluyen con estas NO apareceran en tu plan";
@@ -200,21 +209,22 @@
             // btnIngreso
             // 
             this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnIngreso.Location = new System.Drawing.Point(613, 723);
+            this.btnIngreso.Location = new System.Drawing.Point(460, 587);
+            this.btnIngreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(176, 70);
+            this.btnIngreso.Size = new System.Drawing.Size(132, 57);
             this.btnIngreso.TabIndex = 53;
             this.btnIngreso.Text = "Guardar y finalizar";
             this.btnIngreso.UseVisualStyleBackColor = false;
             // 
             // FrmLlenarPreferencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(812, 826);
+            this.ClientSize = new System.Drawing.Size(609, 671);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
@@ -225,6 +235,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmLlenarPreferencias";
             this.Text = "FrmLlenarPreferencias";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -32,10 +32,12 @@ CREATE TABLE RECETA (
     RecetaID INT PRIMARY KEY IDENTITY(1,1),
     Nombre VARCHAR(100) NOT NULL,
     Descripcion NVARCHAR(MAX),
-    Categoria VARCHAR(20) CHECK (Categoria IN ('Desayuno', 'Almuerzo', 'Cena', 'Snack')),
-    TotalCalorias DECIMAL(8, 2),
-    TotalProteinas DECIMAL(8, 2),
-    TotalCarbohidratos DECIMAL(8, 2),
+    Categoria VARCHAR(20) CHECK (Categoria IN ('Desayuno', 'Almuerzo', 'Cena', 'Snack')) not null,
+	TipoDieta Varchar(30) not null,
+	TipoDieta2 varchar(30),
+    TotalCalorias DECIMAL(8, 2) not null,
+    TotalProteinas DECIMAL(8, 2) not null,
+    TotalCarbohidratos DECIMAL(8, 2) not null,
 );
 
 -- Creación de la tabla INGREDIENTES_RECETA
@@ -106,9 +108,9 @@ CREATE TABLE REGISTRO_COMIDAS (
 CREATE TABLE PREF_USUARIO (
     Pref_UsuarioID INT PRIMARY KEY IDENTITY(1,1),
     AlimentoID INT,
-    UsuarioID VARCHAR(20),
+    Cedula VARCHAR(20),
     FOREIGN KEY (AlimentoID) REFERENCES ALIMENTO(AlimentoID),
-    FOREIGN KEY (UsuarioID) REFERENCES USUARIOS(Cedula)
+    FOREIGN KEY (Cedula) REFERENCES USUARIOS(Cedula)
 );
 
 -- Creación de la tabla ALERGIA (catálogo de alergias)
@@ -131,7 +133,16 @@ CREATE TABLE ALERG_ALIMENTO (
 CREATE TABLE ALERG_USUARIO (
     Alerg_usuarioID INT PRIMARY KEY IDENTITY(1,1),
     AlergiaID INT,
-    UsuarioID VARCHAR(20),
+    Cedula VARCHAR(20),
     FOREIGN KEY (AlergiaID) REFERENCES ALERGIA(AlergiaID),
-    FOREIGN KEY (UsuarioID) REFERENCES USUARIOS(Cedula)
+    FOREIGN KEY (Cedula) REFERENCES USUARIOS(Cedula)
+);
+
+--Creacion de la tabla FeedBack
+CREATE TABLE FEEDBACK(
+	FeedBackID INT PRIMARY KEY IDENTITY(1,1),
+	Cedula VARCHAR(20),
+	Destacado VARCHAR(250),
+	Mejoras VARCHAR(250),
+	FOREIGN KEY (Cedula) REFERENCES USUARIOS(Cedula)
 );
