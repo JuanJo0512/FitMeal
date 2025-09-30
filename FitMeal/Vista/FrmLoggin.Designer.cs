@@ -38,6 +38,7 @@
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,11 +46,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miskan", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
             this.label1.Location = new System.Drawing.Point(224, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 58);
+            this.label1.Size = new System.Drawing.Size(176, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "FitMeal";
             // 
@@ -126,6 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnCrearCuenta);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel2);
@@ -147,6 +149,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 372);
             this.panel2.TabIndex = 8;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Location = new System.Drawing.Point(53, 415);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(148, 26);
+            this.btnAdmin.TabIndex = 9;
+            this.btnAdmin.Text = "Modo Administrador";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmLoggin
             // 
@@ -176,5 +188,6 @@
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAdmin;
     }
 }

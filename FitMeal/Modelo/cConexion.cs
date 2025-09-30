@@ -12,7 +12,7 @@ namespace FitMeal.Modelo
     class cConexion
     {
         //Se define la ruta de la base de datos
-        static private string CadenaConexion = @"Data Source=PC109-12913;Initial Catalog=FitMeal;Integrated Security=True;";
+        static private string CadenaConexion = @"Data Source=DESKTOP-44EUCBT;Initial Catalog=FitMeal;Integrated Security=True;Encrypt=False";
 
         //Definir una variable para cargar la base de datos
         private SqlConnection Conexion = new SqlConnection(CadenaConexion);
