@@ -32,6 +32,7 @@ namespace FitMeal.Vista
             AbrirForm(new FrmLlenarDatos(),this);
         }
 
+        //Metodo para pasar entre formularios que se usara en todo el codigo
         private static Form activeForm = null;
         public static void AbrirForm(Form frmHijo, Form frmactual)
         {
@@ -50,53 +51,48 @@ namespace FitMeal.Vista
         {
             try
             {
-                
-
                 string cedula = txtUsuario.Text;
                 string contraseña = txtContraseña.Text;
 
-                if (cedula == "1040572195" || cedula == "1020110100")
+                if (string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(contraseña))
                 {
-                    AbrirForm(new frmAdmin(), this);
+                    MessageBox.Show("Debe ingresarse la cedula y contraseña");
+                    return;
+                }
+
+                string query = "select Nombre from usuarios where Cedula = @cedula and contrasena = @contraseña";
+
+                SqlCommand cmd = new SqlCommand(query, cn.AbrirConexion());
+                cmd.Parameters.AddWithValue("@cedula", cedula);
+                cmd.Parameters.AddWithValue("@contraseña", contraseña);
+
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null)
+                {
+                    UsuarioActivoCedula = cedula;
+                    UsuarioActivoNombre = resultado.ToString();
+
+                    MessageBox.Show($"Biemvenido {UsuarioActivoNombre}");
+
+                    AbrirForm(new FrmLlenarPreferencias(), this);
                 }
                 else
                 {
-
-
-                    if (string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(contraseña))
-                    {
-                        MessageBox.Show("Debe ingresarse la cedula y contraseña");
-                        return;
-                    }
-
-                    string query = "select Nombre from usuarios where Cedula = @cedula and contrasena = @contraseña";
-
-                    SqlCommand cmd = new SqlCommand(query, cn.AbrirConexion());
-                    cmd.Parameters.AddWithValue("@cedula", cedula);
-                    cmd.Parameters.AddWithValue("@contraseña", contraseña);
-
-                    object resultado = cmd.ExecuteScalar();
-
-                    if (resultado != null)
-                    {
-                        UsuarioActivoCedula = cedula;
-                        UsuarioActivoNombre = resultado.ToString();
-
-                        MessageBox.Show($"Biemvenido {UsuarioActivoNombre}");
-
-                        AbrirForm(new FrmRegistrarAlimentos(), this);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario o Contraseña incorrectos");
-                    }
-                    cn.CerrarConexion();
+                    MessageBox.Show("Usuario o Contraseña incorrectos");
                 }
+                cn.CerrarConexion();
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ingresar: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmLogginAdmin(), this);
         }
     }
 }

@@ -71,6 +71,12 @@
     <Compile Include="Vista\FrmLlenarPreferencias.Designer.cs">
       <DependentUpon>FrmLlenarPreferencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmLogginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLogginAdmin.Designer.cs">
+      <DependentUpon>frmLogginAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmMiPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmLoggin.resx">
       <DependentUpon>FrmLoggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLogginAdmin.resx">
+      <DependentUpon>frmLogginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmMiPlan.resx">
       <DependentUpon>FrmMiPlan.cs</DependentUpon>

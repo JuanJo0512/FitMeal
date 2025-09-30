@@ -49,9 +49,8 @@ INSERT INTO ALIMENTO (Nombre, Categoria, Calorias, Proteinas, Carbohidratos, Gra
 ('Tilapia', 'Pescado', 96.00, 20.00, 0.00, 1.70), -- Libre de gluten, Alto en proteína, Bajo en carbohidratos
 ('Bacalao', 'Pescado', 82.00, 18.00, 0.00, 0.70), -- Libre de gluten, Alto en proteína, Bajo en carbohidratos
 ('Merluza', 'Pescado', 86.00, 18.00, 0.00, 1.00), -- Libre de gluten, Alto en proteína, Bajo en carbohidratos
-('Pez espada', 'Pescado', 121.00, 19.00, 0.00, 4.00), -- Libre de gluten, Alto en proteína, Bajo en carbohidratos
 
--- Categoría: Proteína (lácteos, huevos y derivados)
+-- Categoría: Proteína-Animal
 ('Huevo entero', 'Proteína', 155.00, 13.00, 1.10, 11.00), -- Libre de gluten, Alto en proteína, Vegetariano
 ('Claras de huevo', 'Proteína', 52.00, 11.00, 0.70, 0.00), -- Libre de gluten, Alto en proteína, Vegetariano, Bajo en carbohidratos
 ('Yogur griego', 'Proteína', 59.00, 10.00, 3.60, 0.40), -- Libre de gluten, Vegetariano
