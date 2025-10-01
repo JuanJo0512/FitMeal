@@ -75,7 +75,7 @@ namespace FitMeal.Vista
 
                     MessageBox.Show($"Biemvenido {UsuarioActivoNombre}");
 
-                    AbrirForm(new FrmLlenarPreferencias(), this);
+                    AbrirForm(new frmVerPreferencias(), this);
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace FitMeal.Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al ingresar: " + ex.Message);
+                MessageBox.Show("Error al ingresar");
             }
         }
 

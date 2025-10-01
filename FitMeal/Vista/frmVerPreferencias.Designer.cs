@@ -46,9 +46,9 @@
             this.btnIngreso = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.dtgPreferencias = new System.Windows.Forms.DataGridView();
-            this.dtgAlergias = new System.Windows.Forms.DataGridView();
             this.preferenciaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgAlergias = new System.Windows.Forms.DataGridView();
             this.alergiaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alimentoExcluido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlergiaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -224,6 +224,7 @@
             this.btnIngreso.TabIndex = 34;
             this.btnIngreso.Text = "Editar Preferencias";
             this.btnIngreso.UseVisualStyleBackColor = false;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // button7
             // 
@@ -236,6 +237,7 @@
             this.button7.TabIndex = 35;
             this.button7.Text = "Eliminar Preferencias";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // dtgPreferencias
             // 
@@ -252,23 +254,6 @@
             this.dtgPreferencias.RowTemplate.Height = 24;
             this.dtgPreferencias.Size = new System.Drawing.Size(304, 345);
             this.dtgPreferencias.TabIndex = 36;
-            // 
-            // dtgAlergias
-            // 
-            this.dtgAlergias.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlergias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAlergias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.alergiaNombre,
-            this.alimentoExcluido,
-            this.AlergiaID});
-            this.dtgAlergias.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlergias.Location = new System.Drawing.Point(683, 232);
-            this.dtgAlergias.Name = "dtgAlergias";
-            this.dtgAlergias.RowHeadersWidth = 51;
-            this.dtgAlergias.RowTemplate.Height = 24;
-            this.dtgAlergias.Size = new System.Drawing.Size(363, 345);
-            this.dtgAlergias.TabIndex = 37;
             // 
             // preferenciaAlimento
             // 
@@ -288,6 +273,23 @@
             this.AlimentoID.Name = "AlimentoID";
             this.AlimentoID.Visible = false;
             this.AlimentoID.Width = 125;
+            // 
+            // dtgAlergias
+            // 
+            this.dtgAlergias.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dtgAlergias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAlergias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.alergiaNombre,
+            this.alimentoExcluido,
+            this.AlergiaID});
+            this.dtgAlergias.GridColor = System.Drawing.Color.Cornsilk;
+            this.dtgAlergias.Location = new System.Drawing.Point(683, 232);
+            this.dtgAlergias.Name = "dtgAlergias";
+            this.dtgAlergias.RowHeadersWidth = 51;
+            this.dtgAlergias.RowTemplate.Height = 24;
+            this.dtgAlergias.Size = new System.Drawing.Size(363, 345);
+            this.dtgAlergias.TabIndex = 37;
             // 
             // alergiaNombre
             // 

@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAlimentos = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.dtgAlimentos = new System.Windows.Forms.DataGridView();
+            this.nombreAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excluirAlimento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
             this.txtBuscarAlergia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgAlergias = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.nombreAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excluirAlimento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nombreAlergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlergiaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionAlergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkAlergia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblAlergias = new System.Windows.Forms.Label();
+            this.btnguardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlergias)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // lblAlimentos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Location = new System.Drawing.Point(35, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(504, 44);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Ahora por favor, indicamos que alimentos preferirias no comer\r\nLos veras lo menos" +
+            this.lblAlimentos.AutoSize = true;
+            this.lblAlimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlimentos.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblAlimentos.Location = new System.Drawing.Point(35, 103);
+            this.lblAlimentos.Name = "lblAlimentos";
+            this.lblAlimentos.Size = new System.Drawing.Size(504, 44);
+            this.lblAlimentos.TabIndex = 25;
+            this.lblAlimentos.Text = "Ahora por favor, indicamos que alimentos preferirias no comer\r\nLos veras lo menos" +
     " posible en tu plan de comidas";
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(29, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 51);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Casi Acabamos!";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblTitulo.Location = new System.Drawing.Point(29, 22);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(337, 51);
+            this.lblTitulo.TabIndex = 45;
+            this.lblTitulo.Text = "Casi Acabamos!";
             // 
             // dtgAlimentos
             // 
@@ -91,6 +91,35 @@
             this.dtgAlimentos.RowTemplate.Height = 24;
             this.dtgAlimentos.Size = new System.Drawing.Size(569, 194);
             this.dtgAlimentos.TabIndex = 46;
+            // 
+            // nombreAlimento
+            // 
+            this.nombreAlimento.HeaderText = "Nombre";
+            this.nombreAlimento.MinimumWidth = 6;
+            this.nombreAlimento.Name = "nombreAlimento";
+            this.nombreAlimento.Width = 125;
+            // 
+            // AlimentoID
+            // 
+            this.AlimentoID.HeaderText = "ID";
+            this.AlimentoID.MinimumWidth = 6;
+            this.AlimentoID.Name = "AlimentoID";
+            this.AlimentoID.Visible = false;
+            this.AlimentoID.Width = 125;
+            // 
+            // categoriaAlimento
+            // 
+            this.categoriaAlimento.HeaderText = "Categoria";
+            this.categoriaAlimento.MinimumWidth = 6;
+            this.categoriaAlimento.Name = "categoriaAlimento";
+            this.categoriaAlimento.Width = 125;
+            // 
+            // excluirAlimento
+            // 
+            this.excluirAlimento.HeaderText = "Excluir Alimento";
+            this.excluirAlimento.MinimumWidth = 6;
+            this.excluirAlimento.Name = "excluirAlimento";
+            this.excluirAlimento.Width = 125;
             // 
             // label2
             // 
@@ -151,61 +180,6 @@
             this.dtgAlergias.Size = new System.Drawing.Size(569, 194);
             this.dtgAlergias.TabIndex = 50;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(35, 439);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(549, 44);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Por ultimo, incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que " +
-    "se excluyen con estas NO apareceran en tu plan";
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnguardar.Location = new System.Drawing.Point(613, 722);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(176, 70);
-            this.btnguardar.TabIndex = 53;
-            this.btnguardar.Text = "Guardar y finalizar";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
-            // nombreAlimento
-            // 
-            this.nombreAlimento.HeaderText = "Nombre";
-            this.nombreAlimento.MinimumWidth = 6;
-            this.nombreAlimento.Name = "nombreAlimento";
-            this.nombreAlimento.Width = 125;
-            // 
-            // AlimentoID
-            // 
-            this.AlimentoID.HeaderText = "ID";
-            this.AlimentoID.MinimumWidth = 6;
-            this.AlimentoID.Name = "AlimentoID";
-            this.AlimentoID.Visible = false;
-            this.AlimentoID.Width = 125;
-            // 
-            // categoriaAlimento
-            // 
-            this.categoriaAlimento.HeaderText = "Categoria";
-            this.categoriaAlimento.MinimumWidth = 6;
-            this.categoriaAlimento.Name = "categoriaAlimento";
-            this.categoriaAlimento.Width = 125;
-            // 
-            // excluirAlimento
-            // 
-            this.excluirAlimento.HeaderText = "Excluir Alimento";
-            this.excluirAlimento.MinimumWidth = 6;
-            this.excluirAlimento.Name = "excluirAlimento";
-            this.excluirAlimento.Width = 125;
-            // 
             // nombreAlergia
             // 
             this.nombreAlergia.HeaderText = "Alergia";
@@ -237,6 +211,32 @@
             this.checkAlergia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.checkAlergia.Width = 125;
             // 
+            // lblAlergias
+            // 
+            this.lblAlergias.AutoSize = true;
+            this.lblAlergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlergias.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblAlergias.Location = new System.Drawing.Point(35, 439);
+            this.lblAlergias.Name = "lblAlergias";
+            this.lblAlergias.Size = new System.Drawing.Size(549, 44);
+            this.lblAlergias.TabIndex = 49;
+            this.lblAlergias.Text = "Por ultimo, incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que " +
+    "se excluyen con estas NO apareceran en tu plan";
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnguardar.Location = new System.Drawing.Point(613, 722);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(176, 70);
+            this.btnguardar.TabIndex = 53;
+            this.btnguardar.Text = "Guardar y finalizar";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
             // FrmLlenarPreferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,15 +247,16 @@
             this.Controls.Add(this.txtBuscarAlergia);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtgAlergias);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblAlergias);
             this.Controls.Add(this.txtBuscarAlimento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgAlimentos);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.lblAlimentos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLlenarPreferencias";
             this.Text = "FrmLlenarPreferencias";
+            this.Load += new System.EventHandler(this.LlenarPreferencias);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlergias)).EndInit();
             this.ResumeLayout(false);
@@ -264,15 +265,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAlimentos;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dtgAlimentos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscarAlimento;
         private System.Windows.Forms.TextBox txtBuscarAlergia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtgAlergias;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAlergias;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreAlimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlimentoID;
