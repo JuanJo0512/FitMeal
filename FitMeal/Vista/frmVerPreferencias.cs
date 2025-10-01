@@ -19,6 +19,8 @@ namespace FitMeal.Vista
         SqlDataAdapter da;
         DataTable dt;
         SqlDataReader dr;
+        public static bool Añadir;
+        public static bool Eliminar;
         public frmVerPreferencias()
         {
             InitializeComponent();
@@ -81,6 +83,17 @@ namespace FitMeal.Vista
             dr.Close();
             cn.CerrarConexion(); // cierras manualmente
         }
-        
+
+        private void btnIngreso_Click(object sender, EventArgs e)
+        {
+            Añadir = true;
+            FrmLoggin.AbrirForm(new FrmLlenarPreferencias(), this);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Eliminar = true;
+            FrmLoggin.AbrirForm(new FrmLlenarPreferencias(), this);
+        }
     }
 }

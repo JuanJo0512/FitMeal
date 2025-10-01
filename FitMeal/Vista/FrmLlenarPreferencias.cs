@@ -23,46 +23,6 @@ namespace FitMeal.Vista
         {
             InitializeComponent();
             cn = new cConexion();
-            CargarAlimentos();
-            CargarAlergias();
-        }
-
-        private void CargarAlimentos()
-        {
-                dtgAlimentos.Rows.Clear();
-
-                string query = "SELECT AlimentoID, Nombre, Categoria FROM ALIMENTO";
-                cmd = new SqlCommand(query, cn.AbrirConexion());
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    dtgAlimentos.Rows.Add(
-                        dr["Nombre"].ToString(),
-                        dr["AlimentoID"].ToString(),
-                        dr["Categoria"].ToString()
-                    );
-                }
-                cn.CerrarConexion();
-        }
-
-        private void CargarAlergias()
-        {
-                dtgAlergias.Rows.Clear();
-
-                string query = "SELECT AlergiaID, Nombre, Descripcion FROM ALERGIA";
-                 cmd = new SqlCommand(query, cn.AbrirConexion());
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    dtgAlergias.Rows.Add(
-                        dr["Nombre"].ToString(),
-                        dr["AlergiaID"].ToString(),
-                        dr["Descripcion"].ToString()
-                    );
-                }
-                cn.CerrarConexion();
         }
 
         private void txtBuscarAlimento_TextChanged(object sender, EventArgs e)
@@ -100,41 +60,209 @@ namespace FitMeal.Vista
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dtgAlimentos.Rows)
+            if (frmVerPreferencias.Añadir)
             {
-                bool marcado = Convert.ToBoolean(row.Cells["excluirAlimento"].Value);
-                if (marcado)
+
+                //Añadir alimentos seleccionados
+                foreach (DataGridViewRow row in dtgAlimentos.Rows)
                 {
-                    int alimentoID = Convert.ToInt32(row.Cells["AlimentoID"].Value);
+                    bool marcado = Convert.ToBoolean(row.Cells["excluirAlimento"].Value);
 
-                    string insert = "insert into PREF_USUARIO (AlimentoID, Cedula) VALUES (@alimentoID, @cedula)";
+                    if (marcado)
+                    {
+                        int alimentoID = Convert.ToInt32(row.Cells["AlimentoID"].Value);
 
-                    cmd = new SqlCommand(insert, cn.AbrirConexion());
+                        string insert = "insert into PREF_USUARIO (AlimentoID, Cedula) VALUES (@alimentoID, @cedula)";
+
+                        cmd = new SqlCommand(insert, cn.AbrirConexion());
                         cmd.Parameters.AddWithValue("@alimentoID", alimentoID);
                         cmd.Parameters.AddWithValue("@cedula", FrmLoggin.UsuarioActivoCedula);
                         cmd.ExecuteNonQuery();
+                    }
                 }
-            }
 
-            // Guardar alergias seleccionadas
-            foreach (DataGridViewRow row in dtgAlergias.Rows)
-            {
-                bool marcado = Convert.ToBoolean(row.Cells["checkAlergia"].Value);
-                if (marcado)
+                // Guardar alergias seleccionadas
+                foreach (DataGridViewRow row in dtgAlergias.Rows)
                 {
-                    int alergiaID = Convert.ToInt32(row.Cells["AlergiaID"].Value);
+                    bool marcado = Convert.ToBoolean(row.Cells["checkAlergia"].Value);
 
-                    string insert = "insert into ALERG_USUARIO (AlergiaID, Cedula) VALUES (@alergiaID, @cedula)";
+                    if (marcado)
+                    {
+                        int alergiaID = Convert.ToInt32(row.Cells["AlergiaID"].Value);
 
-                      cmd = new SqlCommand(insert, cn.AbrirConexion());
+                        string insert = "insert into ALERG_USUARIO (AlergiaID, Cedula) VALUES (@alergiaID, @cedula)";
+
+                        cmd = new SqlCommand(insert, cn.AbrirConexion());
                         cmd.Parameters.AddWithValue("@alergiaID", alergiaID);
                         cmd.Parameters.AddWithValue("@cedula", FrmLoggin.UsuarioActivoCedula);
                         cmd.ExecuteNonQuery();
-                    
+
+                    }
+                }
+            }
+            if (frmVerPreferencias.Eliminar)
+            {
+
+                //Eliminar alimentos seleccionados
+                foreach (DataGridViewRow row in dtgAlimentos.Rows)
+                {
+                    bool marcado = Convert.ToBoolean(row.Cells["excluirAlimento"].Value);
+
+                    if (marcado)
+                    {
+                        int alimentoID = Convert.ToInt32(row.Cells["AlimentoID"].Value);
+
+                        string delete = "DELETE FROM PREF_USUARIO WHERE AlimentoID = @alimentoID AND Cedula = @cedula";
+
+                        cmd = new SqlCommand(delete, cn.AbrirConexion());
+                        cmd.Parameters.AddWithValue("@alimentoID", alimentoID);
+                        cmd.Parameters.AddWithValue("@cedula", FrmLoggin.UsuarioActivoCedula);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                // Eliminar alergias seleccionadas
+                foreach (DataGridViewRow row in dtgAlergias.Rows)
+                {
+                    bool marcado = Convert.ToBoolean(row.Cells["checkAlergia"].Value);
+
+                    if (marcado)
+                    {
+                        int alergiaID = Convert.ToInt32(row.Cells["AlergiaID"].Value);
+
+                        string delete = "DELETE FROM ALERG_USUARIO WHERE AlergiaID = @alergiaID AND Cedula = @cedula";
+
+                        cmd = new SqlCommand(delete, cn.AbrirConexion());
+                        cmd.Parameters.AddWithValue("@alergiaID", alergiaID);
+                        cmd.Parameters.AddWithValue("@cedula", FrmLoggin.UsuarioActivoCedula);
+                        cmd.ExecuteNonQuery();
+
+                    }
                 }
             }
 
+            frmVerPreferencias.Añadir = false;
+            frmVerPreferencias.Eliminar = false;
             FrmLoggin.AbrirForm(new frmVerPreferencias(), this);
+        }
+
+        private void LlenarPreferencias(object sender, EventArgs e)
+        {
+            if (frmVerPreferencias.Añadir)
+            {
+                CargarAlimentosParaAñadir();
+                CargarAlergiasParaAñadir();
+            }
+            else if (frmVerPreferencias.Eliminar)
+            {
+                CargarAlimentosParaEliminar();
+                CargarAlergiasParaEliminar();
+            }
+        }
+
+
+        private void CargarAlimentosParaAñadir()
+        {
+            dtgAlimentos.Rows.Clear();
+
+            string query = @"
+            SELECT AlimentoID, Nombre, Categoria
+            FROM ALIMENTO
+            WHERE AlimentoID NOT IN (
+            SELECT AlimentoID FROM PREF_USUARIO WHERE Cedula = @Cedula
+            )";
+
+            cmd = new SqlCommand(query, cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dtgAlimentos.Rows.Add(dr["Nombre"].ToString(), 
+                    dr["AlimentoID"].ToString(), 
+                    dr["Categoria"].ToString(),
+                    false);
+            }
+            dr.Close();
+            cn.CerrarConexion();
+        }
+
+        private void CargarAlergiasParaAñadir()
+        {
+            dtgAlergias.Rows.Clear();
+
+            string query = @"
+            SELECT AlergiaID, Nombre, Descripcion
+            FROM ALERGIA
+            WHERE AlergiaID NOT IN (
+            SELECT AlergiaID 
+            FROM ALERG_USUARIO 
+            WHERE Cedula = @Cedula
+            )";
+
+            cmd = new SqlCommand(query, cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dtgAlergias.Rows.Add(dr["Nombre"].ToString(),
+                    dr["AlergiaID"].ToString(),
+                    dr["Descripcion"].ToString(),
+                    false);
+            }
+            dr.Close();
+            cn.CerrarConexion();
+        }
+
+        private void CargarAlimentosParaEliminar()
+        {
+            dtgAlimentos.Rows.Clear();
+
+            string query = @"
+        SELECT A.AlimentoID, A.Nombre, A.Categoria
+        FROM PREF_USUARIO P
+        INNER JOIN ALIMENTO A ON P.AlimentoID = A.AlimentoID
+        WHERE P.Cedula = @Cedula";
+
+            cmd = new SqlCommand(query, cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dtgAlimentos.Rows.Add(dr["Nombre"].ToString(),
+                    dr["AlimentoID"].ToString(),
+                    dr["Categoria"].ToString(),
+                    false);
+            }
+            dr.Close();
+            cn.CerrarConexion();
+        }
+
+        private void CargarAlergiasParaEliminar()
+        {
+            dtgAlergias.Rows.Clear();
+
+            string query = @"
+        SELECT AL.AlergiaID, AL.Nombre, AL.Descripcion
+        FROM ALERG_USUARIO AU
+        INNER JOIN ALERGIA AL ON AU.AlergiaID = AL.AlergiaID
+        WHERE AU.Cedula = @Cedula";
+
+            cmd = new SqlCommand(query, cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dtgAlergias.Rows.Add(dr["Nombre"].ToString(),
+                    dr["AlergiaID"].ToString(),
+                    dr["Descripcion"].ToString(),
+                    false);
+            }
+            dr.Close();
+            cn.CerrarConexion();
         }
     }
 }
