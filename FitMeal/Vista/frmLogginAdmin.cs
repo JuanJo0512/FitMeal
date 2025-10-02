@@ -36,7 +36,7 @@ namespace FitMeal.Vista
             {
                 if (codigo == "1040572195" || codigo == "1020110100")
                 {
-                    FrmLoggin.AbrirForm(new frmAdmin(), this);
+                    FrmLoggin.AbrirForm(new FrmAdmin(), this);
                 }
             }
         }

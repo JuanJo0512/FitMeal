@@ -47,17 +47,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelo\cConexion.cs" />
-    <Compile Include="Vista\frmAdmin.cs">
+    <Compile Include="Vista\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmAdmin.Designer.cs">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
+    <Compile Include="Vista\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmGestionAlimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmGestionAlimentos.Designer.cs">
+      <DependentUpon>frmGestionAlimentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmFeedback.Designer.cs">
       <DependentUpon>FrmFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmGestionarRecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmGestionarRecetas.Designer.cs">
+      <DependentUpon>FrmGestionarRecetas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmLlenarDatos.cs">
       <SubType>Form</SubType>
@@ -136,8 +148,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmGestionAlimentos.resx">
+      <DependentUpon>frmGestionAlimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmFeedback.resx">
       <DependentUpon>FrmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmGestionarRecetas.resx">
+      <DependentUpon>FrmGestionarRecetas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmLlenarDatos.resx">
       <DependentUpon>FrmLlenarDatos.cs</DependentUpon>
