@@ -220,8 +220,8 @@
             this.lblAlergias.Name = "lblAlergias";
             this.lblAlergias.Size = new System.Drawing.Size(549, 44);
             this.lblAlergias.TabIndex = 49;
-            this.lblAlergias.Text = "Por ultimo, incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que " +
-    "se excluyen con estas NO apareceran en tu plan";
+            this.lblAlergias.Text = "Incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que se excluyen " +
+    "con estas NO apareceran en tu plan";
             // 
             // btnguardar
             // 
@@ -255,7 +255,7 @@
             this.Controls.Add(this.lblAlimentos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLlenarPreferencias";
-            this.Text = "FrmLlenarPreferencias";
+            this.Text = "                 ";
             this.Load += new System.EventHandler(this.LlenarPreferencias);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlergias)).EndInit();

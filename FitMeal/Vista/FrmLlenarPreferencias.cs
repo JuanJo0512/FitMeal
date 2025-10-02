@@ -63,7 +63,6 @@ namespace FitMeal.Vista
             if (frmVerPreferencias.Añadir)
             {
 
-                //Añadir alimentos seleccionados
                 foreach (DataGridViewRow row in dtgAlimentos.Rows)
                 {
                     bool marcado = Convert.ToBoolean(row.Cells["excluirAlimento"].Value);
@@ -81,7 +80,6 @@ namespace FitMeal.Vista
                     }
                 }
 
-                // Guardar alergias seleccionadas
                 foreach (DataGridViewRow row in dtgAlergias.Rows)
                 {
                     bool marcado = Convert.ToBoolean(row.Cells["checkAlergia"].Value);
@@ -103,7 +101,6 @@ namespace FitMeal.Vista
             if (frmVerPreferencias.Eliminar)
             {
 
-                //Eliminar alimentos seleccionados
                 foreach (DataGridViewRow row in dtgAlimentos.Rows)
                 {
                     bool marcado = Convert.ToBoolean(row.Cells["excluirAlimento"].Value);
@@ -121,7 +118,6 @@ namespace FitMeal.Vista
                     }
                 }
 
-                // Eliminar alergias seleccionadas
                 foreach (DataGridViewRow row in dtgAlergias.Rows)
                 {
                     bool marcado = Convert.ToBoolean(row.Cells["checkAlergia"].Value);
@@ -148,13 +144,19 @@ namespace FitMeal.Vista
 
         private void LlenarPreferencias(object sender, EventArgs e)
         {
-            if (frmVerPreferencias.Añadir)
+                if (frmVerPreferencias.Añadir)
             {
+                lblTitulo.Text = "Indique lo que desea añadir";
+                lblAlimentos.Text = "Ahora por favor, indicamos que alimentos preferirias no comer\r\nLos veras lo menos posible en tu plan de comidas";
+                lblAlergias.Text = "Incluye tus alergias/intolerancias a continuacion\r\nLos alimentos que se excluyen con estas NO apareceran en tu plan";
                 CargarAlimentosParaAñadir();
                 CargarAlergiasParaAñadir();
             }
             else if (frmVerPreferencias.Eliminar)
             {
+                lblTitulo.Text = "Indica las preferencias que deseas eliminar";
+                lblAlimentos.Text = "Indicamos que alimentos no preferidos deseas eliminar de tu perfil";
+                lblAlergias.Text = "Indicanos que alergias deseas eliminar de tu perfil";
                 CargarAlimentosParaEliminar();
                 CargarAlergiasParaEliminar();
             }
