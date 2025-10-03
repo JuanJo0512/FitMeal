@@ -18,6 +18,7 @@ namespace FitMeal.Vista
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable dt;
+
         //mantiene los datos del usuario que ingresara
         public static string UsuarioActivoCedula;
         public static string UsuarioActivoNombre;

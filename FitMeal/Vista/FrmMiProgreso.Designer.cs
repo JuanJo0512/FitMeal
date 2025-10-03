@@ -29,41 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiProgreso));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIrFeedback = new System.Windows.Forms.Button();
+            this.btnIrRegistrarProgreso = new System.Windows.Forms.Button();
+            this.btnIrRegistrarPlan = new System.Windows.Forms.Button();
+            this.btnIrRegistrarActividad = new System.Windows.Forms.Button();
+            this.btnIrRegistrarAlimento = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.chrTiempo = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chrConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chrProgreso = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnConsumo = new System.Windows.Forms.Button();
+            this.btnEjercicio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrTiempo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrConsumo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrProgreso)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnIrFeedback);
+            this.panel1.Controls.Add(this.btnIrRegistrarProgreso);
+            this.panel1.Controls.Add(this.btnIrRegistrarPlan);
+            this.panel1.Controls.Add(this.btnIrRegistrarActividad);
+            this.panel1.Controls.Add(this.btnIrRegistrarAlimento);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
@@ -83,70 +80,75 @@
             this.button6.Text = "Mi Perfil";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnIrFeedback
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(-3, 541);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(289, 76);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Calificar Experiencia";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrFeedback.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrFeedback.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrFeedback.Location = new System.Drawing.Point(-3, 541);
+            this.btnIrFeedback.Name = "btnIrFeedback";
+            this.btnIrFeedback.Size = new System.Drawing.Size(289, 76);
+            this.btnIrFeedback.TabIndex = 11;
+            this.btnIrFeedback.Text = "Calificar Experiencia";
+            this.btnIrFeedback.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.Click += new System.EventHandler(this.btnIrFeedback_Click);
             // 
-            // button4
+            // btnIrRegistrarProgreso
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Location = new System.Drawing.Point(0, 442);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 76);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Mi Progreso";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarProgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarProgreso.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarProgreso.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarProgreso.Location = new System.Drawing.Point(0, 442);
+            this.btnIrRegistrarProgreso.Name = "btnIrRegistrarProgreso";
+            this.btnIrRegistrarProgreso.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarProgreso.TabIndex = 10;
+            this.btnIrRegistrarProgreso.Text = "Mi Progreso";
+            this.btnIrRegistrarProgreso.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.Click += new System.EventHandler(this.btnIrRegistrarProgreso_Click);
             // 
-            // button3
+            // btnIrRegistrarPlan
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(-3, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 76);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Mi Plan";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarPlan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarPlan.Location = new System.Drawing.Point(-3, 344);
+            this.btnIrRegistrarPlan.Name = "btnIrRegistrarPlan";
+            this.btnIrRegistrarPlan.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarPlan.TabIndex = 9;
+            this.btnIrRegistrarPlan.Text = "Mi Plan";
+            this.btnIrRegistrarPlan.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.Click += new System.EventHandler(this.btnIrRegistrarPlan_Click);
             // 
-            // button2
+            // btnIrRegistrarActividad
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(-4, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 76);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Registrar Actividad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarActividad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarActividad.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarActividad.Location = new System.Drawing.Point(-4, 252);
+            this.btnIrRegistrarActividad.Name = "btnIrRegistrarActividad";
+            this.btnIrRegistrarActividad.Size = new System.Drawing.Size(293, 76);
+            this.btnIrRegistrarActividad.TabIndex = 7;
+            this.btnIrRegistrarActividad.Text = "Registrar Actividad";
+            this.btnIrRegistrarActividad.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.Click += new System.EventHandler(this.btnIrRegistrarActividad_Click);
             // 
-            // button1
+            // btnIrRegistrarAlimento
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 76);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar Alimento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarAlimento.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarAlimento.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarAlimento.Location = new System.Drawing.Point(0, 161);
+            this.btnIrRegistrarAlimento.Name = "btnIrRegistrarAlimento";
+            this.btnIrRegistrarAlimento.Size = new System.Drawing.Size(286, 76);
+            this.btnIrRegistrarAlimento.TabIndex = 6;
+            this.btnIrRegistrarAlimento.Text = "Registrar Alimento";
+            this.btnIrRegistrarAlimento.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.Click += new System.EventHandler(this.btnIrRegistrarAlimento_Click);
             // 
             // panel2
             // 
@@ -177,16 +179,16 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Mi Progreso";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miskan", 18F);
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(463, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 37);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Nombre aqui";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Miskan", 18F);
+            this.lblNombre.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblNombre.Location = new System.Drawing.Point(463, 57);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(209, 37);
+            this.lblNombre.TabIndex = 28;
+            this.lblNombre.Text = "Nombre aqui";
             // 
             // label1
             // 
@@ -198,37 +200,47 @@
             this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 31;
             // 
-            // chrTiempo
+            // chrProgreso
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chrTiempo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chrTiempo.Legends.Add(legend1);
-            this.chrTiempo.Location = new System.Drawing.Point(318, 237);
-            this.chrTiempo.Name = "chrTiempo";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chrTiempo.Series.Add(series1);
-            this.chrTiempo.Size = new System.Drawing.Size(300, 300);
-            this.chrTiempo.TabIndex = 32;
-            this.chrTiempo.Text = "chart1";
+            chartArea6.Name = "ChartArea1";
+            this.chrProgreso.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chrProgreso.Legends.Add(legend6);
+            this.chrProgreso.Location = new System.Drawing.Point(379, 196);
+            this.chrProgreso.Name = "chrProgreso";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chrProgreso.Series.Add(series6);
+            this.chrProgreso.Size = new System.Drawing.Size(559, 300);
+            this.chrProgreso.TabIndex = 32;
+            this.chrProgreso.Text = "chart1";
             // 
-            // chrConsumo
+            // btnConsumo
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chrConsumo.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chrConsumo.Legends.Add(legend2);
-            this.chrConsumo.Location = new System.Drawing.Point(672, 237);
-            this.chrConsumo.Name = "chrConsumo";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chrConsumo.Series.Add(series2);
-            this.chrConsumo.Size = new System.Drawing.Size(300, 300);
-            this.chrConsumo.TabIndex = 33;
-            this.chrConsumo.Text = "chart2";
+            this.btnConsumo.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsumo.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnConsumo.Location = new System.Drawing.Point(792, 541);
+            this.btnConsumo.Name = "btnConsumo";
+            this.btnConsumo.Size = new System.Drawing.Size(182, 42);
+            this.btnConsumo.TabIndex = 35;
+            this.btnConsumo.Text = "Tu Consumo";
+            this.btnConsumo.UseVisualStyleBackColor = false;
+            this.btnConsumo.Click += new System.EventHandler(this.btnConsumo_Click);
+            // 
+            // btnEjercicio
+            // 
+            this.btnEjercicio.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEjercicio.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEjercicio.Location = new System.Drawing.Point(365, 541);
+            this.btnEjercicio.Name = "btnEjercicio";
+            this.btnEjercicio.Size = new System.Drawing.Size(181, 42);
+            this.btnEjercicio.TabIndex = 36;
+            this.btnEjercicio.Text = "Tu Ejercicio";
+            this.btnEjercicio.UseVisualStyleBackColor = false;
+            this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
             // 
             // FrmMiProgreso
             // 
@@ -236,20 +248,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1087, 632);
-            this.Controls.Add(this.chrConsumo);
-            this.Controls.Add(this.chrTiempo);
+            this.Controls.Add(this.btnEjercicio);
+            this.Controls.Add(this.btnConsumo);
+            this.Controls.Add(this.chrProgreso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMiProgreso";
             this.Text = "FrmMiProgreso";
             this.Load += new System.EventHandler(this.FrmMiProgreso_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrTiempo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrConsumo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrProgreso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,17 +271,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIrFeedback;
+        private System.Windows.Forms.Button btnIrRegistrarProgreso;
+        private System.Windows.Forms.Button btnIrRegistrarPlan;
+        private System.Windows.Forms.Button btnIrRegistrarActividad;
+        private System.Windows.Forms.Button btnIrRegistrarAlimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chrTiempo;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chrConsumo;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrProgreso;
+        private System.Windows.Forms.Button btnConsumo;
+        private System.Windows.Forms.Button btnEjercicio;
     }
 }
