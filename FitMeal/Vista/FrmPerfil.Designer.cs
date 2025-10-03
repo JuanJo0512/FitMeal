@@ -59,6 +59,7 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.cmbMeta = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -306,7 +307,7 @@
             this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
             this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnIngreso.Location = new System.Drawing.Point(333, 496);
+            this.btnIngreso.Location = new System.Drawing.Point(333, 484);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(178, 55);
             this.btnIngreso.TabIndex = 33;
@@ -318,7 +319,7 @@
             this.button7.BackColor = System.Drawing.Color.OliveDrab;
             this.button7.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button7.Location = new System.Drawing.Point(547, 496);
+            this.button7.Location = new System.Drawing.Point(517, 484);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(234, 55);
             this.button7.TabIndex = 34;
@@ -330,7 +331,7 @@
             this.button8.BackColor = System.Drawing.Color.Goldenrod;
             this.button8.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button8.Location = new System.Drawing.Point(827, 496);
+            this.button8.Location = new System.Drawing.Point(757, 484);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(201, 55);
             this.button8.TabIndex = 35;
@@ -390,12 +391,26 @@
             this.cmbMeta.Size = new System.Drawing.Size(241, 24);
             this.cmbMeta.TabIndex = 42;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.OliveDrab;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(967, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 55);
+            this.button1.TabIndex = 43;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1095, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbMeta);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtAltura);
@@ -461,5 +476,6 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.ComboBox cmbMeta;
+        private System.Windows.Forms.Button button1;
     }
 }
