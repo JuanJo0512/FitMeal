@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiProgreso));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,8 +47,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chrTiempo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chrConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrTiempo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrConsumo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -185,10 +195,40 @@
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label1.Location = new System.Drawing.Point(466, 320);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 48);
+            this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Aca se insertan las graficas pero aja, \r\nprimero voy aterminar de hacer todo el d" +
-    "iseño";
+            // 
+            // chrTiempo
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chrTiempo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrTiempo.Legends.Add(legend1);
+            this.chrTiempo.Location = new System.Drawing.Point(318, 237);
+            this.chrTiempo.Name = "chrTiempo";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrTiempo.Series.Add(series1);
+            this.chrTiempo.Size = new System.Drawing.Size(300, 300);
+            this.chrTiempo.TabIndex = 32;
+            this.chrTiempo.Text = "chart1";
+            // 
+            // chrConsumo
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chrConsumo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chrConsumo.Legends.Add(legend2);
+            this.chrConsumo.Location = new System.Drawing.Point(672, 237);
+            this.chrConsumo.Name = "chrConsumo";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chrConsumo.Series.Add(series2);
+            this.chrConsumo.Size = new System.Drawing.Size(300, 300);
+            this.chrConsumo.TabIndex = 33;
+            this.chrConsumo.Text = "chart2";
             // 
             // FrmMiProgreso
             // 
@@ -196,6 +236,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1087, 632);
+            this.Controls.Add(this.chrConsumo);
+            this.Controls.Add(this.chrTiempo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -203,8 +245,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmMiProgreso";
             this.Text = "FrmMiProgreso";
+            this.Load += new System.EventHandler(this.FrmMiProgreso_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrTiempo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chrConsumo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +269,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrTiempo;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrConsumo;
     }
 }

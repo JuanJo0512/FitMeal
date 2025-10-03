@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +104,12 @@
     </Compile>
     <Compile Include="Vista\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmProgresoPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmProgresoPrueba.Designer.cs">
+      <DependentUpon>frmProgresoPrueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmRegistrarActividad.cs">
       <SubType>Form</SubType>
@@ -160,6 +176,9 @@
     <EmbeddedResource Include="Vista\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmProgresoPrueba.resx">
+      <DependentUpon>frmProgresoPrueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmRegistrarActividad.resx">
       <DependentUpon>FrmRegistrarActividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +191,7 @@
     <EmbeddedResource Include="Vista\frmVerPreferencias.resx">
       <DependentUpon>frmVerPreferencias.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
