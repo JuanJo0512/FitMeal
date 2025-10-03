@@ -45,6 +45,7 @@
             this.totCarb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totProt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -236,12 +237,26 @@
             this.Selec.Name = "Selec";
             this.Selec.Width = 125;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button6.Location = new System.Drawing.Point(914, 543);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(145, 46);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "GUARDAR";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // FrmRegistrarAlimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1097, 627);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -272,5 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;
         private System.Windows.Forms.DataGridViewTextBoxColumn totProt;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selec;
+        private System.Windows.Forms.Button button6;
     }
 }

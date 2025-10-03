@@ -53,9 +53,9 @@ namespace FitMeal.Vista
                     cmd = new SqlCommand(insertarQuery, cn.AbrirConexion());
 
                     int edad;
-                    if (!int.TryParse(txtEdad.Text, out edad) || edad <= 0)
+                    if (!int.TryParse(txtEdad.Text, out edad) || edad < 18)
                     {
-                        MessageBox.Show("Ingrese una edad válida.");
+                        MessageBox.Show("Debes ser mayor de edad para utilizar esta app.");
                         return;
                     }
                     decimal altura;
