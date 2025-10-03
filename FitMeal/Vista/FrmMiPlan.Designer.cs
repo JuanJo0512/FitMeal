@@ -48,6 +48,8 @@
             this.totCal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totCarb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totProt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,7 +74,7 @@
             // 
             this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.button6.ForeColor = System.Drawing.Color.Cornsilk;
             this.button6.Location = new System.Drawing.Point(-1, 0);
             this.button6.Name = "button6";
@@ -178,11 +180,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miskan", 18F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label2.Location = new System.Drawing.Point(461, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 37);
+            this.label2.Size = new System.Drawing.Size(185, 36);
             this.label2.TabIndex = 31;
             this.label2.Text = "Nombre aqui";
             // 
@@ -195,7 +197,7 @@
             "Almuerzo ",
             "Cena",
             "Snack"});
-            this.comboBox1.Location = new System.Drawing.Point(615, 180);
+            this.comboBox1.Location = new System.Drawing.Point(615, 166);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(307, 24);
             this.comboBox1.TabIndex = 34;
@@ -205,7 +207,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(342, 180);
+            this.label1.Location = new System.Drawing.Point(342, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 24);
             this.label1.TabIndex = 35;
@@ -229,7 +231,7 @@
             this.totCal,
             this.totCarb,
             this.totProt});
-            this.dataGridView1.Location = new System.Drawing.Point(346, 235);
+            this.dataGridView1.Location = new System.Drawing.Point(346, 196);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -264,12 +266,40 @@
             this.totProt.Name = "totProt";
             this.totProt.Width = 125;
             // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnguardar.Location = new System.Drawing.Point(346, 564);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(152, 58);
+            this.btnguardar.TabIndex = 54;
+            this.btnguardar.Text = "Generar Plan";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.OliveDrab;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button7.Location = new System.Drawing.Point(825, 560);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(152, 58);
+            this.button7.TabIndex = 55;
+            this.button7.Text = "Aprovar Plan";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // FrmMiPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1085, 633);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -307,5 +337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totCal;
         private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;
         private System.Windows.Forms.DataGridViewTextBoxColumn totProt;
+        private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Button button7;
     }
 }

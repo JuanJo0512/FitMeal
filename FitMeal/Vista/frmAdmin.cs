@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace FitMeal.Vista
 {
-    public partial class frmAdmin : Form
+    public partial class FrmAdmin : Form
     {
-        public frmAdmin()
+        public FrmAdmin()
         {
             InitializeComponent();
+        }
+
+        private void btnAlimentos_Click(object sender, EventArgs e)
+        {
+            FrmLoggin.AbrirForm(new frmGestionAlimentos(), this);
+        }
+
+        private void btnRecetas_Click(object sender, EventArgs e)
+        {
+            FrmLoggin.AbrirForm(new FrmGestionarRecetas(), this);
+        }
+
+        private void brnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLoggin.AbrirForm(new FrmLoggin(), this);
         }
     }
 }
