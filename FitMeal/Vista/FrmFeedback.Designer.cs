@@ -30,125 +30,130 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFeedback));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.btnIrFeedback = new System.Windows.Forms.Button();
+            this.btnIrRegistrarProgreso = new System.Windows.Forms.Button();
+            this.btnIrRegistrarPlan = new System.Windows.Forms.Button();
+            this.btnIrRegistrarActividad = new System.Windows.Forms.Button();
+            this.btnIrRegistrarAlimento = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpPuntuacion = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnIngreso = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDestacado = new System.Windows.Forms.TextBox();
+            this.txtMejoras = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpPuntuacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnMiPerfil);
+            this.panel1.Controls.Add(this.btnIrFeedback);
+            this.panel1.Controls.Add(this.btnIrRegistrarProgreso);
+            this.panel1.Controls.Add(this.btnIrRegistrarPlan);
+            this.panel1.Controls.Add(this.btnIrRegistrarActividad);
+            this.panel1.Controls.Add(this.btnIrRegistrarAlimento);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 5;
             // 
-            // button6
+            // btnMiPerfil
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnMiPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnMiPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnMiPerfil.Location = new System.Drawing.Point(-1, 0);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Size = new System.Drawing.Size(286, 155);
+            this.btnMiPerfil.TabIndex = 13;
+            this.btnMiPerfil.Text = "Mi Perfil";
+            this.btnMiPerfil.UseVisualStyleBackColor = false;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
-            // button5
+            // btnIrFeedback
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(-3, 541);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(289, 76);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Calificar Experiencia";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrFeedback.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrFeedback.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrFeedback.Location = new System.Drawing.Point(-3, 541);
+            this.btnIrFeedback.Name = "btnIrFeedback";
+            this.btnIrFeedback.Size = new System.Drawing.Size(289, 76);
+            this.btnIrFeedback.TabIndex = 11;
+            this.btnIrFeedback.Text = "Calificar Experiencia";
+            this.btnIrFeedback.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.Click += new System.EventHandler(this.btnIrFeedback_Click);
             // 
-            // button4
+            // btnIrRegistrarProgreso
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Location = new System.Drawing.Point(0, 442);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 76);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Mi Progreso";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarProgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarProgreso.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarProgreso.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarProgreso.Location = new System.Drawing.Point(0, 442);
+            this.btnIrRegistrarProgreso.Name = "btnIrRegistrarProgreso";
+            this.btnIrRegistrarProgreso.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarProgreso.TabIndex = 10;
+            this.btnIrRegistrarProgreso.Text = "Mi Progreso";
+            this.btnIrRegistrarProgreso.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.Click += new System.EventHandler(this.btnIrRegistrarProgreso_Click);
             // 
-            // button3
+            // btnIrRegistrarPlan
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(-3, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 76);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Mi Plan";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarPlan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarPlan.Location = new System.Drawing.Point(-3, 344);
+            this.btnIrRegistrarPlan.Name = "btnIrRegistrarPlan";
+            this.btnIrRegistrarPlan.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarPlan.TabIndex = 9;
+            this.btnIrRegistrarPlan.Text = "Mi Plan";
+            this.btnIrRegistrarPlan.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.Click += new System.EventHandler(this.btnIrRegistrarPlan_Click);
             // 
-            // button2
+            // btnIrRegistrarActividad
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(-4, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 76);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Registrar Actividad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarActividad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarActividad.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarActividad.Location = new System.Drawing.Point(-4, 252);
+            this.btnIrRegistrarActividad.Name = "btnIrRegistrarActividad";
+            this.btnIrRegistrarActividad.Size = new System.Drawing.Size(293, 76);
+            this.btnIrRegistrarActividad.TabIndex = 7;
+            this.btnIrRegistrarActividad.Text = "Registrar Actividad";
+            this.btnIrRegistrarActividad.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.Click += new System.EventHandler(this.btnIrRegistrarActividad_Click);
             // 
-            // button1
+            // btnIrRegistrarAlimento
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 76);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar Alimento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarAlimento.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarAlimento.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarAlimento.Location = new System.Drawing.Point(0, 161);
+            this.btnIrRegistrarAlimento.Name = "btnIrRegistrarAlimento";
+            this.btnIrRegistrarAlimento.Size = new System.Drawing.Size(286, 76);
+            this.btnIrRegistrarAlimento.TabIndex = 6;
+            this.btnIrRegistrarAlimento.Text = "Registrar Alimento";
+            this.btnIrRegistrarAlimento.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.Click += new System.EventHandler(this.btnIrRegistrarAlimento_Click);
             // 
             // panel2
             // 
@@ -179,27 +184,16 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "Tu opinion es vital para nosotros!";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miskan", 18F);
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(463, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 37);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Nombre aqui";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(334, 180);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(692, 30);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Que gvas, a los 2 se nos paso meterle feedback a la bd";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Miskan", 18F);
+            this.lblNombre.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblNombre.Location = new System.Drawing.Point(463, 57);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(209, 37);
+            this.lblNombre.TabIndex = 34;
+            this.lblNombre.Text = "Nombre aqui";
             // 
             // label4
             // 
@@ -267,21 +261,21 @@
             this.radioButton5.Text = "5";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpPuntuacion
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.groupBox1.Location = new System.Drawing.Point(338, 252);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 75);
-            this.groupBox1.TabIndex = 45;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Puntua tu experiencia con FitMeal:";
+            this.grpPuntuacion.Controls.Add(this.radioButton1);
+            this.grpPuntuacion.Controls.Add(this.radioButton5);
+            this.grpPuntuacion.Controls.Add(this.radioButton2);
+            this.grpPuntuacion.Controls.Add(this.radioButton4);
+            this.grpPuntuacion.Controls.Add(this.radioButton3);
+            this.grpPuntuacion.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
+            this.grpPuntuacion.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.grpPuntuacion.Location = new System.Drawing.Point(338, 252);
+            this.grpPuntuacion.Name = "grpPuntuacion";
+            this.grpPuntuacion.Size = new System.Drawing.Size(364, 75);
+            this.grpPuntuacion.TabIndex = 45;
+            this.grpPuntuacion.TabStop = false;
+            this.grpPuntuacion.Text = "Puntua tu experiencia con FitMeal:";
             // 
             // label5
             // 
@@ -306,19 +300,19 @@
             this.btnIngreso.Text = "Enviar";
             this.btnIngreso.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtDestacado
             // 
-            this.textBox1.Location = new System.Drawing.Point(344, 398);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(464, 22);
-            this.textBox1.TabIndex = 48;
+            this.txtDestacado.Location = new System.Drawing.Point(344, 398);
+            this.txtDestacado.Name = "txtDestacado";
+            this.txtDestacado.Size = new System.Drawing.Size(464, 22);
+            this.txtDestacado.TabIndex = 48;
             // 
-            // textBox2
+            // txtMejoras
             // 
-            this.textBox2.Location = new System.Drawing.Point(344, 496);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(464, 22);
-            this.textBox2.TabIndex = 49;
+            this.txtMejoras.Location = new System.Drawing.Point(344, 496);
+            this.txtMejoras.Name = "txtMejoras";
+            this.txtMejoras.Size = new System.Drawing.Size(464, 22);
+            this.txtMejoras.TabIndex = 49;
             // 
             // FrmFeedback
             // 
@@ -326,23 +320,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1091, 633);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMejoras);
+            this.Controls.Add(this.txtDestacado);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpPuntuacion);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
             this.Name = "FrmFeedback";
             this.Text = "FrmFeedback";
+            this.Load += new System.EventHandler(this.FrmFeedback_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpPuntuacion.ResumeLayout(false);
+            this.grpPuntuacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,27 +345,26 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMiPerfil;
+        private System.Windows.Forms.Button btnIrFeedback;
+        private System.Windows.Forms.Button btnIrRegistrarProgreso;
+        private System.Windows.Forms.Button btnIrRegistrarPlan;
+        private System.Windows.Forms.Button btnIrRegistrarActividad;
+        private System.Windows.Forms.Button btnIrRegistrarAlimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpPuntuacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnIngreso;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDestacado;
+        private System.Windows.Forms.TextBox txtMejoras;
     }
 }

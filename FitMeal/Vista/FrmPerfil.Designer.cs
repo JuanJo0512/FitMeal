@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnIrFeedback = new System.Windows.Forms.Button();
+            this.btnIrRegistrarProgreso = new System.Windows.Forms.Button();
+            this.btnIrRegistrarPlan = new System.Windows.Forms.Button();
+            this.btnIrRegistrarActividad = new System.Windows.Forms.Button();
+            this.btnIrRegistrarAlimento = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,17 +48,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblCedula = new System.Windows.Forms.Label();
             this.btnIngreso = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.cmbMeta = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,95 +66,101 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.btnIrFeedback);
+            this.panel1.Controls.Add(this.btnIrRegistrarProgreso);
+            this.panel1.Controls.Add(this.btnIrRegistrarPlan);
+            this.panel1.Controls.Add(this.btnIrRegistrarActividad);
+            this.panel1.Controls.Add(this.btnIrRegistrarAlimento);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 1;
             // 
-            // button6
+            // btnPerfil
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(286, 155);
+            this.btnPerfil.TabIndex = 13;
+            this.btnPerfil.Text = "Mi Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
-            // button5
+            // btnIrFeedback
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(-3, 541);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(289, 76);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Calificar Experiencia";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrFeedback.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrFeedback.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrFeedback.Location = new System.Drawing.Point(-3, 541);
+            this.btnIrFeedback.Name = "btnIrFeedback";
+            this.btnIrFeedback.Size = new System.Drawing.Size(289, 76);
+            this.btnIrFeedback.TabIndex = 11;
+            this.btnIrFeedback.Text = "Calificar Experiencia";
+            this.btnIrFeedback.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.Click += new System.EventHandler(this.btnIrFeedback_Click);
             // 
-            // button4
+            // btnIrRegistrarProgreso
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Location = new System.Drawing.Point(0, 442);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 76);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Mi Progreso";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarProgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarProgreso.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarProgreso.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarProgreso.Location = new System.Drawing.Point(0, 442);
+            this.btnIrRegistrarProgreso.Name = "btnIrRegistrarProgreso";
+            this.btnIrRegistrarProgreso.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarProgreso.TabIndex = 10;
+            this.btnIrRegistrarProgreso.Text = "Mi Progreso";
+            this.btnIrRegistrarProgreso.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.Click += new System.EventHandler(this.btnIrRegistrarProgreso_Click);
             // 
-            // button3
+            // btnIrRegistrarPlan
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(-3, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 76);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Mi Plan";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarPlan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarPlan.Location = new System.Drawing.Point(-3, 344);
+            this.btnIrRegistrarPlan.Name = "btnIrRegistrarPlan";
+            this.btnIrRegistrarPlan.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarPlan.TabIndex = 9;
+            this.btnIrRegistrarPlan.Text = "Mi Plan";
+            this.btnIrRegistrarPlan.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.Click += new System.EventHandler(this.btnIrRegistrarPlan_Click);
             // 
-            // button2
+            // btnIrRegistrarActividad
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(-4, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 76);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Registrar Actividad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarActividad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarActividad.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarActividad.Location = new System.Drawing.Point(-4, 252);
+            this.btnIrRegistrarActividad.Name = "btnIrRegistrarActividad";
+            this.btnIrRegistrarActividad.Size = new System.Drawing.Size(293, 76);
+            this.btnIrRegistrarActividad.TabIndex = 7;
+            this.btnIrRegistrarActividad.Text = "Registrar Actividad";
+            this.btnIrRegistrarActividad.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.Click += new System.EventHandler(this.btnIrRegistrarActividad_Click);
             // 
-            // button1
+            // btnIrRegistrarAlimento
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 76);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar Alimento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarAlimento.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarAlimento.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarAlimento.Location = new System.Drawing.Point(0, 161);
+            this.btnIrRegistrarAlimento.Name = "btnIrRegistrarAlimento";
+            this.btnIrRegistrarAlimento.Size = new System.Drawing.Size(286, 76);
+            this.btnIrRegistrarAlimento.TabIndex = 6;
+            this.btnIrRegistrarAlimento.Text = "Registrar Alimento";
+            this.btnIrRegistrarAlimento.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.Click += new System.EventHandler(this.btnIrRegistrarAlimento_Click);
             // 
             // panel2
             // 
@@ -164,16 +170,16 @@
             this.panel2.Size = new System.Drawing.Size(284, 10);
             this.panel2.TabIndex = 3;
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miskan", 18F);
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(458, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre aqui";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Miskan", 18F);
+            this.lblNombre.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblNombre.Location = new System.Drawing.Point(458, 55);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(209, 37);
+            this.lblNombre.TabIndex = 3;
+            this.lblNombre.Text = "Nombre aqui";
             // 
             // label12
             // 
@@ -284,93 +290,16 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lblCedula
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(428, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(256, 28);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "insertar aca de la BD";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(411, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 28);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "\"";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label13.Location = new System.Drawing.Point(399, 284);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 28);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "\"";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label14.Location = new System.Drawing.Point(399, 342);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 28);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "\"";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label15.Location = new System.Drawing.Point(474, 400);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 28);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "\"";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label16.Location = new System.Drawing.Point(846, 175);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 28);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "\"";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label17.Location = new System.Drawing.Point(846, 232);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(23, 28);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "\"";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label18.Location = new System.Drawing.Point(787, 284);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(23, 28);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "\"";
+            this.lblCedula.AutoSize = true;
+            this.lblCedula.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblCedula.Location = new System.Drawing.Point(428, 175);
+            this.lblCedula.Name = "lblCedula";
+            this.lblCedula.Size = new System.Drawing.Size(44, 28);
+            this.lblCedula.TabIndex = 25;
+            this.lblCedula.Text = "CC";
             // 
             // btnIngreso
             // 
@@ -408,23 +337,76 @@
             this.button8.Text = "Eliminar Mi Perfil";
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(412, 236);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(221, 22);
+            this.txtEmail.TabIndex = 36;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Location = new System.Drawing.Point(408, 290);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(221, 22);
+            this.txtEdad.TabIndex = 37;
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.Location = new System.Drawing.Point(406, 348);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(221, 22);
+            this.txtSexo.TabIndex = 38;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(474, 407);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(221, 22);
+            this.txtContraseña.TabIndex = 39;
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.Location = new System.Drawing.Point(846, 182);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(166, 22);
+            this.txtAltura.TabIndex = 40;
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.Location = new System.Drawing.Point(846, 235);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(182, 22);
+            this.txtPeso.TabIndex = 41;
+            // 
+            // cmbMeta
+            // 
+            this.cmbMeta.FormattingEnabled = true;
+            this.cmbMeta.Items.AddRange(new object[] {
+            "Perder Peso",
+            "Ganar Masa"});
+            this.cmbMeta.Location = new System.Drawing.Point(787, 291);
+            this.cmbMeta.Name = "cmbMeta";
+            this.cmbMeta.Size = new System.Drawing.Size(241, 24);
+            this.cmbMeta.TabIndex = 42;
+            // 
             // FrmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1095, 629);
+            this.Controls.Add(this.cmbMeta);
+            this.Controls.Add(this.txtPeso);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtSexo);
+            this.Controls.Add(this.txtEdad);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btnIngreso);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label12);
@@ -435,10 +417,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
             this.Name = "FrmPerfil";
             this.Text = "FrmPerfil";
+            this.Load += new System.EventHandler(this.FrmPerfil_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -449,14 +432,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button btnIrFeedback;
+        private System.Windows.Forms.Button btnIrRegistrarProgreso;
+        private System.Windows.Forms.Button btnIrRegistrarPlan;
+        private System.Windows.Forms.Button btnIrRegistrarActividad;
+        private System.Windows.Forms.Button btnIrRegistrarAlimento;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -467,16 +450,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtAltura;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.ComboBox cmbMeta;
     }
 }

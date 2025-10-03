@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiProgreso));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnIrFeedback = new System.Windows.Forms.Button();
             this.btnIrRegistrarProgreso = new System.Windows.Forms.Button();
             this.btnIrRegistrarPlan = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnIrFeedback);
             this.panel1.Controls.Add(this.btnIrRegistrarProgreso);
             this.panel1.Controls.Add(this.btnIrRegistrarPlan);
@@ -67,18 +67,19 @@
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 3;
             // 
-            // button6
+            // btnPerfil
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(286, 155);
+            this.btnPerfil.TabIndex = 13;
+            this.btnPerfil.Text = "Mi Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnIrFeedback
             // 
@@ -202,16 +203,16 @@
             // 
             // chrProgreso
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chrProgreso.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chrProgreso.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.chrProgreso.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrProgreso.Legends.Add(legend1);
             this.chrProgreso.Location = new System.Drawing.Point(379, 196);
             this.chrProgreso.Name = "chrProgreso";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chrProgreso.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrProgreso.Series.Add(series1);
             this.chrProgreso.Size = new System.Drawing.Size(559, 300);
             this.chrProgreso.TabIndex = 32;
             this.chrProgreso.Text = "chart1";
@@ -270,7 +271,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnIrFeedback;
         private System.Windows.Forms.Button btnIrRegistrarProgreso;
         private System.Windows.Forms.Button btnIrRegistrarPlan;

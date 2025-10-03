@@ -63,42 +63,42 @@
             "Lácteo-Vegetal",
             "Semilla",
             "Suplemento"});
-            this.cmbCategoria.Location = new System.Drawing.Point(142, 179);
+            this.cmbCategoria.Location = new System.Drawing.Point(202, 294);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(176, 24);
             this.cmbCategoria.TabIndex = 43;
             // 
             // txtGrasas
             // 
-            this.txtGrasas.Location = new System.Drawing.Point(125, 397);
+            this.txtGrasas.Location = new System.Drawing.Point(615, 345);
             this.txtGrasas.Name = "txtGrasas";
             this.txtGrasas.Size = new System.Drawing.Size(219, 22);
             this.txtGrasas.TabIndex = 42;
             // 
             // txtProteinas
             // 
-            this.txtProteinas.Location = new System.Drawing.Point(140, 282);
+            this.txtProteinas.Location = new System.Drawing.Point(630, 230);
             this.txtProteinas.Name = "txtProteinas";
             this.txtProteinas.Size = new System.Drawing.Size(219, 22);
             this.txtProteinas.TabIndex = 40;
             // 
             // txtCalorias
             // 
-            this.txtCalorias.Location = new System.Drawing.Point(127, 228);
+            this.txtCalorias.Location = new System.Drawing.Point(187, 343);
             this.txtCalorias.Name = "txtCalorias";
             this.txtCalorias.Size = new System.Drawing.Size(219, 22);
             this.txtCalorias.TabIndex = 39;
             // 
             // txtCarbohidratos
             // 
-            this.txtCarbohidratos.Location = new System.Drawing.Point(188, 340);
+            this.txtCarbohidratos.Location = new System.Drawing.Point(678, 288);
             this.txtCarbohidratos.Name = "txtCarbohidratos";
             this.txtCarbohidratos.Size = new System.Drawing.Size(185, 22);
             this.txtCarbohidratos.TabIndex = 38;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(125, 120);
+            this.txtNombre.Location = new System.Drawing.Point(185, 235);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(219, 22);
             this.txtNombre.TabIndex = 37;
@@ -109,7 +109,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label9.Location = new System.Drawing.Point(12, 220);
+            this.label9.Location = new System.Drawing.Point(72, 335);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 30);
             this.label9.TabIndex = 34;
@@ -120,7 +120,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.Location = new System.Drawing.Point(12, 387);
+            this.label6.Location = new System.Drawing.Point(502, 335);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 30);
             this.label6.TabIndex = 31;
@@ -131,7 +131,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label7.Location = new System.Drawing.Point(12, 330);
+            this.label7.Location = new System.Drawing.Point(502, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 30);
             this.label7.TabIndex = 30;
@@ -142,7 +142,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label8.Location = new System.Drawing.Point(12, 272);
+            this.label8.Location = new System.Drawing.Point(502, 220);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 30);
             this.label8.TabIndex = 29;
@@ -153,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(12, 169);
+            this.label5.Location = new System.Drawing.Point(72, 284);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 30);
             this.label5.TabIndex = 28;
@@ -164,7 +164,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(12, 112);
+            this.label4.Location = new System.Drawing.Point(72, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 30);
             this.label4.TabIndex = 27;
@@ -173,11 +173,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Miskan", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(4, 9);
+            this.label1.Location = new System.Drawing.Point(215, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 51);
+            this.label1.Size = new System.Drawing.Size(477, 53);
             this.label1.TabIndex = 24;
             this.label1.Text = "Gestion de Alimentos";
             // 
@@ -187,7 +187,7 @@
             this.label13.BackColor = System.Drawing.Color.Cornsilk;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label13.Location = new System.Drawing.Point(13, 74);
+            this.label13.Location = new System.Drawing.Point(293, 130);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(331, 22);
             this.label13.TabIndex = 47;
@@ -198,7 +198,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnEliminar.Location = new System.Drawing.Point(591, 460);
+            this.btnEliminar.Location = new System.Drawing.Point(705, 456);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(158, 44);
             this.btnEliminar.TabIndex = 48;
@@ -211,7 +211,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnModificar.Location = new System.Drawing.Point(401, 460);
+            this.btnModificar.Location = new System.Drawing.Point(515, 456);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(158, 44);
             this.btnModificar.TabIndex = 49;
@@ -224,7 +224,7 @@
             this.btnAñadir.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAñadir.Location = new System.Drawing.Point(216, 460);
+            this.btnAñadir.Location = new System.Drawing.Point(330, 456);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(158, 44);
             this.btnAñadir.TabIndex = 50;
@@ -237,7 +237,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnVolver.Location = new System.Drawing.Point(13, 460);
+            this.btnVolver.Location = new System.Drawing.Point(127, 456);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(158, 44);
             this.btnVolver.TabIndex = 51;
@@ -250,7 +250,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(975, 575);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnModificar);

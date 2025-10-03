@@ -315,5 +315,12 @@ namespace FitMeal.Vista
             nuevoFormulario.Show();
             this.Hide();
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfil nuevoFormulario = new FrmPerfil();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
     }
 }

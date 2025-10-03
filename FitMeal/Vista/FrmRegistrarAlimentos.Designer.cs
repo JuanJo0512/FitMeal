@@ -30,13 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIrRegistrarAlimento = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnIrFeedback = new System.Windows.Forms.Button();
+            this.btnIrRegistrarProgreso = new System.Windows.Forms.Button();
+            this.btnIrRegistrarPlan = new System.Windows.Forms.Button();
+            this.btnIrRegistrarActividad = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,98 +57,104 @@
             this.panel2.Size = new System.Drawing.Size(284, 10);
             this.panel2.TabIndex = 3;
             // 
-            // button1
+            // btnIrRegistrarAlimento
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 76);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar Alimento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarAlimento.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarAlimento.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarAlimento.Location = new System.Drawing.Point(0, 161);
+            this.btnIrRegistrarAlimento.Name = "btnIrRegistrarAlimento";
+            this.btnIrRegistrarAlimento.Size = new System.Drawing.Size(286, 76);
+            this.btnIrRegistrarAlimento.TabIndex = 6;
+            this.btnIrRegistrarAlimento.Text = "Registrar Alimento";
+            this.btnIrRegistrarAlimento.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarAlimento.Click += new System.EventHandler(this.btnIrRegistrarAlimento_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.btnIrFeedback);
+            this.panel1.Controls.Add(this.btnIrRegistrarProgreso);
+            this.panel1.Controls.Add(this.btnIrRegistrarPlan);
+            this.panel1.Controls.Add(this.btnIrRegistrarActividad);
+            this.panel1.Controls.Add(this.btnIrRegistrarAlimento);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // btnPerfil
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(-1, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(286, 155);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Mi Perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(286, 155);
+            this.btnPerfil.TabIndex = 13;
+            this.btnPerfil.Text = "Mi Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
-            // button5
+            // btnIrFeedback
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(-3, 541);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(289, 76);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Calificar Experiencia";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrFeedback.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrFeedback.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrFeedback.Location = new System.Drawing.Point(-3, 541);
+            this.btnIrFeedback.Name = "btnIrFeedback";
+            this.btnIrFeedback.Size = new System.Drawing.Size(289, 76);
+            this.btnIrFeedback.TabIndex = 11;
+            this.btnIrFeedback.Text = "Calificar Experiencia";
+            this.btnIrFeedback.UseVisualStyleBackColor = false;
+            this.btnIrFeedback.Click += new System.EventHandler(this.btnIrFeedback_Click);
             // 
-            // button4
+            // btnIrRegistrarProgreso
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Location = new System.Drawing.Point(0, 442);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 76);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Mi Progreso";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarProgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarProgreso.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarProgreso.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarProgreso.Location = new System.Drawing.Point(0, 442);
+            this.btnIrRegistrarProgreso.Name = "btnIrRegistrarProgreso";
+            this.btnIrRegistrarProgreso.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarProgreso.TabIndex = 10;
+            this.btnIrRegistrarProgreso.Text = "Mi Progreso";
+            this.btnIrRegistrarProgreso.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarProgreso.Click += new System.EventHandler(this.btnIrRegistrarProgreso_Click);
             // 
-            // button3
+            // btnIrRegistrarPlan
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(-3, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 76);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Mi Plan";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarPlan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarPlan.Location = new System.Drawing.Point(-3, 344);
+            this.btnIrRegistrarPlan.Name = "btnIrRegistrarPlan";
+            this.btnIrRegistrarPlan.Size = new System.Drawing.Size(289, 76);
+            this.btnIrRegistrarPlan.TabIndex = 9;
+            this.btnIrRegistrarPlan.Text = "Mi Plan";
+            this.btnIrRegistrarPlan.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarPlan.Click += new System.EventHandler(this.btnIrRegistrarPlan_Click);
             // 
-            // button2
+            // btnIrRegistrarActividad
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(-4, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 76);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Registrar Actividad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnIrRegistrarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrRegistrarActividad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnIrRegistrarActividad.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnIrRegistrarActividad.Location = new System.Drawing.Point(-4, 252);
+            this.btnIrRegistrarActividad.Name = "btnIrRegistrarActividad";
+            this.btnIrRegistrarActividad.Size = new System.Drawing.Size(293, 76);
+            this.btnIrRegistrarActividad.TabIndex = 7;
+            this.btnIrRegistrarActividad.Text = "Registrar Actividad";
+            this.btnIrRegistrarActividad.UseVisualStyleBackColor = false;
+            this.btnIrRegistrarActividad.Click += new System.EventHandler(this.btnIrRegistrarActividad_Click);
             // 
             // textBox1
             // 
@@ -251,16 +257,16 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIrRegistrarAlimento;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIrFeedback;
+        private System.Windows.Forms.Button btnIrRegistrarProgreso;
+        private System.Windows.Forms.Button btnIrRegistrarPlan;
+        private System.Windows.Forms.Button btnIrRegistrarActividad;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn comida;
         private System.Windows.Forms.DataGridViewTextBoxColumn totCal;
         private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;

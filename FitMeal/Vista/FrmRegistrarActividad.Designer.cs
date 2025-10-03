@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnCalificar = new System.Windows.Forms.Button();
             this.btnProgreso = new System.Windows.Forms.Button();
             this.btnPlan = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnCalificar);
             this.panel1.Controls.Add(this.btnProgreso);
             this.panel1.Controls.Add(this.btnPlan);
@@ -72,18 +72,19 @@
             this.panel1.Size = new System.Drawing.Size(286, 631);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnPerfil
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Miskan", 16.2F);
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 155);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Mi Perfil";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(286, 155);
+            this.btnPerfil.TabIndex = 26;
+            this.btnPerfil.Text = "Mi Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnCalificar
             // 
@@ -97,6 +98,7 @@
             this.btnCalificar.TabIndex = 11;
             this.btnCalificar.Text = "Calificar Experiencia";
             this.btnCalificar.UseVisualStyleBackColor = false;
+            this.btnCalificar.Click += new System.EventHandler(this.btnCalificar_Click);
             // 
             // btnProgreso
             // 
@@ -110,6 +112,7 @@
             this.btnProgreso.TabIndex = 10;
             this.btnProgreso.Text = "Mi Progreso";
             this.btnProgreso.UseVisualStyleBackColor = false;
+            this.btnProgreso.Click += new System.EventHandler(this.btnProgreso_Click);
             // 
             // btnPlan
             // 
@@ -123,6 +126,7 @@
             this.btnPlan.TabIndex = 9;
             this.btnPlan.Text = "Mi Plan";
             this.btnPlan.UseVisualStyleBackColor = false;
+            this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
             // 
             // btnRegistrarActividad
             // 
@@ -136,6 +140,7 @@
             this.btnRegistrarActividad.TabIndex = 7;
             this.btnRegistrarActividad.Text = "Registrar Actividad";
             this.btnRegistrarActividad.UseVisualStyleBackColor = false;
+            this.btnRegistrarActividad.Click += new System.EventHandler(this.btnRegistrarActividad_Click);
             // 
             // btnRegistrarAlimento
             // 
@@ -149,6 +154,7 @@
             this.btnRegistrarAlimento.TabIndex = 6;
             this.btnRegistrarAlimento.Text = "Registrar Alimento";
             this.btnRegistrarAlimento.UseVisualStyleBackColor = false;
+            this.btnRegistrarAlimento.Click += new System.EventHandler(this.btnRegistrarAlimento_Click);
             // 
             // panel2
             // 
@@ -392,6 +398,6 @@
         private System.Windows.Forms.CheckBox chbDeportes;
         private System.Windows.Forms.CheckBox chbActividadesAireLibre;
         private System.Windows.Forms.CheckBox chbActividadDiaria;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPerfil;
     }
 }

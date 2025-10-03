@@ -95,5 +95,61 @@ namespace FitMeal.Vista
             Eliminar = true;
             FrmLoggin.AbrirForm(new FrmLlenarPreferencias(), this);
         }
+
+        private void btnIrRegistrarAlimento_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarAlimentos nuevoFormulario = new FrmRegistrarAlimentos();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
+
+        private void btnIrRegistrarActividad_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarActividad nuevoFormulario = new FrmRegistrarActividad();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
+
+        private void btnIrRegistrarPlan_Click(object sender, EventArgs e)
+        {
+            FrmMiPlan nuevoFormulario = new FrmMiPlan();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
+
+        private void btnIrRegistrarProgreso_Click(object sender, EventArgs e)
+        {
+            FrmMiProgreso nuevoFormulario = new FrmMiProgreso();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
+
+        private void btnIrFeedback_Click(object sender, EventArgs e)
+        {
+            FrmFeedback nuevoFormulario = new FrmFeedback();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
+
+        private void frmVerPreferencias_Load(object sender, EventArgs e)
+        {
+            // Llama a la variable estática directamente desde la clase FrmLoggin
+            // y asigna su valor al texto del Label.
+            if (!string.IsNullOrEmpty(FrmLoggin.UsuarioActivoNombre))
+            {
+                lblNombre.Text = FrmLoggin.UsuarioActivoNombre;
+            }
+            else
+            {
+                lblNombre.Text = "Usuario Invitado";
+            }
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfil nuevoFormulario = new FrmPerfil();
+            nuevoFormulario.Show();
+            this.Hide();
+        }
     }
 }
