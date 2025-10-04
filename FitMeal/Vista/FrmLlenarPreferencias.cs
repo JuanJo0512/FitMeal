@@ -266,5 +266,10 @@ namespace FitMeal.Vista
             dr.Close();
             cn.CerrarConexion();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

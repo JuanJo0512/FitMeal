@@ -35,8 +35,6 @@
             this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.excluirAlimento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
             this.txtBuscarAlergia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgAlergias = new System.Windows.Forms.DataGridView();
@@ -46,6 +44,8 @@
             this.checkAlergia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblAlergias = new System.Windows.Forms.Label();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlergias)).BeginInit();
             this.SuspendLayout();
@@ -242,6 +242,28 @@
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.Location = new System.Drawing.Point(16, 151);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Buscar: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtBuscarAlimento
+            // 
+            this.txtBuscarAlimento.Location = new System.Drawing.Point(125, 151);
+            this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtBuscarAlimento.Name = "txtBuscarAlimento";
+            this.txtBuscarAlimento.Size = new System.Drawing.Size(463, 22);
+            this.txtBuscarAlimento.TabIndex = 48;
+            this.txtBuscarAlimento.TextChanged += new System.EventHandler(this.txtBuscarAlimento_TextChanged);
+            // 
             // FrmLlenarPreferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,8 +295,6 @@
         private System.Windows.Forms.Label lblAlimentos;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dtgAlimentos;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBuscarAlimento;
         private System.Windows.Forms.TextBox txtBuscarAlergia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtgAlergias;
@@ -288,5 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AlergiaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionAlergia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkAlergia;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBuscarAlimento;
     }
 }
