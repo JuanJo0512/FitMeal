@@ -49,9 +49,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCedula = new System.Windows.Forms.Label();
-            this.btnIngreso = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
+            this.btnPreferencias = new System.Windows.Forms.Button();
+            this.btnEliminarPerfil = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.cmbMeta = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -302,44 +302,48 @@
             this.lblCedula.TabIndex = 25;
             this.lblCedula.Text = "CC";
             // 
-            // btnIngreso
+            // btnEditarPerfil
             // 
-            this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnIngreso.Location = new System.Drawing.Point(333, 484);
-            this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(178, 55);
-            this.btnIngreso.TabIndex = 33;
-            this.btnIngreso.Text = "Editar Mi Perfil";
-            this.btnIngreso.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEditarPerfil.Location = new System.Drawing.Point(333, 484);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(178, 55);
+            this.btnEditarPerfil.TabIndex = 33;
+            this.btnEditarPerfil.Text = "Editar Mi Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
-            // button7
+            // btnPreferencias
             // 
-            this.button7.BackColor = System.Drawing.Color.OliveDrab;
-            this.button7.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button7.Location = new System.Drawing.Point(517, 484);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(234, 55);
-            this.button7.TabIndex = 34;
-            this.button7.Text = "Ver Mis Preferencias";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnPreferencias.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnPreferencias.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreferencias.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnPreferencias.Location = new System.Drawing.Point(517, 484);
+            this.btnPreferencias.Name = "btnPreferencias";
+            this.btnPreferencias.Size = new System.Drawing.Size(234, 55);
+            this.btnPreferencias.TabIndex = 34;
+            this.btnPreferencias.Text = "Ver Mis Preferencias";
+            this.btnPreferencias.UseVisualStyleBackColor = false;
+            this.btnPreferencias.Click += new System.EventHandler(this.btnPreferencias_Click);
             // 
-            // button8
+            // btnEliminarPerfil
             // 
-            this.button8.BackColor = System.Drawing.Color.Goldenrod;
-            this.button8.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button8.Location = new System.Drawing.Point(757, 484);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(201, 55);
-            this.button8.TabIndex = 35;
-            this.button8.Text = "Eliminar Mi Perfil";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnEliminarPerfil.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnEliminarPerfil.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEliminarPerfil.Location = new System.Drawing.Point(757, 484);
+            this.btnEliminarPerfil.Name = "btnEliminarPerfil";
+            this.btnEliminarPerfil.Size = new System.Drawing.Size(201, 55);
+            this.btnEliminarPerfil.TabIndex = 35;
+            this.btnEliminarPerfil.Text = "Eliminar Mi Perfil";
+            this.btnEliminarPerfil.UseVisualStyleBackColor = false;
+            this.btnEliminarPerfil.Click += new System.EventHandler(this.btnEliminarPerfil_Click);
             // 
             // txtEmail
             // 
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(412, 236);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(221, 22);
@@ -347,6 +351,7 @@
             // 
             // txtEdad
             // 
+            this.txtEdad.Enabled = false;
             this.txtEdad.Location = new System.Drawing.Point(408, 290);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(221, 22);
@@ -354,6 +359,7 @@
             // 
             // txtSexo
             // 
+            this.txtSexo.Enabled = false;
             this.txtSexo.Location = new System.Drawing.Point(406, 348);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(221, 22);
@@ -361,6 +367,7 @@
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Enabled = false;
             this.txtContraseña.Location = new System.Drawing.Point(474, 407);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(221, 22);
@@ -368,6 +375,7 @@
             // 
             // txtAltura
             // 
+            this.txtAltura.Enabled = false;
             this.txtAltura.Location = new System.Drawing.Point(846, 182);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(166, 22);
@@ -375,6 +383,7 @@
             // 
             // txtPeso
             // 
+            this.txtPeso.Enabled = false;
             this.txtPeso.Location = new System.Drawing.Point(846, 235);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(182, 22);
@@ -382,6 +391,7 @@
             // 
             // cmbMeta
             // 
+            this.cmbMeta.Enabled = false;
             this.cmbMeta.FormattingEnabled = true;
             this.cmbMeta.Items.AddRange(new object[] {
             "Perder Peso",
@@ -391,18 +401,20 @@
             this.cmbMeta.Size = new System.Drawing.Size(241, 24);
             this.cmbMeta.TabIndex = 42;
             // 
-            // button1
+            // btnGuardar
             // 
-            this.button1.BackColor = System.Drawing.Color.OliveDrab;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(967, 484);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 55);
-            this.button1.TabIndex = 43;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnGuardar.Location = new System.Drawing.Point(967, 484);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(61, 55);
+            this.btnGuardar.TabIndex = 43;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FrmPerfil
             // 
@@ -410,7 +422,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1095, 629);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbMeta);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtAltura);
@@ -418,9 +430,9 @@
             this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnIngreso);
+            this.Controls.Add(this.btnEliminarPerfil);
+            this.Controls.Add(this.btnPreferencias);
+            this.Controls.Add(this.btnEditarPerfil);
             this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -466,9 +478,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblCedula;
-        private System.Windows.Forms.Button btnIngreso;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnEditarPerfil;
+        private System.Windows.Forms.Button btnPreferencias;
+        private System.Windows.Forms.Button btnEliminarPerfil;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtSexo;
@@ -476,6 +488,6 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.ComboBox cmbMeta;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
