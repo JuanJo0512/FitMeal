@@ -255,7 +255,6 @@ namespace FitMeal.Vista
 
             if (dr.Read())
             {
-                // Rellena los campos con la información de la BD
                 cmbCategoria.SelectedItem = dr["Categoria"].ToString();
                 txtCalorias.Text = dr["Calorias"].ToString();
                 txtProteinas.Text = dr["Proteinas"].ToString();

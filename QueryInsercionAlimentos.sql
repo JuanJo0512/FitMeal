@@ -92,92 +92,147 @@ INSERT INTO ALIMENTO (Nombre, Categoria, Calorias, Proteinas, Carbohidratos, Gra
 
 ---------------------------
 --Insertar en tabla Receta--
-INSERT INTO RECETA (Nombre, Descripcion, Categoria, TotalCalorias, TotalProteinas, TotalCarbohidratos) VALUES
-('Revuelto de Claras con Espinacas y Pavo', 'Receta baja en carbohidratos y alta en proteína. Es libre de gluten. Para una opción vegetariana, se puede omitir el pavo.', 'Desayuno', 200.00, 25.00, 5.00),
-('Avena de Quinoa de Noche', 'Receta apta para veganos y vegetarianos, y libre de gluten. Utiliza leche vegetal y frutos rojos para un desayuno completo y saludable.', 'Desayuno', 250.00, 10.00, 35.00),
-('Pudín de Chía y Proteína', 'Snack o desayuno alto en proteína. Vegano, vegetariano y libre de gluten. Se puede usar proteína en polvo vegetal para mantener la opción vegana.', 'Desayuno', 300.00, 25.00, 30.00),
-('Tortitas de Plátano y Huevo', 'Tortitas caseras, sin gluten y vegetarianas. Ideal para un desayuno rápido y energético. Se pueden acompañar con miel o frutas.', 'Desayuno', 230.00, 12.00, 30.00),
-('Salmón a la Plancha con Brócoli', 'Plato principal alto en proteínas y bajo en carbohidratos, completamente libre de gluten. Se cocina rápidamente y es muy saludable.', 'Almuerzo', 350.00, 25.00, 10.00),
-('Pechuga de Pollo al Horno con Batata', 'Receta simple y nutritiva, alta en proteína. Se puede sazonar al gusto y es libre de gluten.', 'Almuerzo', 380.00, 30.00, 30.00),
-('Tofu Revuelto con Verduras', 'Una excelente alternativa vegana y vegetariana al huevo revuelto. Libre de gluten y muy versátil con cualquier verdura.', 'Almuerzo', 200.00, 18.00, 8.00),
-('Ensalada de Atún y Garbanzos', 'Comida rápida y fresca, alta en proteínas. Libre de gluten. Ideal para un almuerzo ligero.', 'Almuerzo', 350.00, 35.00, 30.00),
-('Lentejas Estofadas con Verduras', 'Plato tradicional, ideal para una cena nutritiva y reconfortante. Completamente vegano, vegetariano y libre de gluten.', 'Cena', 220.00, 15.00, 40.00),
-('Enchiladas de Pollo con Tortillas de Maíz', 'Cena alta en proteínas, libre de gluten. Se pueden adaptar con carne molida o proteína vegetal (como lentejas) para otras opciones.', 'Cena', 280.00, 30.00, 30.00),
-('Calabacín Relleno de Carne Molida', 'Receta baja en carbohidratos, alta en proteína y libre de gluten. Se puede rellenar con carne vegetal para una opción vegana.', 'Cena', 350.00, 30.00, 10.00),
-('Huevos Duros (2 Unidades)', 'Snack clásico, alto en proteínas y bajo en carbohidratos. Es vegetariano y libre de gluten.', 'Snack', 140.00, 12.00, 1.00),
-('Batido de Proteína y Plátano', 'Snack post-entrenamiento, alto en proteínas. Se puede usar proteína de suero o proteína vegana.', 'Snack', 200.00, 25.00, 20.00),
-('Edamame al Vapor', 'Snack vegano, vegetariano y libre de gluten, muy alto en proteína. Es una alternativa saludable a los snacks procesados.', 'Snack', 180.00, 17.00, 14.00),
-('Jamón de Pavo con Palitos de Zanahoria', 'Snack bajo en carbohidratos y alto en proteína. Libre de gluten. Una opción rápida y sencilla.', 'Snack', 80.00, 12.00, 2.00);
+INSERT INTO RECETA (Nombre, Descripcion, Categoria, TipoDieta, TipoDieta2, TotalCalorias, TotalProteinas, TotalCarbohidratos) VALUES
+('Revuelto de Claras y Pavo', 'Desayuno muy bajo en carbohidratos. El pavo se puede sustituir por tofu para una opción vegetariana.', 'Desayuno', 'Omnívora', 'Alto en proteína', 200.00, 25.00, 5.00),
+('Pudín de Chía y Berries', 'Preparación en frío, ideal para llevar. Es naturalmente dulce y no tiene azúcares añadidos.', 'Desayuno', 'Vegana', 'Libre de gluten', 280.00, 10.00, 35.00),
+('Tostada con Aguacate y Huevo', 'Clásico desayuno completo. El pan integral contiene gluten. Se puede usar pan sin gluten para adaptarlo.', 'Desayuno', 'Vegetariana', 'Alto en proteína', 350.00, 18.00, 30.00),
+('Batido Proteico (Verde)', 'Bebida rápida y muy alta en proteína. Se puede usar proteína de suero o proteína vegetal.', 'Desayuno', 'Omnívora', 'Alto en proteína', 320.00, 35.00, 25.00),
+('Avena con Plátano y Leche', 'Desayuno energético con cereales y fruta. Contiene lactosa.', 'Desayuno', 'Vegetariana', 'Sin azúcares añadidos', 400.00, 15.00, 60.00),
+
+
+-- 2. ALMUERZOS
+('Salmón, Brócoli y Quinoa', 'Comida balanceada, alta en omega-3 y proteína. Libre de gluten por naturaleza.', 'Almuerzo', 'Omnívora', 'Libre de gluten', 420.00, 30.00, 35.00),
+('Tofu, Arroz y Lentejas', 'Plato vegano muy completo en proteína. Se utiliza arroz integral en lugar de blanco.', 'Almuerzo', 'Vegana', 'Alto en proteína', 450.00, 28.00, 55.00),
+('Ensalada de Garbanzos', 'Opción muy fresca y ligera. Se puede añadir queso fresco para una opción vegetariana.', 'Almuerzo', 'Vegana', 'Bajo en grasa', 300.00, 15.00, 45.00),
+('Enchiladas de Pollo (Maíz)', 'Plato mexicano adaptable. Las tortillas de maíz son libres de gluten.', 'Almuerzo', 'Omnívora', 'Libre de gluten', 480.00, 38.00, 40.00),
+('Ternera y Batata Asada', 'Comida ideal para aumento de masa muscular. Se debe controlar la porción de ternera por su grasa.', 'Almuerzo', 'Omnívora', 'Alto en proteína', 550.00, 45.00, 30.00),
+
+
+-- 3. CENAS
+('Sopa de Lentejas', 'Cena tradicional reconfortante. Naturalmente vegana y vegetariana.', 'Cena', 'Vegana', 'Bajo en grasa', 250.00, 15.00, 40.00), -- 11
+('Yogur Griego con Berries', 'Cena o snack nocturno ligero. Es rico en proteína y bajo en carbohidratos si se usa yogur sin azúcar.', 'Cena', 'Vegetariana', 'Bajo en carbohidratos', 220.00, 20.00, 15.00),
+('Pollo al Horno y Ensalada', 'Cena muy limpia y baja en grasa. Ideal para metas de pérdida de peso.', 'Cena', 'Omnívora', 'Bajo en carbohidratos', 320.00, 40.00, 8.00),
+('Bacalao y Pimientos Asados', 'Pescado blanco magro. Alto en proteína y muy bajo en carbohidratos y grasas.', 'Cena', 'Omnívora', 'Bajo en grasa', 300.00, 35.00, 10.00), 
+('Curry de Tempeh y Coco', 'Cena vegana con proteínas vegetales. La leche de coco aporta grasa, pero es una alternativa sin lactosa.', 'Cena', 'Vegana', 'Intolerante a la lactosa', 400.00, 25.00, 25.00),
+
+
+-- 4. SNACKS (RecetaID 16 - 20)
+('Edamame al Vapor', 'Snack de legumbre simple, muy alto en proteína.', 'Snack', 'Vegana', 'Alto en proteína', 180.00, 17.00, 14.00), -- 16
+('Requesón con Manzana', 'Snack vegetariano de lácteo. Aporta caseína para liberación lenta de proteína.', 'Snack', 'Vegetariana', 'Bajo en grasa', 150.00, 12.00, 15.00),
+('Batido de Proteína (Rápido)', 'Snack de emergencia post-entrenamiento.', 'Snack', 'Omnívora', 'Alto en proteína', 120.00, 25.00, 3.00),
+('Hummus y Zanahoria', 'Snack vegetal fresco. El hummus es una buena fuente de carbohidratos y grasa saludable.', 'Snack', 'Vegana', 'Libre de gluten', 210.00, 8.00, 25.00),
+('Pavo y Queso Cottage', 'Snack muy bajo en carbohidratos y alto en proteína.', 'Snack', 'Omnívora', 'Bajo en carbohidratos', 140.00, 22.00, 4.00);
 
 -------------------------------------
 --Insertar en tabla Ingrediente-Receta
--- Receta: Revuelto de Claras con Espinacas y Pavo
+-- Receta 1: Revuelto de Claras y Pavo
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(1, 40, '5 claras'), -- Alimento: Claras de huevo
-(1, 30, '50g'), -- Alimento: Jamón de pavo
-(1, 21, '50g'), -- Alimento: Espinacas
+(1, 40, '5 claras'), -- Claras de huevo
+(1, 30, '50 gramos'), -- Jamón de pavo
+(1, 21, '50 gramos'); -- Espinacas
 
--- Receta: Avena de Quinoa de Noche
-(2, 1, '1/3 taza'), -- Alimento: Quinoa cocida
-(2, 53, '1/2 taza'), -- Alimento: Leche de almendras
-(2, 56, '1 cda.'), -- Alimento: Semillas de chía
-(2, 9, '1/2 taza'), -- Alimento: Frutos rojos
+-- Receta 2: Pudín de Chía y Berries
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(2, 56, '2 cdas'), -- Semillas de chía
+(2, 53, '200 ml'), -- Leche de almendras
+(2, 9, '80 gramos'); -- Frutos rojos
 
--- Receta: Pudín de Chía y Proteína
-(3, 56, '2 cdas.'), -- Alimento: Semillas de chía
-(3, 62, '1 scoop'), -- Alimento: Proteína en polvo
-(3, 53, '3/4 taza'), -- Alimento: Leche de almendras
-(3, 8, '1/2 plátano'), -- Alimento: Plátano
+-- Receta 3: Tostada con Aguacate y Huevo
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(3, 4, '1 rebanada'), -- Pan integral
+(3, 11, '1/2 unidad'), -- Aguacate
+(3, 39, '1 unidad'); -- Huevo entero
 
--- Receta: Tortitas de Plátano y Huevo
-(4, 8, '1 unidad'), -- Alimento: Plátano
-(4, 39, '2 unidades'), -- Alimento: Huevo entero
+-- Receta 4: Batido Proteico (Verde)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(4, 62, '1 scoop'), -- Proteína en polvo
+(4, 8, '1/2 unidad'), -- Plátano
+(4, 21, '50 gramos'); -- Espinacas
 
--- Receta: Salmón a la Plancha con Brócoli
-(5, 33, '100g'), -- Alimento: Salmón
-(5, 22, '150g'), -- Alimento: Brócoli
+-- Receta 5: Avena con Plátano y Leche
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(5, 3, '1/2 taza'), -- Avena en hojuelas
+(5, 42, '150 ml'), -- Leche de vaca
+(5, 8, '1 unidad'); -- Plátano
 
--- Receta: Pechuga de Pollo al Horno con Batata
-(6, 28, '120g'), -- Alimento: Pechuga de pollo
-(6, 23, '1 unidad'), -- Alimento: Batata (camote)
+-- Receta 6: Salmón, Brócoli y Quinoa
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(6, 33, '120 gramos'), -- Salmón
+(6, 22, '100 gramos'), -- Brócoli
+(6, 1, '1/2 taza'); -- Quinoa cocida
 
--- Receta: Tofu Revuelto con Verduras
-(7, 45, '150g'), -- Alimento: Tofu firme
-(7, 24, '100g'), -- Alimento: Pimientos
+-- Receta 7: Tofu, Arroz y Lentejas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(7, 45, '100 gramos'), -- Tofu firme
+(7, 2, '1/2 taza'), -- Arroz integral
+(7, 48, '1/4 taza'); -- Lentejas rojas
 
--- Receta: Ensalada de Atún y Garbanzos
-(8, 34, '1 lata'), -- Alimento: Atún en agua
-(8, 15, '1/2 taza'), -- Alimento: Garbanzos cocidos
-(8, 25, '1 taza'), -- Alimento: Lechuga
-(8, 26, '1/2 unidad'), -- Alimento: Tomate
+-- Receta 8: Ensalada de Garbanzos
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(8, 15, '1 taza'), -- Garbanzos cocidos
+(8, 25, '2 tazas'), -- Lechuga
+(8, 26, '1/2 unidad'); -- Tomate
 
--- Receta: Lentejas Estofadas con Verduras
-(9, 16, '1/2 taza'), -- Alimento: Lentejas cocidas
-(9, 27, '1/4 taza'), -- Alimento: Zanahoria
-(9, 26, '1/4 taza'), -- Alimento: Tomate
+-- Receta 9: Enchiladas de Pollo (Maíz)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(9, 32, '100 gramos'), -- Pollo deshebrado
+(9, 5, '3 unidades'), -- Tortilla de maíz
+(9, 29, '50 gramos'); -- Carne molida magra (para salsa o relleno)
 
--- Receta: Enchiladas de Pollo con Tortillas de Maíz
-(10, 32, '100g'), -- Alimento: Pollo deshebrado
-(10, 5, '2 unidades'), -- Alimento: Tortilla de maíz
-(10, 26, '1/2 taza'), -- Alimento: Tomate
+-- Receta 10: Ternera y Batata Asada
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(10, 31, '150 gramos'), -- Filete de ternera
+(10, 23, '1 unidad'); -- Batata (camote)
 
--- Receta: Calabacín Relleno de Carne Molida
-(11, 24, '1 unidad'), -- Alimento: Pimientos
-(11, 29, '100g'), -- Alimento: Carne molida magra
+-- Receta 11: Sopa de Lentejas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(11, 16, '1 taza'), -- Lentejas cocidas
+(11, 27, '1/2 unidad'), -- Zanahoria
+(11, 26, '1/2 unidad'); -- Tomate
 
--- Receta: Huevos Duros (2 Unidades)
-(12, 39, '2 unidades'), -- Alimento: Huevo entero
+-- Receta 12: Yogur Griego con Berries
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(12, 41, '150 gramos'), -- Yogur griego
+(12, 9, '50 gramos'); -- Frutos rojos
 
--- Receta: Batido de Proteína y Plátano
-(13, 62, '1 scoop'), -- Alimento: Proteína en polvo
-(13, 8, '1/2 unidad'), -- Alimento: Plátano
+-- Receta 13: Pollo al Horno y Ensalada
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(13, 28, '150 gramos'), -- Pechuga de pollo
+(13, 25, '1 taza'), -- Lechuga
+(13, 26, '1/2 unidad'); -- Tomate
 
--- Receta: Edamame al Vapor
-(14, 17, '1 taza'), -- Alimento: Edamame
+-- Receta 14: Bacalao y Pimientos Asados
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(14, 36, '120 gramos'), -- Bacalao
+(14, 24, '1 unidad'); -- Pimientos
 
--- Receta: Jamón de Pavo con Palitos de Zanahoria
-(15, 30, '4 lonchas'), -- Alimento: Jamón de pavo
-(15, 27, '1/2 unidad'); -- Alimento: Zanahoria
+-- Receta 15: Curry de Tempeh y Coco
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(15, 47, '100 gramos'), -- Tempeh
+(15, 51, '100 ml'); -- Leche de coco
+
+-- Receta 16: Edamame al Vapor
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(16, 17, '1 taza'); -- Edamame
+
+-- Receta 17: Requesón con Manzana
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(17, 44, '100 gramos'), -- Requesón
+(17, 10, '1/2 unidad'); -- Manzana
+
+-- Receta 18: Batido de Proteína (Rápido)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(18, 62, '1 scoop'); -- Proteína en polvo
+
+-- Receta 19: Hummus y Zanahoria
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(19, 20, '50 gramos'), -- Hummus
+(19, 27, '1 unidad'); -- Zanahoria
+
+-- Receta 20: Pavo y Queso Cottage
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(20, 30, '4 lonchas'), -- Jamón de pavo
+(20, 43, '50 gramos'); -- Queso cottage
 
 --------------------------------------
 --Insercion en la tabla Alergias--
