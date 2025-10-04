@@ -41,14 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.btn1 = new System.Windows.Forms.RadioButton();
+            this.btn2 = new System.Windows.Forms.RadioButton();
+            this.btn3 = new System.Windows.Forms.RadioButton();
+            this.btn4 = new System.Windows.Forms.RadioButton();
+            this.btn5 = new System.Windows.Forms.RadioButton();
             this.grpPuntuacion = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnIngreso = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.txtDestacado = new System.Windows.Forms.TextBox();
             this.txtMejoras = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -200,79 +200,79 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(340, 354);
+            this.label4.Location = new System.Drawing.Point(340, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(453, 24);
             this.label4.TabIndex = 38;
             this.label4.Text = "¿Qué es lo que más destacarias de fitmeal?";
             // 
-            // radioButton1
+            // btn1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 28);
-            this.radioButton1.TabIndex = 39;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.btn1.AutoSize = true;
+            this.btn1.Location = new System.Drawing.Point(6, 29);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(44, 28);
+            this.btn1.TabIndex = 39;
+            this.btn1.TabStop = true;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // btn2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(73, 29);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(44, 28);
-            this.radioButton2.TabIndex = 40;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btn2.AutoSize = true;
+            this.btn2.Location = new System.Drawing.Point(73, 29);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(44, 28);
+            this.btn2.TabIndex = 40;
+            this.btn2.TabStop = true;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // btn3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(154, 29);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(44, 28);
-            this.radioButton3.TabIndex = 41;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.btn3.AutoSize = true;
+            this.btn3.Location = new System.Drawing.Point(154, 29);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(44, 28);
+            this.btn3.TabIndex = 41;
+            this.btn3.TabStop = true;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // btn4
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(231, 29);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(44, 28);
-            this.radioButton4.TabIndex = 43;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.btn4.AutoSize = true;
+            this.btn4.Location = new System.Drawing.Point(231, 29);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(44, 28);
+            this.btn4.TabIndex = 43;
+            this.btn4.TabStop = true;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // btn5
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(303, 29);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(44, 28);
-            this.radioButton5.TabIndex = 44;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "5";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.btn5.AutoSize = true;
+            this.btn5.Location = new System.Drawing.Point(303, 29);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(44, 28);
+            this.btn5.TabIndex = 44;
+            this.btn5.TabStop = true;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
             // 
             // grpPuntuacion
             // 
-            this.grpPuntuacion.Controls.Add(this.radioButton1);
-            this.grpPuntuacion.Controls.Add(this.radioButton5);
-            this.grpPuntuacion.Controls.Add(this.radioButton2);
-            this.grpPuntuacion.Controls.Add(this.radioButton4);
-            this.grpPuntuacion.Controls.Add(this.radioButton3);
+            this.grpPuntuacion.Controls.Add(this.btn1);
+            this.grpPuntuacion.Controls.Add(this.btn5);
+            this.grpPuntuacion.Controls.Add(this.btn2);
+            this.grpPuntuacion.Controls.Add(this.btn4);
+            this.grpPuntuacion.Controls.Add(this.btn3);
             this.grpPuntuacion.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
             this.grpPuntuacion.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.grpPuntuacion.Location = new System.Drawing.Point(338, 252);
+            this.grpPuntuacion.Location = new System.Drawing.Point(338, 179);
             this.grpPuntuacion.Name = "grpPuntuacion";
-            this.grpPuntuacion.Size = new System.Drawing.Size(364, 75);
+            this.grpPuntuacion.Size = new System.Drawing.Size(508, 75);
             this.grpPuntuacion.TabIndex = 45;
             this.grpPuntuacion.TabStop = false;
             this.grpPuntuacion.Text = "Puntua tu experiencia con FitMeal:";
@@ -282,36 +282,41 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(340, 442);
+            this.label5.Location = new System.Drawing.Point(340, 426);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(356, 24);
             this.label5.TabIndex = 46;
             this.label5.Text = "¿Qué crees que podemos mejorar?";
             // 
-            // btnIngreso
+            // btnEnviar
             // 
-            this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnIngreso.Location = new System.Drawing.Point(852, 562);
-            this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(176, 42);
-            this.btnIngreso.TabIndex = 47;
-            this.btnIngreso.Text = "Enviar";
-            this.btnIngreso.UseVisualStyleBackColor = false;
+            this.btnEnviar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnEnviar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEnviar.Location = new System.Drawing.Point(852, 562);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(176, 42);
+            this.btnEnviar.TabIndex = 47;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click_1);
             // 
             // txtDestacado
             // 
-            this.txtDestacado.Location = new System.Drawing.Point(344, 398);
+            this.txtDestacado.Location = new System.Drawing.Point(344, 325);
+            this.txtDestacado.MaxLength = 350;
+            this.txtDestacado.Multiline = true;
             this.txtDestacado.Name = "txtDestacado";
-            this.txtDestacado.Size = new System.Drawing.Size(464, 22);
+            this.txtDestacado.Size = new System.Drawing.Size(464, 85);
             this.txtDestacado.TabIndex = 48;
             // 
             // txtMejoras
             // 
-            this.txtMejoras.Location = new System.Drawing.Point(344, 496);
+            this.txtMejoras.Location = new System.Drawing.Point(344, 462);
+            this.txtMejoras.MaxLength = 350;
+            this.txtMejoras.Multiline = true;
             this.txtMejoras.Name = "txtMejoras";
-            this.txtMejoras.Size = new System.Drawing.Size(464, 22);
+            this.txtMejoras.Size = new System.Drawing.Size(464, 73);
             this.txtMejoras.TabIndex = 49;
             // 
             // FrmFeedback
@@ -322,7 +327,7 @@
             this.ClientSize = new System.Drawing.Size(1091, 633);
             this.Controls.Add(this.txtMejoras);
             this.Controls.Add(this.txtDestacado);
-            this.Controls.Add(this.btnIngreso);
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.grpPuntuacion);
             this.Controls.Add(this.label4);
@@ -356,14 +361,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton btn1;
+        private System.Windows.Forms.RadioButton btn2;
+        private System.Windows.Forms.RadioButton btn3;
+        private System.Windows.Forms.RadioButton btn4;
+        private System.Windows.Forms.RadioButton btn5;
         private System.Windows.Forms.GroupBox grpPuntuacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnIngreso;
+        private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtDestacado;
         private System.Windows.Forms.TextBox txtMejoras;
     }

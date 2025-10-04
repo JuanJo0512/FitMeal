@@ -69,7 +69,7 @@ namespace FitMeal.Vista
                     UsuarioActivoCedula = cedula;
                     UsuarioActivoNombre = resultado.ToString();
 
-                    MessageBox.Show($"Biemvenido {UsuarioActivoNombre}");
+                    MessageBox.Show($"Bienvenido {UsuarioActivoNombre}");
 
                     AbrirForm(new frmVerPreferencias(), this);
                 }

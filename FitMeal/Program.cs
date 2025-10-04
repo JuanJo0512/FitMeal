@@ -17,7 +17,7 @@ namespace FitMeal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLoggin());
+            Application.Run(new FrmFeedback());
         }
     }
 }
