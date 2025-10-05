@@ -127,102 +127,102 @@ INSERT INTO RECETA (Nombre, Descripcion, Categoria, TipoDieta, TipoDieta2, Total
 --Insertar en tabla Ingrediente-Receta
 -- Receta 1: Revuelto de Claras y Pavo
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(1, 39, '5 claras'), -- CLARAS DE HUEVO (ID 39, ¡Corregido!)
-(1, 30, '50 gramos'), -- Jamón de pavo (ID 30)
-(1, 21, '50 gramos'); -- Espinacas (ID 21)
+(1, 40, '5 claras'), -- Claras de huevo
+(1, 30, '50 gramos'), -- Jamón de pavo
+(1, 21, '50 gramos'); -- Espinacas
 
 -- Receta 2: Pudín de Chía y Berries
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(2, 56, '2 cdas'), -- Semillas de chía (ID 56)
-(2, 53, '200 ml'), -- Leche de almendras (ID 53)
-(2, 9, '80 gramos'); -- Frutos rojos (ID 9)
+(2, 56, '2 cdas'), -- Semillas de chía
+(2, 53, '200 ml'), -- Leche de almendras
+(2, 9, '80 gramos'); -- Frutos rojos
 
 -- Receta 3: Tostada con Aguacate y Huevo
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(3, 4, '1 rebanada'), -- Pan integral (ID 4)
-(3, 11, '1/2 unidad'), -- Aguacate (ID 11)
-(3, 38, '1 unidad'); -- HUEVO ENTERO (ID 38, ajustado)
+(3, 4, '1 rebanada'), -- Pan integral
+(3, 11, '1/2 unidad'), -- Aguacate
+(3, 39, '1 unidad'); -- Huevo entero
 
 -- Receta 4: Batido Proteico (Verde)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(4, 62, '1 scoop'), -- Proteína en polvo (ID 62)
-(4, 8, '1/2 unidad'), -- Plátano (ID 8)
-(4, 21, '50 gramos'); -- Espinacas (ID 21)
+(4, 62, '1 scoop'), -- Proteína en polvo
+(4, 8, '1/2 unidad'), -- Plátano
+(4, 21, '50 gramos'); -- Espinacas
 
 -- Receta 5: Avena con Plátano y Leche
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(5, 3, '1/2 taza'), -- Avena en hojuelas (ID 3)
-(5, 41, '150 ml'), -- Leche de vaca (ID 41, ajustado)
-(5, 8, '1 unidad'); -- Plátano (ID 8)
+(5, 3, '1/2 taza'), -- Avena en hojuelas
+(5, 42, '150 ml'), -- Leche de vaca
+(5, 8, '1 unidad'); -- Plátano
 
 -- Receta 6: Salmón, Brócoli y Quinoa
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(6, 33, '120 gramos'), -- Salmón (ID 33)
-(6, 22, '100 gramos'), -- Brócoli (ID 22)
-(6, 1, '1/2 taza'); -- Quinoa cocida (ID 1)
+(6, 33, '120 gramos'), -- Salmón
+(6, 22, '100 gramos'), -- Brócoli
+(6, 1, '1/2 taza'); -- Quinoa cocida
 
 -- Receta 7: Tofu, Arroz y Lentejas
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(7, 45, '100 gramos'), -- Tofu firme (ID 45)
-(7, 2, '1/2 taza'), -- Arroz integral (ID 2)
-(7, 48, '1/4 taza'); -- Lentejas rojas (ID 48)
+(7, 45, '100 gramos'), -- Tofu firme
+(7, 2, '1/2 taza'), -- Arroz integral
+(7, 48, '1/4 taza'); -- Lentejas rojas
 
 -- Receta 8: Ensalada de Garbanzos
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(8, 15, '1 taza'), -- Garbanzos cocidos (ID 15)
-(8, 25, '2 tazas'), -- Lechuga (ID 25)
-(8, 26, '1/2 unidad'); -- Tomate (ID 26)
+(8, 15, '1 taza'), -- Garbanzos cocidos
+(8, 25, '2 tazas'), -- Lechuga
+(8, 26, '1/2 unidad'); -- Tomate
 
 -- Receta 9: Enchiladas de Pollo (Maíz)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(9, 32, '100 gramos'), -- Pollo deshebrado (ID 32)
-(9, 5, '3 unidades'), -- Tortilla de maíz (ID 5)
-(9, 29, '50 gramos'); -- Carne molida magra (ID 29)
+(9, 32, '100 gramos'), -- Pollo deshebrado
+(9, 5, '3 unidades'), -- Tortilla de maíz
+(9, 29, '50 gramos'); -- Carne molida magra (para salsa o relleno)
 
 -- Receta 10: Ternera y Batata Asada
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(10, 31, '150 gramos'), -- Filete de ternera (ID 31)
-(10, 23, '1 unidad'); -- Batata (camote) (ID 23)
+(10, 31, '150 gramos'), -- Filete de ternera
+(10, 23, '1 unidad'); -- Batata (camote)
 
 -- Receta 11: Sopa de Lentejas
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(11, 16, '1 taza'), -- Lentejas cocidas (ID 16)
-(11, 27, '1/2 unidad'), -- Zanahoria (ID 27)
-(11, 26, '1/2 unidad'); -- Tomate (ID 26)
+(11, 16, '1 taza'), -- Lentejas cocidas
+(11, 27, '1/2 unidad'), -- Zanahoria
+(11, 26, '1/2 unidad'); -- Tomate
 
 -- Receta 12: Yogur Griego con Berries
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(12, 40, '150 gramos'), -- YOGUR GRIEGO (ID 40, ajustado)
-(12, 9, '50 gramos'); -- Frutos rojos (ID 9)
+(12, 41, '150 gramos'), -- Yogur griego
+(12, 9, '50 gramos'); -- Frutos rojos
 
 -- Receta 13: Pollo al Horno y Ensalada
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(13, 28, '150 gramos'), -- Pechuga de pollo (ID 28)
-(13, 25, '1 taza'), -- Lechuga (ID 25)
-(13, 26, '1/2 unidad'); -- Tomate (ID 26)
+(13, 28, '150 gramos'), -- Pechuga de pollo
+(13, 25, '1 taza'), -- Lechuga
+(13, 26, '1/2 unidad'); -- Tomate
 
 -- Receta 14: Bacalao y Pimientos Asados
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(14, 36, '120 gramos'), -- Bacalao (ID 36)
-(14, 24, '1 unidad'); -- Pimientos (ID 24)
+(14, 36, '120 gramos'), -- Bacalao
+(14, 24, '1 unidad'); -- Pimientos
 
 -- Receta 15: Curry de Tempeh y Coco
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(15, 47, '100 gramos'), -- Tempeh (ID 47)
-(15, 51, '100 ml'); -- Leche de coco (ID 51)
+(15, 47, '100 gramos'), -- Tempeh
+(15, 51, '100 ml'); -- Leche de coco
 
 -- Receta 16: Edamame al Vapor
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(16, 17, '1 taza'); -- Edamame (ID 17)
+(16, 17, '1 taza'); -- Edamame
 
 -- Receta 17: Requesón con Manzana
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(17, 43, '100 gramos'), -- REQUESÓN (ID 43, ajustado)
-(17, 10, '1/2 unidad'); -- Manzana (ID 10)
+(17, 44, '100 gramos'), -- Requesón
+(17, 10, '1/2 unidad'); -- Manzana
 
 -- Receta 18: Batido de Proteína (Rápido)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(18, 62, '1 scoop'); -- Proteína en polvo (ID 62)
+(18, 62, '1 scoop'); -- Proteína en polvo
 
 -- Receta 19: Hummus y Zanahoria
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
@@ -232,7 +232,7 @@ INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
 -- Receta 20: Pavo y Queso Cottage
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
 (20, 30, '4 lonchas'), -- Jamón de pavo
-(20, 42, '50 gramos'); -- QUESO COTTAGE
+(20, 43, '50 gramos'); -- Queso cottage
 
 --------------------------------------
 --Insercion en la tabla Alergias--

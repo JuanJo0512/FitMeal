@@ -133,9 +133,6 @@ namespace FitMeal.Vista
             string textoMejorar = txtMejoras.Text.Trim();
             string cedula = FrmLoggin.UsuarioActivoCedula;
 
-            // Valos a ver si me lo guardo
-            MessageBox.Show($"Puntuación seleccionada: {puntuacion}");
-
             if (puntuacion > 0 && !string.IsNullOrEmpty(textoDestacar) && !string.IsNullOrEmpty(textoMejorar))
             {
                 try

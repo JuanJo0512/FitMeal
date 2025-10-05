@@ -149,20 +149,7 @@
             this.txtTotalProteinas.Name = "txtTotalProteinas";
             this.txtTotalProteinas.Size = new System.Drawing.Size(231, 22);
             this.txtTotalProteinas.TabIndex = 63;
-            // 
-            // txtTipo2
-            // 
-            this.txtTipo2.Location = new System.Drawing.Point(740, 212);
-            this.txtTipo2.Name = "txtTipo2";
-            this.txtTipo2.Size = new System.Drawing.Size(231, 22);
-            this.txtTipo2.TabIndex = 62;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(110, 212);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(231, 22);
-            this.txtTipo.TabIndex = 61;
+          
             // 
             // txtTotalCalorias
             // 
