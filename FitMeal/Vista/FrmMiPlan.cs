@@ -99,7 +99,6 @@ namespace FitMeal.Vista
                     }
                     else
                     {
-                        // Si ya venció el plan, marcarlo como Finalizado
                         dr.Close();
                         cn.CerrarConexion();
 
@@ -136,19 +135,32 @@ namespace FitMeal.Vista
         {
             dtgMiPlan.Rows.Clear();
 
-            string llenar = @"select c.TipoComida, r.Nombre, r.TotalCalorias,r.TotalProteinas, r.TotalCarbohidratos
+            string llenar = @"select c.Fecha, c.TipoComida, r.Nombre, r.TotalCalorias,r.TotalProteinas, r.TotalCarbohidratos
               from COMIDA_PLANIFICADA c
               inner join RECETA r on  c.RecetaID = r.RecetaID
               where c.PlanID = @PlanID
-              order by c.TipoComida";
+              order by c.Fecha, c.TipoComida";
 
             SqlCommand cmd = new SqlCommand(llenar, cn.AbrirConexion());
             cmd.Parameters.AddWithValue("@PlanID", PlanID);
             SqlDataReader dr = cmd.ExecuteReader();
 
+            DateTime fechaInicio = DateTime.MinValue;
+
             while (dr.Read())
             {
+
+                DateTime fecha = Convert.ToDateTime(dr["Fecha"]);
+
+
+                if (fechaInicio == DateTime.MinValue)
+                    fechaInicio = fecha;
+
+                int numeroDia = (int)(fecha - fechaInicio).TotalDays + 1;
+                string diaTexto = "Día " + numeroDia;
+
                 dtgMiPlan.Rows.Add(
+                    diaTexto,
                     dr["TipoComida"].ToString(),
                     dr["Nombre"].ToString(),
                     dr["TotalCalorias"].ToString(),
@@ -161,33 +173,45 @@ namespace FitMeal.Vista
             cn.CerrarConexion();
         }
 
+
         private void Filtrar(DataGridView dtg, String Filtro)
         {
             Filtro = Filtro.ToLower();
 
+            if (string.IsNullOrEmpty(Filtro) || Filtro == "todos")
+            {
+                foreach (DataGridViewRow row in dtg.Rows)
+                {
+                    if (!row.IsNewRow)
+                        row.Visible = true;
+                }
+                return;
+            }
+
+
             foreach (DataGridViewRow row in dtg.Rows)
             {
-                if (!row.IsNewRow)
-                {
-                    bool visible = false;
-
-                    foreach (DataGridViewCell cell in row.Cells)
+                    if (!row.IsNewRow)
                     {
-                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(Filtro))
+                        bool visible = false;
+
+                        foreach (DataGridViewCell cell in row.Cells)
                         {
-                            visible = true;
-                            break;
+                            if (cell.Value != null && cell.Value.ToString().ToLower().Contains(Filtro))
+                            {
+                                visible = true;
+                                break;
+                            }
                         }
+                        row.Visible = visible;
                     }
-                    row.Visible = visible;
-                }
             }
         }
+        
 
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbCategoria.SelectedItem.ToString() != "Todos")
-                Filtrar(dtgMiPlan, cmbCategoria.SelectedItem.ToString());   
+            Filtrar(dtgMiPlan, cmbCategoria.Text);
         }
 
         private void btnGenerarPlan_Click(object sender, EventArgs e)
