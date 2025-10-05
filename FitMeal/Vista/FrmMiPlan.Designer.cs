@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiPlan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnIrFeedback = new System.Windows.Forms.Button();
@@ -41,18 +41,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totCal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totCarb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totProt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.dtgMiPlan = new System.Windows.Forms.DataGridView();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipodeComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreReceta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proteínas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carbohidratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerarPlan = new System.Windows.Forms.Button();
+            this.btnAprobarPlan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMiPlan)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +76,7 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
             this.btnPerfil.Name = "btnPerfil";
@@ -194,19 +196,20 @@
             this.lblNombre.TabIndex = 31;
             this.lblNombre.Text = "Nombre aqui";
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
             "Todos",
             "Desayuno",
-            "Almuerzo ",
+            "Almuerzo",
             "Cena",
             "Snack"});
-            this.comboBox1.Location = new System.Drawing.Point(615, 166);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(307, 24);
-            this.comboBox1.TabIndex = 34;
+            this.cmbCategoria.Location = new System.Drawing.Point(615, 166);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(307, 24);
+            this.cmbCategoria.TabIndex = 34;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -219,8 +222,9 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Elige el momento del dia";
             // 
-            // dataGridView1
+            // dtgMiPlan
             // 
+<<<<<<< HEAD
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -244,64 +248,135 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(631, 354);
             this.dataGridView1.TabIndex = 36;
+=======
+            this.dtgMiPlan.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dtgMiPlan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgMiPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgMiPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMiPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dia,
+            this.TipodeComida,
+            this.NombreReceta,
+            this.Calorias,
+            this.Proteínas,
+            this.Carbohidratos});
+            this.dtgMiPlan.Location = new System.Drawing.Point(346, 196);
+            this.dtgMiPlan.Name = "dtgMiPlan";
+            this.dtgMiPlan.RowHeadersWidth = 51;
+            this.dtgMiPlan.RowTemplate.Height = 24;
+            this.dtgMiPlan.Size = new System.Drawing.Size(716, 354);
+            this.dtgMiPlan.TabIndex = 36;
+            this.dtgMiPlan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMiPlan_CellDoubleClick);
+>>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
             // 
-            // comida
+            // Dia
             // 
+<<<<<<< HEAD
             this.comida.HeaderText = "Comida";
             this.comida.MinimumWidth = 6;
             this.comida.Name = "comida";
             this.comida.ReadOnly = true;
             this.comida.Width = 185;
+=======
+            this.Dia.HeaderText = "Dia";
+            this.Dia.MinimumWidth = 6;
+            this.Dia.Name = "Dia";
+            this.Dia.Width = 125;
+>>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
             // 
-            // totCal
+            // TipodeComida
             // 
+<<<<<<< HEAD
             this.totCal.HeaderText = "Calorias";
             this.totCal.MinimumWidth = 6;
             this.totCal.Name = "totCal";
             this.totCal.ReadOnly = true;
             this.totCal.Width = 125;
+=======
+            this.TipodeComida.HeaderText = "Tipo de Comida";
+            this.TipodeComida.MinimumWidth = 6;
+            this.TipodeComida.Name = "TipodeComida";
+            this.TipodeComida.Width = 125;
+>>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
             // 
-            // totCarb
+            // NombreReceta
             // 
+<<<<<<< HEAD
             this.totCarb.HeaderText = "Carbohidratos";
             this.totCarb.MinimumWidth = 6;
             this.totCarb.Name = "totCarb";
             this.totCarb.ReadOnly = true;
             this.totCarb.Width = 125;
+=======
+            this.NombreReceta.HeaderText = "Nombre de Receta";
+            this.NombreReceta.MinimumWidth = 6;
+            this.NombreReceta.Name = "NombreReceta";
+            this.NombreReceta.Width = 125;
+>>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
             // 
-            // totProt
+            // Calorias
             // 
+<<<<<<< HEAD
             this.totProt.HeaderText = "Proteinas";
             this.totProt.MinimumWidth = 6;
             this.totProt.Name = "totProt";
             this.totProt.ReadOnly = true;
             this.totProt.Width = 125;
+=======
+            this.Calorias.HeaderText = "Calorias";
+            this.Calorias.MinimumWidth = 6;
+            this.Calorias.Name = "Calorias";
+            this.Calorias.Width = 125;
+>>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
             // 
-            // btnguardar
+            // Proteínas
             // 
-            this.btnguardar.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnguardar.Location = new System.Drawing.Point(346, 564);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(152, 58);
-            this.btnguardar.TabIndex = 54;
-            this.btnguardar.Text = "Generar Plan";
-            this.btnguardar.UseVisualStyleBackColor = false;
+            this.Proteínas.HeaderText = "Proteínas";
+            this.Proteínas.MinimumWidth = 6;
+            this.Proteínas.Name = "Proteínas";
+            this.Proteínas.Width = 125;
             // 
-            // button7
+            // Carbohidratos
             // 
-            this.button7.BackColor = System.Drawing.Color.OliveDrab;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button7.Location = new System.Drawing.Point(825, 560);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(152, 58);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "Aprovar Plan";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Carbohidratos.HeaderText = "Carbohidratos";
+            this.Carbohidratos.MinimumWidth = 6;
+            this.Carbohidratos.Name = "Carbohidratos";
+            this.Carbohidratos.Width = 125;
+            // 
+            // btnGenerarPlan
+            // 
+            this.btnGenerarPlan.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnGenerarPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnGenerarPlan.Location = new System.Drawing.Point(346, 564);
+            this.btnGenerarPlan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGenerarPlan.Name = "btnGenerarPlan";
+            this.btnGenerarPlan.Size = new System.Drawing.Size(152, 58);
+            this.btnGenerarPlan.TabIndex = 54;
+            this.btnGenerarPlan.Text = "Generar Plan";
+            this.btnGenerarPlan.UseVisualStyleBackColor = false;
+            this.btnGenerarPlan.Click += new System.EventHandler(this.btnGenerarPlan_Click);
+            // 
+            // btnAprobarPlan
+            // 
+            this.btnAprobarPlan.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnAprobarPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAprobarPlan.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnAprobarPlan.Location = new System.Drawing.Point(825, 560);
+            this.btnAprobarPlan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAprobarPlan.Name = "btnAprobarPlan";
+            this.btnAprobarPlan.Size = new System.Drawing.Size(152, 58);
+            this.btnAprobarPlan.TabIndex = 55;
+            this.btnAprobarPlan.Text = "Aprovar Plan";
+            this.btnAprobarPlan.UseVisualStyleBackColor = false;
+            this.btnAprobarPlan.Click += new System.EventHandler(this.btnAprobarPlan_Click);
             // 
             // FrmMiPlan
             // 
@@ -309,11 +384,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1085, 633);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAprobarPlan);
+            this.Controls.Add(this.btnGenerarPlan);
+            this.Controls.Add(this.dtgMiPlan);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNombre);
@@ -323,7 +398,7 @@
             this.Load += new System.EventHandler(this.FrmMiPlan_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMiPlan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,14 +417,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn comida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totCal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totCarb;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totProt;
-        private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView dtgMiPlan;
+        private System.Windows.Forms.Button btnGenerarPlan;
+        private System.Windows.Forms.Button btnAprobarPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipodeComida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreReceta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calorias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Proteínas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Carbohidratos;
     }
 }

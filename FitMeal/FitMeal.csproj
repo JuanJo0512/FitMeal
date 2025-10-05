@@ -63,6 +63,12 @@
     <Compile Include="Vista\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmDetallesReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmDetallesReceta.Designer.cs">
+      <DependentUpon>FrmDetallesReceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmGestionAlimentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmDetallesReceta.resx">
+      <DependentUpon>FrmDetallesReceta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmGestionAlimentos.resx">
       <DependentUpon>frmGestionAlimentos.cs</DependentUpon>
