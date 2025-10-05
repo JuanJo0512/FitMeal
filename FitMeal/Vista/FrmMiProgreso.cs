@@ -39,7 +39,7 @@ namespace FitMeal.Vista
 
         private void CargarGraficoTiempo()
         {
-            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal;Integrated Security=True;Encrypt=False";
+            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
 
 
             // Consulta del SQL para que solo aparezcan los ultimos 7 dias en el grafico

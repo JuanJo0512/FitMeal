@@ -291,11 +291,11 @@
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnEnviar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Miskan", 10F);
             this.btnEnviar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEnviar.Location = new System.Drawing.Point(852, 562);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(176, 42);
+            this.btnEnviar.Size = new System.Drawing.Size(158, 42);
             this.btnEnviar.TabIndex = 47;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;

@@ -123,27 +123,6 @@
             this.excluirAlimento.Name = "excluirAlimento";
             this.excluirAlimento.Width = 125;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(47, 210);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Buscar: ";
-            // 
-            // txtBuscarAlimento
-            // 
-            this.txtBuscarAlimento.Location = new System.Drawing.Point(156, 210);
-            this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtBuscarAlimento.Name = "txtBuscarAlimento";
-            this.txtBuscarAlimento.Size = new System.Drawing.Size(463, 22);
-            this.txtBuscarAlimento.TabIndex = 48;
-            this.txtBuscarAlimento.TextChanged += new System.EventHandler(this.txtBuscarAlimento_TextChanged);
-            // 
             // txtBuscarAlergia
             // 
             this.txtBuscarAlergia.Location = new System.Drawing.Point(156, 623);
@@ -247,7 +226,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(16, 151);
+            this.label2.Location = new System.Drawing.Point(31, 204);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 22);
@@ -257,7 +236,7 @@
             // 
             // txtBuscarAlimento
             // 
-            this.txtBuscarAlimento.Location = new System.Drawing.Point(125, 151);
+            this.txtBuscarAlimento.Location = new System.Drawing.Point(115, 206);
             this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBuscarAlimento.Name = "txtBuscarAlimento";
             this.txtBuscarAlimento.Size = new System.Drawing.Size(463, 22);

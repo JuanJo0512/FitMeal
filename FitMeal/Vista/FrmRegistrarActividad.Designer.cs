@@ -39,14 +39,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtCalorias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDuracion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.chbCardioAerobico = new System.Windows.Forms.CheckBox();
             this.chbFuerza = new System.Windows.Forms.CheckBox();
@@ -54,7 +53,9 @@
             this.chbDeportes = new System.Windows.Forms.CheckBox();
             this.chbActividadesAireLibre = new System.Windows.Forms.CheckBox();
             this.chbActividadDiaria = new System.Windows.Forms.CheckBox();
+            this.grpEjercicio = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
+            this.grpEjercicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -186,23 +187,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Por favor, completa los siguientes datos";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(341, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 30);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Tipo De Ejercicio:\r\n";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(629, 172);
+            this.label5.Location = new System.Drawing.Point(345, 386);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 30);
             this.label5.TabIndex = 12;
@@ -217,7 +207,7 @@
             // txtCalorias
             // 
             this.txtCalorias.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalorias.Location = new System.Drawing.Point(874, 172);
+            this.txtCalorias.Location = new System.Drawing.Point(610, 386);
             this.txtCalorias.Name = "txtCalorias";
             this.txtCalorias.Size = new System.Drawing.Size(141, 35);
             this.txtCalorias.TabIndex = 14;
@@ -236,7 +226,7 @@
             // txtDuracion
             // 
             this.txtDuracion.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuracion.Location = new System.Drawing.Point(727, 435);
+            this.txtDuracion.Location = new System.Drawing.Point(745, 435);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(141, 35);
             this.txtDuracion.TabIndex = 16;
@@ -246,24 +236,25 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label7.Location = new System.Drawing.Point(874, 435);
+            this.label7.Location = new System.Drawing.Point(896, 435);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 30);
             this.label7.TabIndex = 17;
             this.label7.Text = "h";
             // 
-            // button6
+            // btnGuardar
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button6.Location = new System.Drawing.Point(346, 526);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 46);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "GUARDAR";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnGuardar.Location = new System.Drawing.Point(346, 526);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(145, 46);
+            this.btnGuardar.TabIndex = 18;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label8
             // 
@@ -279,7 +270,7 @@
             // 
             this.chbCardioAerobico.AutoSize = true;
             this.chbCardioAerobico.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbCardioAerobico.Location = new System.Drawing.Point(354, 258);
+            this.chbCardioAerobico.Location = new System.Drawing.Point(18, 72);
             this.chbCardioAerobico.Name = "chbCardioAerobico";
             this.chbCardioAerobico.Size = new System.Drawing.Size(139, 24);
             this.chbCardioAerobico.TabIndex = 20;
@@ -290,7 +281,7 @@
             // 
             this.chbFuerza.AutoSize = true;
             this.chbFuerza.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.chbFuerza.Location = new System.Drawing.Point(354, 224);
+            this.chbFuerza.Location = new System.Drawing.Point(18, 42);
             this.chbFuerza.Name = "chbFuerza";
             this.chbFuerza.Size = new System.Drawing.Size(76, 24);
             this.chbFuerza.TabIndex = 21;
@@ -301,7 +292,7 @@
             // 
             this.chbFlexibilidad.AutoSize = true;
             this.chbFlexibilidad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.chbFlexibilidad.Location = new System.Drawing.Point(354, 348);
+            this.chbFlexibilidad.Location = new System.Drawing.Point(304, 42);
             this.chbFlexibilidad.Name = "chbFlexibilidad";
             this.chbFlexibilidad.Size = new System.Drawing.Size(188, 24);
             this.chbFlexibilidad.TabIndex = 22;
@@ -312,7 +303,7 @@
             // 
             this.chbDeportes.AutoSize = true;
             this.chbDeportes.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.chbDeportes.Location = new System.Drawing.Point(354, 378);
+            this.chbDeportes.Location = new System.Drawing.Point(304, 72);
             this.chbDeportes.Name = "chbDeportes";
             this.chbDeportes.Size = new System.Drawing.Size(236, 24);
             this.chbDeportes.TabIndex = 23;
@@ -323,7 +314,7 @@
             // 
             this.chbActividadesAireLibre.AutoSize = true;
             this.chbActividadesAireLibre.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.chbActividadesAireLibre.Location = new System.Drawing.Point(354, 288);
+            this.chbActividadesAireLibre.Location = new System.Drawing.Point(18, 102);
             this.chbActividadesAireLibre.Name = "chbActividadesAireLibre";
             this.chbActividadesAireLibre.Size = new System.Drawing.Size(189, 24);
             this.chbActividadesAireLibre.TabIndex = 24;
@@ -334,12 +325,29 @@
             // 
             this.chbActividadDiaria.AutoSize = true;
             this.chbActividadDiaria.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.chbActividadDiaria.Location = new System.Drawing.Point(354, 318);
+            this.chbActividadDiaria.Location = new System.Drawing.Point(18, 133);
             this.chbActividadDiaria.Name = "chbActividadDiaria";
             this.chbActividadDiaria.Size = new System.Drawing.Size(201, 24);
             this.chbActividadDiaria.TabIndex = 25;
             this.chbActividadDiaria.Text = "Actividad diaria ocacional";
             this.chbActividadDiaria.UseVisualStyleBackColor = true;
+            // 
+            // grpEjercicio
+            // 
+            this.grpEjercicio.Controls.Add(this.chbFuerza);
+            this.grpEjercicio.Controls.Add(this.chbCardioAerobico);
+            this.grpEjercicio.Controls.Add(this.chbDeportes);
+            this.grpEjercicio.Controls.Add(this.chbActividadDiaria);
+            this.grpEjercicio.Controls.Add(this.chbFlexibilidad);
+            this.grpEjercicio.Controls.Add(this.chbActividadesAireLibre);
+            this.grpEjercicio.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpEjercicio.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.grpEjercicio.Location = new System.Drawing.Point(346, 172);
+            this.grpEjercicio.Name = "grpEjercicio";
+            this.grpEjercicio.Size = new System.Drawing.Size(649, 177);
+            this.grpEjercicio.TabIndex = 26;
+            this.grpEjercicio.TabStop = false;
+            this.grpEjercicio.Text = "Tipo De Ejercicio:";
             // 
             // FrmRegistrarActividad
             // 
@@ -347,26 +355,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1097, 631);
-            this.Controls.Add(this.chbActividadDiaria);
-            this.Controls.Add(this.chbActividadesAireLibre);
-            this.Controls.Add(this.chbDeportes);
-            this.Controls.Add(this.chbFlexibilidad);
-            this.Controls.Add(this.chbFuerza);
-            this.Controls.Add(this.chbCardioAerobico);
+            this.Controls.Add(this.grpEjercicio);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDuracion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCalorias);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmRegistrarActividad";
             this.Text = "FrmRegistrarActividad";
             this.panel1.ResumeLayout(false);
+            this.grpEjercicio.ResumeLayout(false);
+            this.grpEjercicio.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,14 +387,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtCalorias;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDuracion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox chbCardioAerobico;
         private System.Windows.Forms.CheckBox chbFuerza;
@@ -399,5 +402,6 @@
         private System.Windows.Forms.CheckBox chbActividadesAireLibre;
         private System.Windows.Forms.CheckBox chbActividadDiaria;
         private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.GroupBox grpEjercicio;
     }
 }

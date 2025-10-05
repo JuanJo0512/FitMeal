@@ -239,6 +239,7 @@
             this.totProt});
             this.dataGridView1.Location = new System.Drawing.Point(346, 196);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(631, 354);
@@ -249,6 +250,7 @@
             this.comida.HeaderText = "Comida";
             this.comida.MinimumWidth = 6;
             this.comida.Name = "comida";
+            this.comida.ReadOnly = true;
             this.comida.Width = 185;
             // 
             // totCal
@@ -256,6 +258,7 @@
             this.totCal.HeaderText = "Calorias";
             this.totCal.MinimumWidth = 6;
             this.totCal.Name = "totCal";
+            this.totCal.ReadOnly = true;
             this.totCal.Width = 125;
             // 
             // totCarb
@@ -263,6 +266,7 @@
             this.totCarb.HeaderText = "Carbohidratos";
             this.totCarb.MinimumWidth = 6;
             this.totCarb.Name = "totCarb";
+            this.totCarb.ReadOnly = true;
             this.totCarb.Width = 125;
             // 
             // totProt
@@ -270,6 +274,7 @@
             this.totProt.HeaderText = "Proteinas";
             this.totProt.MinimumWidth = 6;
             this.totProt.Name = "totProt";
+            this.totProt.ReadOnly = true;
             this.totProt.Width = 125;
             // 
             // btnguardar

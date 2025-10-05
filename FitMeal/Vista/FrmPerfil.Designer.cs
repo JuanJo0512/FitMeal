@@ -305,7 +305,7 @@
             // btnEditarPerfil
             // 
             this.btnEditarPerfil.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnEditarPerfil.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Miskan", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEditarPerfil.Location = new System.Drawing.Point(333, 484);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
@@ -318,7 +318,7 @@
             // btnPreferencias
             // 
             this.btnPreferencias.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnPreferencias.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreferencias.Font = new System.Drawing.Font("Miskan", 10F);
             this.btnPreferencias.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPreferencias.Location = new System.Drawing.Point(517, 484);
             this.btnPreferencias.Name = "btnPreferencias";
@@ -331,7 +331,7 @@
             // btnEliminarPerfil
             // 
             this.btnEliminarPerfil.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEliminarPerfil.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarPerfil.Font = new System.Drawing.Font("Miskan", 10F);
             this.btnEliminarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEliminarPerfil.Location = new System.Drawing.Point(757, 484);
             this.btnEliminarPerfil.Name = "btnEliminarPerfil";
