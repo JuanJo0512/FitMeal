@@ -99,130 +99,185 @@ INSERT INTO RECETA (Nombre, Descripcion, Categoria, TipoDieta, TipoDieta2, Total
 ('Batido Proteico (Verde)', 'Bebida rápida y muy alta en proteína. Se puede usar proteína de suero o proteína vegetal.', 'Desayuno', 'Omnívora', 'Alto en proteína', 320.00, 35.00, 25.00),
 ('Avena con Plátano y Leche', 'Desayuno energético con cereales y fruta. Contiene lactosa.', 'Desayuno', 'Vegetariana', 'Sin azúcares añadidos', 400.00, 15.00, 60.00),
 
-
--- 2. ALMUERZOS
 ('Salmón, Brócoli y Quinoa', 'Comida balanceada, alta en omega-3 y proteína. Libre de gluten por naturaleza.', 'Almuerzo', 'Omnívora', 'Libre de gluten', 420.00, 30.00, 35.00),
 ('Tofu, Arroz y Lentejas', 'Plato vegano muy completo en proteína. Se utiliza arroz integral en lugar de blanco.', 'Almuerzo', 'Vegana', 'Alto en proteína', 450.00, 28.00, 55.00),
 ('Ensalada de Garbanzos', 'Opción muy fresca y ligera. Se puede añadir queso fresco para una opción vegetariana.', 'Almuerzo', 'Vegana', 'Bajo en grasa', 300.00, 15.00, 45.00),
 ('Enchiladas de Pollo (Maíz)', 'Plato mexicano adaptable. Las tortillas de maíz son libres de gluten.', 'Almuerzo', 'Omnívora', 'Libre de gluten', 480.00, 38.00, 40.00),
 ('Ternera y Batata Asada', 'Comida ideal para aumento de masa muscular. Se debe controlar la porción de ternera por su grasa.', 'Almuerzo', 'Omnívora', 'Alto en proteína', 550.00, 45.00, 30.00),
 
-
--- 3. CENAS
 ('Sopa de Lentejas', 'Cena tradicional reconfortante. Naturalmente vegana y vegetariana.', 'Cena', 'Vegana', 'Bajo en grasa', 250.00, 15.00, 40.00), -- 11
 ('Yogur Griego con Berries', 'Cena o snack nocturno ligero. Es rico en proteína y bajo en carbohidratos si se usa yogur sin azúcar.', 'Cena', 'Vegetariana', 'Bajo en carbohidratos', 220.00, 20.00, 15.00),
 ('Pollo al Horno y Ensalada', 'Cena muy limpia y baja en grasa. Ideal para metas de pérdida de peso.', 'Cena', 'Omnívora', 'Bajo en carbohidratos', 320.00, 40.00, 8.00),
 ('Bacalao y Pimientos Asados', 'Pescado blanco magro. Alto en proteína y muy bajo en carbohidratos y grasas.', 'Cena', 'Omnívora', 'Bajo en grasa', 300.00, 35.00, 10.00), 
 ('Curry de Tempeh y Coco', 'Cena vegana con proteínas vegetales. La leche de coco aporta grasa, pero es una alternativa sin lactosa.', 'Cena', 'Vegana', 'Intolerante a la lactosa', 400.00, 25.00, 25.00),
 
-
--- 4. SNACKS (RecetaID 16 - 20)
 ('Edamame al Vapor', 'Snack de legumbre simple, muy alto en proteína.', 'Snack', 'Vegana', 'Alto en proteína', 180.00, 17.00, 14.00), -- 16
 ('Requesón con Manzana', 'Snack vegetariano de lácteo. Aporta caseína para liberación lenta de proteína.', 'Snack', 'Vegetariana', 'Bajo en grasa', 150.00, 12.00, 15.00),
 ('Batido de Proteína (Rápido)', 'Snack de emergencia post-entrenamiento.', 'Snack', 'Omnívora', 'Alto en proteína', 120.00, 25.00, 3.00),
 ('Hummus y Zanahoria', 'Snack vegetal fresco. El hummus es una buena fuente de carbohidratos y grasa saludable.', 'Snack', 'Vegana', 'Libre de gluten', 210.00, 8.00, 25.00),
-('Pavo y Queso Cottage', 'Snack muy bajo en carbohidratos y alto en proteína.', 'Snack', 'Omnívora', 'Bajo en carbohidratos', 140.00, 22.00, 4.00);
+('Pavo y Queso Cottage', 'Snack muy bajo en carbohidratos y alto en proteína.', 'Snack', 'Omnívora', 'Bajo en carbohidratos', 140.00, 22.00, 4.00),
+
+
+('Bowl de Tilapia y Espinacas', 'Cena o almuerzo muy ligero y bajo en grasa y carbohidratos.', 'Cena', 'Omnívora', 'Bajo en carbohidratos', 250.00, 30.00, 5.00),
+('Omelette de Pimientos y Queso', 'Desayuno o cena rápido, alto en proteína y sin cereales.', 'Desayuno', 'Vegetariana', 'Bajo en carbohidratos', 220.00, 20.00, 7.00),
+('Snack Alto en Fibra (Lino)', 'Snack con semillas de lino, alto en fibra para saciedad.', 'Snack', 'Vegana', 'Libre de gluten', 150.00, 5.00, 10.00),
+
+
+('Burrito de Frijoles, Arroz y Pollo', 'Almuerzo denso en calorías y nutrientes, ideal para post-entrenamiento.', 'Almuerzo', 'Omnívora', 'Alto en proteína', 600.00, 45.00, 60.00),
+('Batido Alto en Calorías y Proteína', 'Batido para aumentar ingesta calórica de manera práctica.', 'Desayuno', 'Omnívora', 'Alto en proteína', 500.00, 50.00, 40.00),
+('Tofu Scramble con Quinoa', 'Desayuno vegano con alto contenido de proteína vegetal y carbohidratos complejos.', 'Desayuno', 'Vegana', 'Alto en proteína', 410.00, 25.00, 45.00),
+
+
+('Merluza con Batata y Brócoli', 'Plato con proteína magra, carbohidrato complejo y vegetal verde.', 'Almuerzo', 'Omnívora', 'Bajo en grasa', 400.00, 30.00, 35.00),
+('Tazón de Couscous y Alubias', 'Comida vegetariana con carbohidratos, legumbres y vegetales frescos.', 'Almuerzo', 'Vegetariana', 'Bajo en grasa', 380.00, 18.00, 50.00),
+('Wrap de Pollo y Vegetales', 'Comida balanceada que integra proteína, cereal y vegetales en porciones controladas.', 'Almuerzo', 'Omnívora', 'Ninguno', 430.00, 35.00, 40.00),
+
+
+('Tazón de Yogur con Mango y Semillas', 'Desayuno fresco con probióticos y fruta.', 'Desayuno', 'Vegetariana', 'Libre de gluten', 320.00, 15.00, 45.00),
+('Batido de Fresa y Soja', 'Opción vegana y sin lactosa para un desayuno rápido.', 'Desayuno', 'Vegana', 'Intolerante a la lactosa', 250.00, 10.00, 40.00),
+('Claras de Huevo y Aguacate', 'Muy bajo en carbohidratos, alto en proteína y grasa saludable.', 'Desayuno', 'Vegetariana', 'Bajo en carbohidratos', 280.00, 22.00, 5.00),
+('Waffles de Proteína (Avena)', 'Desayuno alto en carbohidratos complejos y proteína.', 'Desayuno', 'Omnívora', 'Alto en proteína', 450.00, 30.00, 55.00), 
+('Tortilla con Jamón de Pavo', 'Desayuno rápido y salado, alto en proteína.', 'Desayuno', 'Omnívora', 'Alto en proteína', 280.00, 25.00, 15.00),
+
+
+('Ensalada de Atún y Arroz Integral', 'Almuerzo balanceado, rico en proteína de pescado.', 'Almuerzo', 'Omnívora', 'Bajo en grasa', 410.00, 32.00, 40.00), 
+('Pescado Blanco con Couscous y Tomate', 'Comida ligera con carbohidratos complejos y proteína magra.', 'Almuerzo', 'Omnívora', 'Bajo en grasa', 390.00, 28.00, 45.00),
+('Frijoles Negros y Batata', 'Almuerzo vegano reconfortante, denso en carbohidratos y fibra.', 'Almuerzo', 'Vegana', 'Libre de gluten', 480.00, 25.00, 70.00),
+('Hamburguesa de Ternera y Lechuga', 'Opción baja en carbohidratos usando lechuga en lugar de pan.', 'Almuerzo', 'Omnívora', 'Bajo en carbohidratos', 380.00, 30.00, 10.00),
+('Tazón de Garbanzos y Trigo Sarraceno', 'Plato vegetariano completo, libre de gluten.', 'Almuerzo', 'Vegana', 'Libre de gluten', 430.00, 18.00, 65.00),
+
+
+('Pollo, Pimientos y Brócoli Salteado', 'Cena baja en carbohidratos con mucha verdura.', 'Cena', 'Omnívora', 'Bajo en carbohidratos', 350.00, 38.00, 12.00),
+('Salmón y Espinacas', 'Cena nutritiva, alta en grasa saludable (Omega-3) y proteína.', 'Cena', 'Omnívora', 'Alto en proteína', 450.00, 35.00, 5.00), 
+('Tempeh con Vegetales (Sin Cereales)', 'Cena vegana ligera y alta en proteína vegetal.', 'Cena', 'Vegana', 'Alto en proteína', 300.00, 22.00, 15.00),
+('Queso Cottage y Tomate', 'Cena o snack nocturno muy rápido y bajo en calorías.', 'Cena', 'Vegetariana', 'Bajo en carbohidratos', 180.00, 15.00, 8.00),
+('Lentejas con Aguacate', 'Cena vegana con carbohidratos, proteína y grasa saludable.', 'Cena', 'Vegana', 'Libre de gluten', 350.00, 15.00, 40.00),
+
+
+
+('Tostada de Requesón y Naranja', 'Desayuno ligero con cítricos, lácteos y pan integral.', 'Desayuno', 'Vegetariana', 'Bajo en grasa', 300.00, 15.00, 40.00),
+('Batido de Proteína y Almendras', 'Batido sin lactosa, ideal para la mañana o post-entrenamiento.', 'Desayuno', 'Omnívora', 'Intolerante a la lactosa', 350.00, 30.00, 25.00),
+('Omelette de Queso Cottage y Espinacas', 'Desayuno muy alto en proteína y bajo en carbohidratos.', 'Desayuno', 'Vegetariana', 'Bajo en carbohidratos', 250.00, 25.00, 5.00),
+('Bowl de Avena y Semillas de Calabaza', 'Desayuno energético con grasa saludable y fibra.', 'Desayuno', 'Vegana', 'Alto en proteína', 420.00, 18.00, 60.00),
+
+
+('Wrap de Pollo y Aguacate', 'Comida rápida, baja en carbohidratos usando lechuga en lugar de tortilla.', 'Almuerzo', 'Omnívora', 'Bajo en carbohidratos', 350.00, 35.00, 10.00),
+('Ensalada de Lentejas y Tomate', 'Plato vegano fresco y muy completo en micronutrientes.', 'Almuerzo', 'Vegana', 'Libre de gluten', 320.00, 15.00, 45.00),
+('Arroz Integral con Tofu', 'Almuerzo balanceado, ideal para mantener la energía.', 'Almuerzo', 'Vegana', 'Alto en proteína', 450.00, 25.00, 60.00),
+('Pechuga de Pollo y Batata', 'Plato clásico para la ganancia de masa, alto en proteína y carbohidratos.', 'Almuerzo', 'Omnívora', 'Alto en proteína', 500.00, 40.00, 45.00),
+
+
+('Sopa de Verduras y Ternera', 'Cena caliente y sustanciosa, baja en carbohidratos si se limita la patata.', 'Cena', 'Omnívora', 'Bajo en carbohidratos', 380.00, 30.00, 15.00),
+('Merluza y Ensalada de Zanahoria', 'Cena muy baja en grasa y ligera para la noche.', 'Cena', 'Omnívora', 'Bajo en grasa', 280.00, 35.00, 15.00),
+('Tofu al Curry y Brócoli', 'Cena vegana con sabor intenso. Sin lácteos.', 'Cena', 'Vegana', 'Intolerante a la lactosa', 350.00, 20.00, 25.00),
+('Queso Cottage y Frutos Rojos', 'Cena simple y ligera, perfecta como postre nutritivo.', 'Cena', 'Vegetariana', 'Bajo en carbohidratos', 190.00, 18.00, 15.00),
+
+
+('Manzana y Requesón', 'Snack clásico balanceado y alto en proteína.', 'Snack', 'Vegetariana', 'Bajo en grasa', 170.00, 14.00, 20.00),
+('Edamame Salado', 'Snack de legumbre, alto en proteína y muy saciante.', 'Snack', 'Vegana', 'Alto en proteína', 150.00, 14.00, 10.00),
+('Zanahoria y Hummus', 'Snack vegetal con grasa saludable y fibra.', 'Snack', 'Vegana', 'Libre de gluten', 180.00, 6.00, 25.00),
+('Batido de Plátano y Leche de Coco', 'Snack energético para recargar glucógeno.', 'Snack', 'Vegana', 'Intolerante a la lactosa', 280.00, 5.00, 45.00);
 
 -------------------------------------
 --Insertar en tabla Ingrediente-Receta
 -- Receta 1: Revuelto de Claras y Pavo
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(1, 40, '5 claras'), -- Claras de huevo
-(1, 30, '50 gramos'), -- Jamón de pavo
-(1, 21, '50 gramos'); -- Espinacas
+(1, 39, '5 claras'), -- CLARAS DE HUEVO (ID 39, ¡Corregido!)
+(1, 30, '50 gramos'), -- Jamón de pavo (ID 30)
+(1, 21, '50 gramos'); -- Espinacas (ID 21)
 
 -- Receta 2: Pudín de Chía y Berries
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(2, 56, '2 cdas'), -- Semillas de chía
-(2, 53, '200 ml'), -- Leche de almendras
-(2, 9, '80 gramos'); -- Frutos rojos
+(2, 56, '2 cdas'), -- Semillas de chía (ID 56)
+(2, 53, '200 ml'), -- Leche de almendras (ID 53)
+(2, 9, '80 gramos'); -- Frutos rojos (ID 9)
 
 -- Receta 3: Tostada con Aguacate y Huevo
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(3, 4, '1 rebanada'), -- Pan integral
-(3, 11, '1/2 unidad'), -- Aguacate
-(3, 39, '1 unidad'); -- Huevo entero
+(3, 4, '1 rebanada'), -- Pan integral (ID 4)
+(3, 11, '1/2 unidad'), -- Aguacate (ID 11)
+(3, 38, '1 unidad'); -- HUEVO ENTERO (ID 38, ajustado)
 
 -- Receta 4: Batido Proteico (Verde)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(4, 62, '1 scoop'), -- Proteína en polvo
-(4, 8, '1/2 unidad'), -- Plátano
-(4, 21, '50 gramos'); -- Espinacas
+(4, 62, '1 scoop'), -- Proteína en polvo (ID 62)
+(4, 8, '1/2 unidad'), -- Plátano (ID 8)
+(4, 21, '50 gramos'); -- Espinacas (ID 21)
 
 -- Receta 5: Avena con Plátano y Leche
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(5, 3, '1/2 taza'), -- Avena en hojuelas
-(5, 42, '150 ml'), -- Leche de vaca
-(5, 8, '1 unidad'); -- Plátano
+(5, 3, '1/2 taza'), -- Avena en hojuelas (ID 3)
+(5, 41, '150 ml'), -- Leche de vaca (ID 41, ajustado)
+(5, 8, '1 unidad'); -- Plátano (ID 8)
 
 -- Receta 6: Salmón, Brócoli y Quinoa
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(6, 33, '120 gramos'), -- Salmón
-(6, 22, '100 gramos'), -- Brócoli
-(6, 1, '1/2 taza'); -- Quinoa cocida
+(6, 33, '120 gramos'), -- Salmón (ID 33)
+(6, 22, '100 gramos'), -- Brócoli (ID 22)
+(6, 1, '1/2 taza'); -- Quinoa cocida (ID 1)
 
 -- Receta 7: Tofu, Arroz y Lentejas
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(7, 45, '100 gramos'), -- Tofu firme
-(7, 2, '1/2 taza'), -- Arroz integral
-(7, 48, '1/4 taza'); -- Lentejas rojas
+(7, 45, '100 gramos'), -- Tofu firme (ID 45)
+(7, 2, '1/2 taza'), -- Arroz integral (ID 2)
+(7, 48, '1/4 taza'); -- Lentejas rojas (ID 48)
 
 -- Receta 8: Ensalada de Garbanzos
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(8, 15, '1 taza'), -- Garbanzos cocidos
-(8, 25, '2 tazas'), -- Lechuga
-(8, 26, '1/2 unidad'); -- Tomate
+(8, 15, '1 taza'), -- Garbanzos cocidos (ID 15)
+(8, 25, '2 tazas'), -- Lechuga (ID 25)
+(8, 26, '1/2 unidad'); -- Tomate (ID 26)
 
 -- Receta 9: Enchiladas de Pollo (Maíz)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(9, 32, '100 gramos'), -- Pollo deshebrado
-(9, 5, '3 unidades'), -- Tortilla de maíz
-(9, 29, '50 gramos'); -- Carne molida magra (para salsa o relleno)
+(9, 32, '100 gramos'), -- Pollo deshebrado (ID 32)
+(9, 5, '3 unidades'), -- Tortilla de maíz (ID 5)
+(9, 29, '50 gramos'); -- Carne molida magra (ID 29)
 
 -- Receta 10: Ternera y Batata Asada
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(10, 31, '150 gramos'), -- Filete de ternera
-(10, 23, '1 unidad'); -- Batata (camote)
+(10, 31, '150 gramos'), -- Filete de ternera (ID 31)
+(10, 23, '1 unidad'); -- Batata (camote) (ID 23)
 
 -- Receta 11: Sopa de Lentejas
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(11, 16, '1 taza'), -- Lentejas cocidas
-(11, 27, '1/2 unidad'), -- Zanahoria
-(11, 26, '1/2 unidad'); -- Tomate
+(11, 16, '1 taza'), -- Lentejas cocidas (ID 16)
+(11, 27, '1/2 unidad'), -- Zanahoria (ID 27)
+(11, 26, '1/2 unidad'); -- Tomate (ID 26)
 
 -- Receta 12: Yogur Griego con Berries
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(12, 41, '150 gramos'), -- Yogur griego
-(12, 9, '50 gramos'); -- Frutos rojos
+(12, 40, '150 gramos'), -- YOGUR GRIEGO (ID 40, ajustado)
+(12, 9, '50 gramos'); -- Frutos rojos (ID 9)
 
 -- Receta 13: Pollo al Horno y Ensalada
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(13, 28, '150 gramos'), -- Pechuga de pollo
-(13, 25, '1 taza'), -- Lechuga
-(13, 26, '1/2 unidad'); -- Tomate
+(13, 28, '150 gramos'), -- Pechuga de pollo (ID 28)
+(13, 25, '1 taza'), -- Lechuga (ID 25)
+(13, 26, '1/2 unidad'); -- Tomate (ID 26)
 
 -- Receta 14: Bacalao y Pimientos Asados
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(14, 36, '120 gramos'), -- Bacalao
-(14, 24, '1 unidad'); -- Pimientos
+(14, 36, '120 gramos'), -- Bacalao (ID 36)
+(14, 24, '1 unidad'); -- Pimientos (ID 24)
 
 -- Receta 15: Curry de Tempeh y Coco
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(15, 47, '100 gramos'), -- Tempeh
-(15, 51, '100 ml'); -- Leche de coco
+(15, 47, '100 gramos'), -- Tempeh (ID 47)
+(15, 51, '100 ml'); -- Leche de coco (ID 51)
 
 -- Receta 16: Edamame al Vapor
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(16, 17, '1 taza'); -- Edamame
+(16, 17, '1 taza'); -- Edamame (ID 17)
 
 -- Receta 17: Requesón con Manzana
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(17, 44, '100 gramos'), -- Requesón
-(17, 10, '1/2 unidad'); -- Manzana
+(17, 43, '100 gramos'), -- REQUESÓN (ID 43, ajustado)
+(17, 10, '1/2 unidad'); -- Manzana (ID 10)
 
 -- Receta 18: Batido de Proteína (Rápido)
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
-(18, 62, '1 scoop'); -- Proteína en polvo
+(18, 62, '1 scoop'); -- Proteína en polvo (ID 62)
 
 -- Receta 19: Hummus y Zanahoria
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
@@ -232,7 +287,236 @@ INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
 -- Receta 20: Pavo y Queso Cottage
 INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
 (20, 30, '4 lonchas'), -- Jamón de pavo
-(20, 43, '50 gramos'); -- Queso cottage
+(20, 42, '50 gramos'); -- QUESO COTTAGE
+
+-- Receta 21: Bowl de Tilapia y Espinacas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(21, 37, '100 gramos'), -- Tilapia
+(21, 21, '1 taza'),    -- Espinacas
+(21, 22, '50 gramos'); -- Brócoli
+
+-- Receta 22: Omelette de Pimientos y Queso
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(22, 38, '2 unidades'), -- Huevo entero
+(22, 39, '2 claras'),   -- Claras de huevo
+(22, 24, '1 unidad'),   -- Pimientos
+(22, 42, '30 gramos');  -- Queso cottage
+
+-- Receta 23: Snack Alto en Fibra (Lino)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(23, 57, '1 cucharada'), -- Semillas de lino
+(23, 10, '1/2 unidad');  -- Manzana
+
+-- Receta 24: Burrito de Frijoles, Arroz y Pollo
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(24, 5, '2 unidades'),    -- Tortilla de maíz
+(24, 28, '100 gramos'),   -- Pechuga de pollo
+(24, 2, '1/2 taza'),      -- Arroz integral
+(24, 19, '1/4 taza');     -- Frijoles negros
+
+-- Receta 25: Batido Alto en Calorías y Proteína
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(25, 62, '2 scoops'),    -- Proteína en polvo
+(25, 8, '1 unidad'),     -- Plátano
+(25, 52, '200 ml');      -- Leche de avena
+
+-- Receta 26: Tofu Scramble con Quinoa
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(26, 45, '150 gramos'),  -- Tofu firme
+(26, 1, '1/2 taza'),     -- Quinoa cocida
+(26, 21, '1 taza');      -- Espinacas
+
+-- Receta 27: Merluza con Batata y Brócoli
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(27, 37, '100 gramos'),  -- Merluza
+(27, 23, '100 gramos'),  -- Batata (camote)
+(27, 22, '100 gramos');  -- Brócoli
+
+-- Receta 28: Tazón de Couscous y Alubias
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(28, 6, '1/2 taza'),     -- Couscous
+(28, 18, '1/2 taza'),    -- Alubias blancas
+(28, 26, '1/2 unidad');  -- Tomate
+
+-- Receta 29: Wrap de Pollo y Vegetales
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(29, 4, '1 rebanada'),   -- Pan integral (usado como base para wrap, alternando con tortilla)
+(29, 32, '80 gramos'),   -- Pollo deshebrado
+(29, 25, '1 taza'),      -- Lechuga
+(29, 11, '30 gramos');   -- Aguacate
+
+-- Receta 30: Tazón de Yogur con Mango y Semillas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(30, 40, '150 gramos'),  -- Yogur griego (ID 40)
+(30, 13, '1/2 unidad'),  -- Mango (ID 13)
+(30, 56, '1 cda');       -- Semillas de chía (ID 56)
+
+-- Receta 31: Batido de Fresa y Soja
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(31, 12, '1 taza'),      -- Fresa (ID 12)
+(31, 54, '200 ml');      -- Leche de soja (ID 54)
+
+-- Receta 32: Claras de Huevo y Aguacate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(32, 39, '6 claras'),    -- Claras de huevo (ID 39)
+(32, 11, '1/4 unidad');  -- Aguacate (ID 11)
+
+-- Receta 33: Waffles de Proteína (Avena)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(33, 3, '1/2 taza'),     -- Avena en hojuelas (ID 3)
+(33, 62, '1 scoop'),     -- Proteína en polvo (ID 62)
+(33, 39, '3 claras');    -- Claras de huevo (ID 39)
+
+-- Receta 34: Tortilla con Jamón de Pavo
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(34, 5, '2 unidades'),   -- Tortilla de maíz (ID 5)
+(34, 30, '50 gramos');   -- Jamón de pavo (ID 30)
+
+-- Receta 35: Ensalada de Atún y Arroz Integral
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(35, 34, '1 lata'),      -- Atún en agua (ID 34)
+(35, 2, '1/2 taza'),     -- Arroz integral (ID 2)
+(35, 25, '1 taza');      -- Lechuga (ID 25)
+
+-- Receta 36: Pescado Blanco con Couscous y Tomate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(36, 37, '120 gramos'),  -- Merluza (ID 37)
+(36, 6, '1/2 taza'),     -- Couscous (ID 6)
+(36, 26, '1 unidad');    -- Tomate (ID 26)
+
+-- Receta 37: Frijoles Negros y Batata
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(37, 19, '1 taza'),      -- Frijoles negros (ID 19)
+(37, 23, '1 unidad');    -- Batata (camote) (ID 23)
+
+-- Receta 38: Hamburguesa de Ternera y Lechuga
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(38, 31, '150 gramos'),  -- Filete de ternera (ID 31)
+(38, 25, '2 hojas'),     -- Lechuga (ID 25)
+(38, 26, '2 rodajas');   -- Tomate (ID 26)
+
+-- Receta 39: Tazón de Garbanzos y Trigo Sarraceno
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(39, 15, '1 taza'),      -- Garbanzos cocidos (ID 15)
+(39, 7, '1/2 taza'),     -- Trigo sarraceno (ID 7)
+(39, 27, '1/2 unidad');  -- Zanahoria (ID 27)
+
+-- Receta 40: Pollo, Pimientos y Brócoli Salteado
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(40, 28, '120 gramos'),  -- Pechuga de pollo (ID 28)
+(40, 24, '1 unidad'),    -- Pimientos (ID 24)
+(40, 22, '100 gramos');  -- Brócoli (ID 22)
+
+-- Receta 41: Salmón y Espinacas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(41, 33, '150 gramos'),  -- Salmón (ID 33)
+(41, 21, '1 taza');      -- Espinacas (ID 21)
+
+-- Receta 42: Tempeh con Vegetales (Sin Cereales)
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(42, 47, '100 gramos'),  -- Tempeh (ID 47)
+(42, 27, '1 unidad'),    -- Zanahoria (ID 27)
+(42, 22, '50 gramos');   -- Brócoli (ID 22)
+
+-- Receta 43: Queso Cottage y Tomate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(43, 42, '100 gramos'),  -- Queso cottage (ID 42)
+(43, 26, '1 unidad');    -- Tomate (ID 26)
+
+-- Receta 44: Lentejas con Aguacate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(44, 16, '1 taza'),      -- Lentejas cocidas (ID 16)
+(44, 11, '1/4 unidad');  -- Aguacate (ID 11)
+
+-- Receta 45: Tostada de Requesón y Naranja
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(45, 4, '1 rebanada'),    -- Pan integral (ID 4)
+(45, 43, '50 gramos'),    -- Requesón (ID 43)
+(45, 14, '1/2 unidad');   -- Naranja (ID 14)
+
+-- Receta 46: Batido de Proteína y Almendras
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(46, 62, '1 scoop'),      -- Proteína en polvo (ID 62)
+(46, 53, '200 ml'),       -- Leche de almendras (ID 53)
+(46, 8, '1/2 unidad');    -- Plátano (ID 8)
+
+-- Receta 47: Omelette de Queso Cottage y Espinacas
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(47, 38, '1 unidad'),     -- Huevo entero (ID 38)
+(47, 39, '3 claras'),     -- Claras de huevo (ID 39)
+(47, 42, '30 gramos'),    -- Queso cottage (ID 42)
+(47, 21, '50 gramos');    -- Espinacas (ID 21)
+
+-- Receta 48: Bowl de Avena y Semillas de Calabaza
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(48, 3, '1/2 taza'),      -- Avena en hojuelas (ID 3)
+(48, 52, '150 ml'),       -- Leche de avena (ID 52)
+(48, 58, '1 cda');        -- Semillas de calabaza (ID 58)
+
+-- Receta 49: Wrap de Pollo y Aguacate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(49, 28, '120 gramos'),   -- Pechuga de pollo (ID 28)
+(49, 11, '1/4 unidad'),   -- Aguacate (ID 11)
+(49, 25, '2 hojas');      -- Lechuga (ID 25)
+
+-- Receta 50: Ensalada de Lentejas y Tomate
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(50, 16, '1 taza'),       -- Lentejas cocidas (ID 16)
+(50, 26, '1 unidad'),     -- Tomate (ID 26)
+(50, 25, '1 taza');       -- Lechuga (ID 25)
+
+-- Receta 51: Arroz Integral con Tofu
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(51, 2, '1/2 taza'),      -- Arroz integral (ID 2)
+(51, 45, '100 gramos'),   -- Tofu firme (ID 45)
+(51, 27, '1/2 unidad');   -- Zanahoria (ID 27)
+
+-- Receta 52: Pechuga de Pollo y Batata
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(52, 28, '150 gramos'),   -- Pechuga de pollo (ID 28)
+(52, 23, '1 unidad');     -- Batata (camote) (ID 23)
+
+-- Receta 53: Sopa de Verduras y Ternera
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(53, 31, '100 gramos'),   -- Filete de ternera (ID 31)
+(53, 27, '1 unidad'),     -- Zanahoria (ID 27)
+(53, 22, '50 gramos');    -- Brócoli (ID 22)
+
+-- Receta 54: Merluza y Ensalada de Zanahoria
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(54, 37, '120 gramos'),   -- Merluza (ID 37)
+(54, 27, '1 unidad'),     -- Zanahoria (ID 27)
+(54, 25, '1 taza');       -- Lechuga (ID 25)
+
+-- Receta 55: Tofu al Curry y Brócoli
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(55, 45, '100 gramos'),   -- Tofu firme (ID 45)
+(55, 51, '50 ml'),        -- Leche de coco (ID 51)
+(55, 22, '100 gramos');   -- Brócoli (ID 22)
+
+-- Receta 56: Queso Cottage y Frutos Rojos
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(56, 42, '100 gramos'),   -- Queso cottage (ID 42)
+(56, 9, '50 gramos');     -- Frutos rojos (ID 9)
+
+-- Receta 57: Manzana y Requesón
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(57, 10, '1 unidad'),     -- Manzana (ID 10)
+(57, 43, '50 gramos');    -- Requesón (ID 43)
+
+-- Receta 58: Edamame Salado
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(58, 17, '1 taza');       -- Edamame (ID 17)
+
+-- Receta 59: Zanahoria y Hummus
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(59, 27, '1 unidad'),     -- Zanahoria (ID 27)
+(59, 20, '50 gramos');    -- Hummus (ID 20)
+
+-- Receta 60: Batido de Plátano y Leche de Coco
+INSERT INTO INGREDIENTES_RECETA (RecetaID, AlimentoID, Cantidad) VALUES
+(60, 8, '1 unidad'),      -- Plátano (ID 8)
+(60, 51, '150 ml');       -- Leche de coco (ID 51)
 
 --------------------------------------
 --Insercion en la tabla Alergias--

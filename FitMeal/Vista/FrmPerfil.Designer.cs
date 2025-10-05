@@ -83,7 +83,7 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
             this.btnPerfil.Name = "btnPerfil";
@@ -174,11 +174,11 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Miskan", 18F);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNombre.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lblNombre.Location = new System.Drawing.Point(458, 55);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(209, 37);
+            this.lblNombre.Size = new System.Drawing.Size(185, 36);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre aqui";
             // 
@@ -395,7 +395,8 @@
             this.cmbMeta.FormattingEnabled = true;
             this.cmbMeta.Items.AddRange(new object[] {
             "Perder Peso",
-            "Ganar Masa"});
+            "Ganar Masa",
+            "Comer Balanceado"});
             this.cmbMeta.Location = new System.Drawing.Point(787, 291);
             this.cmbMeta.Name = "cmbMeta";
             this.cmbMeta.Size = new System.Drawing.Size(241, 24);

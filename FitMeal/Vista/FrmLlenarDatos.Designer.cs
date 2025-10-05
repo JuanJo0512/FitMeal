@@ -57,11 +57,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miskan", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label1.Location = new System.Drawing.Point(37, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 53);
+            this.label1.Size = new System.Drawing.Size(237, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido";
             // 
@@ -189,7 +189,7 @@
             // btnCrearPerfil
             // 
             this.btnCrearPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCrearPerfil.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnCrearPerfil.Location = new System.Drawing.Point(598, 757);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
@@ -264,7 +264,8 @@
             this.cmbMeta.FormattingEnabled = true;
             this.cmbMeta.Items.AddRange(new object[] {
             "Perder Peso",
-            "Ganar Masa"});
+            "Ganar Masa",
+            "Comer Balanceado"});
             this.cmbMeta.Location = new System.Drawing.Point(121, 624);
             this.cmbMeta.Name = "cmbMeta";
             this.cmbMeta.Size = new System.Drawing.Size(176, 24);
@@ -280,7 +281,7 @@
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnVolver.Font = new System.Drawing.Font("Miskan", 12F);
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnVolver.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnVolver.Location = new System.Drawing.Point(26, 757);
             this.btnVolver.Name = "btnVolver";
