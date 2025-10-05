@@ -226,7 +226,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(13, 183);
+=======
+            this.label2.Location = new System.Drawing.Point(31, 204);
+>>>>>>> valentina
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 22);
@@ -235,7 +239,11 @@
             // 
             // txtBuscarAlimento
             // 
+<<<<<<< HEAD
             this.txtBuscarAlimento.Location = new System.Drawing.Point(112, 185);
+=======
+            this.txtBuscarAlimento.Location = new System.Drawing.Point(115, 206);
+>>>>>>> valentina
             this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBuscarAlimento.Name = "txtBuscarAlimento";
             this.txtBuscarAlimento.Size = new System.Drawing.Size(463, 22);

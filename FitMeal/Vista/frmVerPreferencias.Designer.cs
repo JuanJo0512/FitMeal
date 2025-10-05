@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerPreferencias));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnIrFeedback = new System.Windows.Forms.Button();
@@ -46,11 +48,10 @@
             this.btnIngreso = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.dtgPreferencias = new System.Windows.Forms.DataGridView();
+            this.dtgAlergias = new System.Windows.Forms.DataGridView();
             this.preferenciaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtgAlergias = new System.Windows.Forms.DataGridView();
             this.alergiaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alimentoExcluido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlergiaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,7 +203,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(397, 188);
+            this.label1.Location = new System.Drawing.Point(417, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 29);
             this.label1.TabIndex = 28;
@@ -247,6 +248,10 @@
             // 
             // dtgPreferencias
             // 
+            this.dtgPreferencias.AllowUserToAddRows = false;
+            this.dtgPreferencias.AllowUserToDeleteRows = false;
+            this.dtgPreferencias.AllowUserToResizeColumns = false;
+            this.dtgPreferencias.AllowUserToResizeRows = false;
             this.dtgPreferencias.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dtgPreferencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgPreferencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -256,29 +261,11 @@
             this.dtgPreferencias.GridColor = System.Drawing.Color.Cornsilk;
             this.dtgPreferencias.Location = new System.Drawing.Point(347, 232);
             this.dtgPreferencias.Name = "dtgPreferencias";
+            this.dtgPreferencias.ReadOnly = true;
             this.dtgPreferencias.RowHeadersWidth = 51;
             this.dtgPreferencias.RowTemplate.Height = 24;
-            this.dtgPreferencias.Size = new System.Drawing.Size(304, 345);
+            this.dtgPreferencias.Size = new System.Drawing.Size(361, 345);
             this.dtgPreferencias.TabIndex = 36;
-            // 
-            // preferenciaAlimento
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.preferenciaAlimento.DefaultCellStyle = dataGridViewCellStyle1;
-            this.preferenciaAlimento.HeaderText = "Alimentos excluidos";
-            this.preferenciaAlimento.MinimumWidth = 10;
-            this.preferenciaAlimento.Name = "preferenciaAlimento";
-            this.preferenciaAlimento.Width = 200;
-            // 
-            // AlimentoID
-            // 
-            this.AlimentoID.HeaderText = "ID";
-            this.AlimentoID.MinimumWidth = 6;
-            this.AlimentoID.Name = "AlimentoID";
-            this.AlimentoID.Visible = false;
-            this.AlimentoID.Width = 125;
             // 
             // dtgAlergias
             // 
@@ -287,35 +274,58 @@
             this.dtgAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAlergias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.alergiaNombre,
-            this.alimentoExcluido,
             this.AlergiaID});
             this.dtgAlergias.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlergias.Location = new System.Drawing.Point(683, 232);
+            this.dtgAlergias.Location = new System.Drawing.Point(769, 232);
             this.dtgAlergias.Name = "dtgAlergias";
+            this.dtgAlergias.ReadOnly = true;
             this.dtgAlergias.RowHeadersWidth = 51;
             this.dtgAlergias.RowTemplate.Height = 24;
-            this.dtgAlergias.Size = new System.Drawing.Size(363, 345);
+            this.dtgAlergias.Size = new System.Drawing.Size(256, 345);
             this.dtgAlergias.TabIndex = 37;
+            // 
+            // preferenciaAlimento
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.preferenciaAlimento.DefaultCellStyle = dataGridViewCellStyle9;
+            this.preferenciaAlimento.HeaderText = "Alimentos excluidos";
+            this.preferenciaAlimento.MinimumWidth = 10;
+            this.preferenciaAlimento.Name = "preferenciaAlimento";
+            this.preferenciaAlimento.ReadOnly = true;
+            this.preferenciaAlimento.Width = 200;
+            // 
+            // AlimentoID
+            // 
+            this.AlimentoID.HeaderText = "ID";
+            this.AlimentoID.MinimumWidth = 6;
+            this.AlimentoID.Name = "AlimentoID";
+            this.AlimentoID.ReadOnly = true;
+            this.AlimentoID.Visible = false;
+            this.AlimentoID.Width = 125;
             // 
             // alergiaNombre
             // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.alergiaNombre.DefaultCellStyle = dataGridViewCellStyle7;
             this.alergiaNombre.HeaderText = "Alergia";
             this.alergiaNombre.MinimumWidth = 6;
             this.alergiaNombre.Name = "alergiaNombre";
+            this.alergiaNombre.ReadOnly = true;
             this.alergiaNombre.Width = 110;
-            // 
-            // alimentoExcluido
-            // 
-            this.alimentoExcluido.HeaderText = "Alimentos excluidos";
-            this.alimentoExcluido.MinimumWidth = 6;
-            this.alimentoExcluido.Name = "alimentoExcluido";
-            this.alimentoExcluido.Width = 200;
             // 
             // AlergiaID
             // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.AlergiaID.DefaultCellStyle = dataGridViewCellStyle8;
             this.AlergiaID.HeaderText = "ID";
             this.AlergiaID.MinimumWidth = 6;
             this.AlergiaID.Name = "AlergiaID";
+            this.AlergiaID.ReadOnly = true;
             this.AlergiaID.Visible = false;
             this.AlergiaID.Width = 125;
             // 
@@ -369,7 +379,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preferenciaAlimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlimentoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn alergiaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alimentoExcluido;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlergiaID;
     }
 }

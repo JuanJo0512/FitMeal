@@ -71,7 +71,7 @@ namespace FitMeal.Vista
 
                     MessageBox.Show($"Bienvenido {UsuarioActivoNombre}");
 
-                    AbrirForm(new frmVerPreferencias(), this);
+                    AbrirForm(new FrmPerfil(), this);
                 }
                 else
                 {

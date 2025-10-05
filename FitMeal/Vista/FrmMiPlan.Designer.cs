@@ -224,6 +224,7 @@
             // 
             // dtgMiPlan
             // 
+<<<<<<< HEAD
             this.dtgMiPlan.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dtgMiPlan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -249,34 +250,91 @@
             this.dtgMiPlan.Size = new System.Drawing.Size(716, 354);
             this.dtgMiPlan.TabIndex = 36;
             this.dtgMiPlan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMiPlan_CellDoubleClick);
+=======
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.comida,
+            this.totCal,
+            this.totCarb,
+            this.totProt});
+            this.dataGridView1.Location = new System.Drawing.Point(346, 196);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(631, 354);
+            this.dataGridView1.TabIndex = 36;
+>>>>>>> valentina
             // 
             // Dia
             // 
+<<<<<<< HEAD
             this.Dia.HeaderText = "Dia";
             this.Dia.MinimumWidth = 6;
             this.Dia.Name = "Dia";
             this.Dia.Width = 125;
+=======
+            this.comida.HeaderText = "Comida";
+            this.comida.MinimumWidth = 6;
+            this.comida.Name = "comida";
+            this.comida.ReadOnly = true;
+            this.comida.Width = 185;
+>>>>>>> valentina
             // 
             // TipodeComida
             // 
+<<<<<<< HEAD
             this.TipodeComida.HeaderText = "Tipo de Comida";
             this.TipodeComida.MinimumWidth = 6;
             this.TipodeComida.Name = "TipodeComida";
             this.TipodeComida.Width = 125;
+=======
+            this.totCal.HeaderText = "Calorias";
+            this.totCal.MinimumWidth = 6;
+            this.totCal.Name = "totCal";
+            this.totCal.ReadOnly = true;
+            this.totCal.Width = 125;
+>>>>>>> valentina
             // 
             // NombreReceta
             // 
+<<<<<<< HEAD
             this.NombreReceta.HeaderText = "Nombre de Receta";
             this.NombreReceta.MinimumWidth = 6;
             this.NombreReceta.Name = "NombreReceta";
             this.NombreReceta.Width = 125;
+=======
+            this.totCarb.HeaderText = "Carbohidratos";
+            this.totCarb.MinimumWidth = 6;
+            this.totCarb.Name = "totCarb";
+            this.totCarb.ReadOnly = true;
+            this.totCarb.Width = 125;
+>>>>>>> valentina
             // 
             // Calorias
             // 
+<<<<<<< HEAD
             this.Calorias.HeaderText = "Calorias";
             this.Calorias.MinimumWidth = 6;
             this.Calorias.Name = "Calorias";
             this.Calorias.Width = 125;
+=======
+            this.totProt.HeaderText = "Proteinas";
+            this.totProt.MinimumWidth = 6;
+            this.totProt.Name = "totProt";
+            this.totProt.ReadOnly = true;
+            this.totProt.Width = 125;
+>>>>>>> valentina
             // 
             // Proteínas
             // 
