@@ -50,8 +50,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCedula = new System.Windows.Forms.Label();
             this.btnIngreso = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnVerPreferencias = new System.Windows.Forms.Button();
+            this.btnEliminarPerfil = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -83,7 +83,7 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
             this.btnPerfil.Name = "btnPerfil";
@@ -174,11 +174,11 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Miskan", 18F);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNombre.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lblNombre.Location = new System.Drawing.Point(458, 55);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(209, 37);
+            this.lblNombre.Size = new System.Drawing.Size(185, 36);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre aqui";
             // 
@@ -305,7 +305,7 @@
             // btnIngreso
             // 
             this.btnIngreso.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIngreso.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnIngreso.Location = new System.Drawing.Point(333, 484);
             this.btnIngreso.Name = "btnIngreso";
@@ -314,29 +314,29 @@
             this.btnIngreso.Text = "Editar Mi Perfil";
             this.btnIngreso.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnVerPreferencias
             // 
-            this.button7.BackColor = System.Drawing.Color.OliveDrab;
-            this.button7.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button7.Location = new System.Drawing.Point(517, 484);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(234, 55);
-            this.button7.TabIndex = 34;
-            this.button7.Text = "Ver Mis Preferencias";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnVerPreferencias.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnVerPreferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPreferencias.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnVerPreferencias.Location = new System.Drawing.Point(517, 484);
+            this.btnVerPreferencias.Name = "btnVerPreferencias";
+            this.btnVerPreferencias.Size = new System.Drawing.Size(234, 55);
+            this.btnVerPreferencias.TabIndex = 34;
+            this.btnVerPreferencias.Text = "Ver Mis Preferencias";
+            this.btnVerPreferencias.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnEliminarPerfil
             // 
-            this.button8.BackColor = System.Drawing.Color.Goldenrod;
-            this.button8.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button8.Location = new System.Drawing.Point(757, 484);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(201, 55);
-            this.button8.TabIndex = 35;
-            this.button8.Text = "Eliminar Mi Perfil";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnEliminarPerfil.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnEliminarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnEliminarPerfil.Location = new System.Drawing.Point(757, 484);
+            this.btnEliminarPerfil.Name = "btnEliminarPerfil";
+            this.btnEliminarPerfil.Size = new System.Drawing.Size(201, 55);
+            this.btnEliminarPerfil.TabIndex = 35;
+            this.btnEliminarPerfil.Text = "Eliminar Mi Perfil";
+            this.btnEliminarPerfil.UseVisualStyleBackColor = false;
             // 
             // txtEmail
             // 
@@ -385,7 +385,8 @@
             this.cmbMeta.FormattingEnabled = true;
             this.cmbMeta.Items.AddRange(new object[] {
             "Perder Peso",
-            "Ganar Masa"});
+            "Ganar Masa",
+            "Comer Balanceado"});
             this.cmbMeta.Location = new System.Drawing.Point(787, 291);
             this.cmbMeta.Name = "cmbMeta";
             this.cmbMeta.Size = new System.Drawing.Size(241, 24);
@@ -396,7 +397,7 @@
             this.button1.BackColor = System.Drawing.Color.OliveDrab;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cornsilk;
             this.button1.Location = new System.Drawing.Point(967, 484);
             this.button1.Name = "button1";
@@ -418,8 +419,8 @@
             this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnEliminarPerfil);
+            this.Controls.Add(this.btnVerPreferencias);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.pictureBox1);
@@ -467,8 +468,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Button btnIngreso;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnVerPreferencias;
+        private System.Windows.Forms.Button btnEliminarPerfil;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtSexo;

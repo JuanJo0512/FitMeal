@@ -48,11 +48,6 @@
             this.txtTotalCarbohidratos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgAlimentos = new System.Windows.Forms.DataGridView();
-            this.txtTotalCalorias = new System.Windows.Forms.TextBox();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.cmbTipo2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.nombreAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +56,11 @@
             this.Carbohidratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtTotalCalorias = new System.Windows.Forms.TextBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbTipo2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).BeginInit();
@@ -138,38 +138,17 @@
             "Almuerzo",
             "Cena",
             "Snack"});
-            this.cmbCategoria.Location = new System.Drawing.Point(601, 163);
+            this.cmbCategoria.Location = new System.Drawing.Point(596, 159);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(188, 24);
             this.cmbCategoria.TabIndex = 64;
             // 
             // txtTotalProteinas
             // 
-            this.txtTotalProteinas.Location = new System.Drawing.Point(691, 268);
+            this.txtTotalProteinas.Location = new System.Drawing.Point(747, 228);
             this.txtTotalProteinas.Name = "txtTotalProteinas";
             this.txtTotalProteinas.Size = new System.Drawing.Size(231, 22);
             this.txtTotalProteinas.TabIndex = 63;
-            // 
-            // txtTipo2
-            // 
-            this.txtTipo2.Location = new System.Drawing.Point(740, 212);
-            this.txtTipo2.Name = "txtTipo2";
-            this.txtTipo2.Size = new System.Drawing.Size(231, 22);
-            this.txtTipo2.TabIndex = 62;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(110, 212);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(231, 22);
-            this.txtTipo.TabIndex = 61;
-            // 
-            // txtTotalCalorias
-            // 
-            this.txtTotalCalorias.Location = new System.Drawing.Point(223, 268);
-            this.txtTotalCalorias.Name = "txtTotalCalorias";
-            this.txtTotalCalorias.Size = new System.Drawing.Size(197, 22);
-            this.txtTotalCalorias.TabIndex = 60;
             // 
             // txtNombre
             // 
@@ -184,7 +163,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label9.Location = new System.Drawing.Point(26, 202);
+            this.label9.Location = new System.Drawing.Point(26, 157);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 30);
             this.label9.TabIndex = 58;
@@ -195,7 +174,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.Location = new System.Drawing.Point(25, 258);
+            this.label6.Location = new System.Drawing.Point(26, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 30);
             this.label6.TabIndex = 57;
@@ -206,7 +185,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label7.Location = new System.Drawing.Point(26, 315);
+            this.label7.Location = new System.Drawing.Point(467, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(238, 30);
             this.label7.TabIndex = 56;
@@ -217,7 +196,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label8.Location = new System.Drawing.Point(484, 204);
+            this.label8.Location = new System.Drawing.Point(26, 214);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(250, 30);
             this.label8.TabIndex = 55;
@@ -228,7 +207,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(474, 153);
+            this.label5.Location = new System.Drawing.Point(466, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 30);
             this.label5.TabIndex = 54;
@@ -248,11 +227,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miskan", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 53);
+            this.label1.Size = new System.Drawing.Size(400, 51);
             this.label1.TabIndex = 52;
             this.label1.Text = "Gestion de Recetas";
             // 
@@ -261,7 +240,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Location = new System.Drawing.Point(484, 258);
+            this.label2.Location = new System.Drawing.Point(551, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 30);
             this.label2.TabIndex = 70;
@@ -269,7 +248,7 @@
             // 
             // txtTotalCarbohidratos
             // 
-            this.txtTotalCarbohidratos.Location = new System.Drawing.Point(298, 323);
+            this.txtTotalCarbohidratos.Location = new System.Drawing.Point(711, 276);
             this.txtTotalCarbohidratos.Name = "txtTotalCarbohidratos";
             this.txtTotalCarbohidratos.Size = new System.Drawing.Size(231, 22);
             this.txtTotalCarbohidratos.TabIndex = 71;
@@ -277,11 +256,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miskan", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Location = new System.Drawing.Point(190, 377);
+            this.label3.Location = new System.Drawing.Point(26, 329);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(639, 28);
+            this.label3.Size = new System.Drawing.Size(602, 29);
             this.label3.TabIndex = 72;
             this.label3.Text = "Seleccione los alimentos que se usan para esta receta:";
             // 
@@ -300,75 +279,13 @@
             this.Cantidad,
             this.Seleccionar});
             this.dtgAlimentos.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlimentos.Location = new System.Drawing.Point(45, 434);
+            this.dtgAlimentos.Location = new System.Drawing.Point(21, 479);
             this.dtgAlimentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgAlimentos.Name = "dtgAlimentos";
             this.dtgAlimentos.RowHeadersWidth = 51;
             this.dtgAlimentos.RowTemplate.Height = 24;
             this.dtgAlimentos.Size = new System.Drawing.Size(640, 194);
             this.dtgAlimentos.TabIndex = 73;
-            // 
-            // txtTotalCalorias
-            // 
-            this.txtTotalCalorias.Location = new System.Drawing.Point(787, 250);
-            this.txtTotalCalorias.Name = "txtTotalCalorias";
-            this.txtTotalCalorias.Size = new System.Drawing.Size(197, 22);
-            this.txtTotalCalorias.TabIndex = 60;
-            // 
-            // cmbTipo
-            // 
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
-            "Omnívora",
-            "Vegetariana",
-            "Vegana"});
-            this.cmbTipo.Location = new System.Drawing.Point(545, 174);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(241, 24);
-            this.cmbTipo.TabIndex = 74;
-            // 
-            // cmbTipo2
-            // 
-            this.cmbTipo2.FormattingEnabled = true;
-            this.cmbTipo2.Items.AddRange(new object[] {
-            "Libre de gluten",
-            "",
-            "",
-            "Intolerante a la lactosa",
-            "",
-            "",
-            "Bajo en carbohidratos",
-            "",
-            "",
-            "Alto en proteína",
-            "",
-            "",
-            "Bajo en grasa",
-            "",
-            "",
-            "Sin azúcares añadidos"});
-            this.cmbTipo2.Location = new System.Drawing.Point(282, 244);
-            this.cmbTipo2.Name = "cmbTipo2";
-            this.cmbTipo2.Size = new System.Drawing.Size(241, 24);
-            this.cmbTipo2.TabIndex = 75;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label10.Location = new System.Drawing.Point(467, 105);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 30);
-            this.label10.TabIndex = 76;
-            this.label10.Text = "Descripcion:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(631, 115);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(379, 22);
-            this.txtDescripcion.TabIndex = 77;
             // 
             // nombreAlimento
             // 
@@ -433,6 +350,58 @@
             this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Seleccionar.Width = 70;
+            // 
+            // txtTotalCalorias
+            // 
+            this.txtTotalCalorias.Location = new System.Drawing.Point(215, 278);
+            this.txtTotalCalorias.Name = "txtTotalCalorias";
+            this.txtTotalCalorias.Size = new System.Drawing.Size(197, 22);
+            this.txtTotalCalorias.TabIndex = 60;
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Omnívora",
+            "Vegetariana",
+            "Vegana"});
+            this.cmbTipo.Location = new System.Drawing.Point(117, 163);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(241, 24);
+            this.cmbTipo.TabIndex = 74;
+            // 
+            // cmbTipo2
+            // 
+            this.cmbTipo2.FormattingEnabled = true;
+            this.cmbTipo2.Items.AddRange(new object[] {
+            "Libre de gluten",
+            "Intolerante a la lactosa",
+            "Bajo en carbohidratos",
+            "Alto en proteína",
+            "Bajo en grasa",
+            "Sin azúcares añadidos"});
+            this.cmbTipo2.Location = new System.Drawing.Point(282, 220);
+            this.cmbTipo2.Name = "cmbTipo2";
+            this.cmbTipo2.Size = new System.Drawing.Size(241, 24);
+            this.cmbTipo2.TabIndex = 75;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.Location = new System.Drawing.Point(467, 105);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(146, 30);
+            this.label10.TabIndex = 76;
+            this.label10.Text = "Descripcion:";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(631, 115);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(379, 22);
+            this.txtDescripcion.TabIndex = 77;
             // 
             // txtBuscarAlimento
             // 
