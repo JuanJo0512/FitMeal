@@ -43,10 +43,6 @@
             this.dgvRegistrarAlimento = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.RecetaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadCalorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrarAlimento)).BeginInit();
             this.SuspendLayout();
@@ -194,11 +190,7 @@
             this.dgvRegistrarAlimento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRegistrarAlimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistrarAlimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Selec,
-            this.RecetaID,
-            this.NombreComida,
-            this.Categoria,
-            this.CantidadCalorias});
+            this.Selec});
             this.dgvRegistrarAlimento.Location = new System.Drawing.Point(332, 163);
             this.dgvRegistrarAlimento.MultiSelect = false;
             this.dgvRegistrarAlimento.Name = "dgvRegistrarAlimento";
@@ -227,34 +219,6 @@
             this.Selec.MinimumWidth = 6;
             this.Selec.Name = "Selec";
             this.Selec.Width = 125;
-            // 
-            // RecetaID
-            // 
-            this.RecetaID.HeaderText = "# Receta";
-            this.RecetaID.MinimumWidth = 6;
-            this.RecetaID.Name = "RecetaID";
-            this.RecetaID.Width = 125;
-            // 
-            // NombreComida
-            // 
-            this.NombreComida.HeaderText = "Nombre";
-            this.NombreComida.MinimumWidth = 6;
-            this.NombreComida.Name = "NombreComida";
-            this.NombreComida.Width = 125;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.Width = 125;
-            // 
-            // CantidadCalorias
-            // 
-            this.CantidadCalorias.HeaderText = "Calorias";
-            this.CantidadCalorias.MinimumWidth = 6;
-            this.CantidadCalorias.Name = "CantidadCalorias";
-            this.CantidadCalorias.Width = 125;
             // 
             // FrmRegistrarAlimentos
             // 
@@ -291,9 +255,5 @@
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RecetaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreComida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadCalorias;
     }
 }

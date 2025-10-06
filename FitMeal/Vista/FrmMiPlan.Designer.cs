@@ -304,20 +304,12 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(631, 354);
             this.dataGridView1.TabIndex = 36;
->>>>>>> valentina
->>>>>>> main
-            // 
-            // Dia
-            // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
             this.Dia.HeaderText = "Dia";
             this.Dia.MinimumWidth = 6;
             this.Dia.Name = "Dia";
             this.Dia.Width = 125;
-=======
->>>>>>> main
+
             this.comida.HeaderText = "Comida";
             this.comida.MinimumWidth = 6;
             this.comida.Name = "comida";
@@ -329,22 +321,13 @@
             this.Dia.MinimumWidth = 6;
             this.Dia.Name = "Dia";
             this.Dia.Width = 125;
->>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
-=======
->>>>>>> valentina
->>>>>>> main
-            // 
-            // TipodeComida
-            // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
             this.TipodeComida.HeaderText = "Tipo de Comida";
             this.TipodeComida.MinimumWidth = 6;
             this.TipodeComida.Name = "TipodeComida";
             this.TipodeComida.Width = 125;
 =======
->>>>>>> main
+
             this.totCal.HeaderText = "Calorias";
             this.totCal.MinimumWidth = 6;
             this.totCal.Name = "totCal";
@@ -356,22 +339,13 @@
             this.TipodeComida.MinimumWidth = 6;
             this.TipodeComida.Name = "TipodeComida";
             this.TipodeComida.Width = 125;
->>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
-=======
->>>>>>> valentina
->>>>>>> main
-            // 
-            // NombreReceta
-            // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
             this.NombreReceta.HeaderText = "Nombre de Receta";
             this.NombreReceta.MinimumWidth = 6;
             this.NombreReceta.Name = "NombreReceta";
             this.NombreReceta.Width = 125;
 =======
->>>>>>> main
+
             this.totCarb.HeaderText = "Carbohidratos";
             this.totCarb.MinimumWidth = 6;
             this.totCarb.Name = "totCarb";
@@ -383,22 +357,12 @@
             this.NombreReceta.MinimumWidth = 6;
             this.NombreReceta.Name = "NombreReceta";
             this.NombreReceta.Width = 125;
->>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
-=======
->>>>>>> valentina
->>>>>>> main
-            // 
-            // Calorias
-            // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
             this.Calorias.HeaderText = "Calorias";
             this.Calorias.MinimumWidth = 6;
             this.Calorias.Name = "Calorias";
             this.Calorias.Width = 125;
-=======
->>>>>>> main
+
             this.totProt.HeaderText = "Proteinas";
             this.totProt.MinimumWidth = 6;
             this.totProt.Name = "totProt";
@@ -410,10 +374,6 @@
             this.Calorias.MinimumWidth = 6;
             this.Calorias.Name = "Calorias";
             this.Calorias.Width = 125;
->>>>>>> 8abe2bac9927a815135406c39f81ab8fb01a9557
-=======
->>>>>>> valentina
->>>>>>> main
             // 
             // Proteínas
             // 
