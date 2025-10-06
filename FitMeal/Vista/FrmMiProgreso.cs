@@ -40,19 +40,22 @@ namespace FitMeal.Vista
         private void CargarGraficoTiempo()
         {
             string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
-
+            string cedula = FrmLoggin.UsuarioActivoCedula;
 
             // Consulta del SQL para que solo aparezcan los ultimos 7 dias en el grafico
             string query = @"
                 SELECT 
-                    CONVERT(DATE, Fecha) AS Dia,
-                    SUM(TiempoEjercicio) AS TiempoTot
+                    CONVERT(DATE, RA.Fecha) AS Dia,
+                    SUM(RA.TiempoEjercicio) AS TiempoTot
                 FROM
-                    REGISTRO_ACTIVIDAD
+                    REGISTRO_ACTIVIDAD RA
+                INNER JOIN
+                    PROGRESO P ON RA.ProgresoID = P.ProgresoID
                 WHERE
-                    Fecha >= DATEADD(day, -7, GETDATE())
+                    P.Cedula = @Cedula -- Filtro por el usuario activo
+                    AND RA.Fecha >= DATEADD(day, -7, GETDATE())
                 GROUP BY
-                    CONVERT(DATE, Fecha)
+                    CONVERT(DATE, RA.Fecha)
                 ORDER BY
                     Dia ASC";
 
@@ -82,20 +85,30 @@ namespace FitMeal.Vista
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
-                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // Esta condicion significa "Mientras haya más filas de datos disponibles para ser leídas del resultado de la consulta SQL, ejecuta el bloque de código siguiente."
-                        while (reader.Read()) {
+                        // Agregamos el parámetro @Cedula para filtrar
+                        command.Parameters.AddWithValue("@Cedula", cedula);
 
-                            // obtiene los valores de la consulta que hicimos arriba
-                            DateTime dia = reader.GetDateTime(0);
-                            int tiempo = Convert.ToInt32(reader["TiempoTotal"]);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // 1. Obtiene la fecha por índice (0)
+                                DateTime dia = reader.GetDateTime(0);
 
-                            // Aca añade el punto al grafico (Eje x: Fecha  y Eje Y: Tiempo)
-                            serieEjercicio.Points.AddXY(dia, tiempo);
+                                // 2. CORRECCIÓN DEL ERROR: Usa Convert.ToDouble o GetDouble() para SUM(INT) y lee el nombre correcto.
+                                // La columna se llama 'TiempoTot' en el SELECT.
+                                double tiempoDouble = Convert.ToDouble(reader["TiempoTot"]);
+
+                                // Si quieres que el valor en el gráfico sea un int:
+                                int tiempo = Convert.ToInt32(tiempoDouble);
+
+                                // Aca añade el punto al grafico
+                                serieEjercicio.Points.AddXY(dia, tiempo);
+                            }
                         }
-                    }
 
+                    }
                 }
                 // en el catch va lo que ocurre si hay una excepcion o algo falla
                 catch (Exception ex)
@@ -142,8 +155,8 @@ namespace FitMeal.Vista
 
         private void CargarGraficoConsumo()
         {
-            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal;Integrated Security=True;Encrypt=False";
-
+            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
+            string cedula = FrmLoggin.UsuarioActivoCedula;
 
             // Consulta del SQL para que solo aparezcan los ultimos 7 dias en el grafico
             // Se hace un JOIN entre REGISTRO_COMIDAS y REGISTRO_ACTIVIDAD porque necesito CaloriasQuemadas y CaloriasConsumidas
@@ -156,30 +169,34 @@ namespace FitMeal.Vista
                 (
                     -- Subconsulta A: Calorías Quemadas por Día
                     SELECT 
-                        CONVERT(DATE, Fecha) AS Dia,
-                        SUM(CaloriasQuemadas) AS CaloriasQuemadas
+                        CONVERT(DATE, RA.Fecha) AS Dia,
+                        SUM(RA.CaloriasQuemadas) AS CaloriasQuemadas
                     FROM
-                        REGISTRO_ACTIVIDAD
+                        REGISTRO_ACTIVIDAD RA
+                    INNER JOIN PROGRESO P ON RA.ProgresoID = P.ProgresoID
                     WHERE
-                        Fecha >= DATEADD(day, -7, GETDATE())
+                        P.Cedula = @Cedula -- FILTRO AÑADIDO
+                        AND RA.Fecha >= DATEADD(day, -7, GETDATE())
                     GROUP BY
-                        CONVERT(DATE, Fecha)
+                        CONVERT(DATE, RA.Fecha)
                 ) AS A
                 FULL OUTER JOIN
                 (
                     -- Subconsulta C: Calorías Consumidas por Día
                     SELECT 
-                        CONVERT(DATE, Fecha) AS Dia,
-                        SUM(CantidadCalorias) AS CaloriasConsumidas
+                        CONVERT(DATE, RC.Fecha) AS Dia,
+                        SUM(RC.CantidadCalorias) AS CaloriasConsumidas
                     FROM
-                        REGISTRO_COMIDAS
+                        REGISTRO_COMIDAS RC
+                    INNER JOIN PROGRESO P ON RC.ProgresoID = P.ProgresoID
                     WHERE
-                        Fecha >= DATEADD(day, -7, GETDATE())
+                        P.Cedula = @Cedula -- FILTRO AÑADIDO
+                        AND RC.Fecha >= DATEADD(day, -7, GETDATE())
                     GROUP BY
-                        CONVERT(DATE, Fecha)
+                        CONVERT(DATE, RC.Fecha)
                 ) AS C ON A.Dia = C.Dia
                 ORDER BY 
-                Dia ASC";
+                    Dia ASC";
 
 
             // Limpio el chart pa que no se me junten los que ya estaban
@@ -216,17 +233,23 @@ namespace FitMeal.Vista
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
-                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
-                        {
-                            DateTime dia = reader.GetDateTime(0);
-                            double consumidas = reader.GetDouble(1);
-                            double quemadas = reader.GetDouble(2);
+                        command.Parameters.AddWithValue("@Cedula", cedula);
 
-                            // Añade el punto a la serie correspondiente
-                            serieComidas.Points.AddXY(dia, consumidas);
-                            serieQuemadas.Points.AddXY(dia, quemadas);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DateTime dia = reader.GetDateTime(0);
+
+                                decimal consumidas = reader.GetDecimal(1);
+                                decimal quemadas = reader.GetDecimal(2);
+
+                                // Añade el punto a la serie correspondiente
+                                // Convertir a Double solo en el momento de agregarlo al gráfico
+                                serieComidas.Points.AddXY(dia, Convert.ToDouble(consumidas));
+                                serieQuemadas.Points.AddXY(dia, Convert.ToDouble(quemadas));
+                            }
                         }
                     }
                 }

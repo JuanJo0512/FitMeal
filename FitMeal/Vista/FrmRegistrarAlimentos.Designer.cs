@@ -41,8 +41,8 @@
             this.txtBuscarReceta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvRegistrarAlimento = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrarAlimento)).BeginInit();
             this.SuspendLayout();
@@ -157,9 +157,9 @@
             // txtBuscarReceta
             // 
             this.txtBuscarReceta.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarReceta.Location = new System.Drawing.Point(524, 74);
+            this.txtBuscarReceta.Location = new System.Drawing.Point(569, 79);
             this.txtBuscarReceta.Name = "txtBuscarReceta";
-            this.txtBuscarReceta.Size = new System.Drawing.Size(421, 35);
+            this.txtBuscarReceta.Size = new System.Drawing.Size(336, 35);
             this.txtBuscarReceta.TabIndex = 1;
             this.txtBuscarReceta.TextChanged += new System.EventHandler(this.txtBuscarReceta_TextChanged);
             // 
@@ -199,6 +199,13 @@
             this.dgvRegistrarAlimento.Size = new System.Drawing.Size(718, 357);
             this.dgvRegistrarAlimento.TabIndex = 4;
             // 
+            // Selec
+            // 
+            this.Selec.HeaderText = "Seleccionar";
+            this.Selec.MinimumWidth = 6;
+            this.Selec.Name = "Selec";
+            this.Selec.Width = 125;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -212,13 +219,6 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // Selec
-            // 
-            this.Selec.HeaderText = "Seleccionar";
-            this.Selec.MinimumWidth = 6;
-            this.Selec.Name = "Selec";
-            this.Selec.Width = 125;
             // 
             // FrmRegistrarAlimentos
             // 

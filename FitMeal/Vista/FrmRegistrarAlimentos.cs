@@ -34,33 +34,29 @@ namespace FitMeal.Vista
 
         private void txtBuscarReceta_TextChanged(object sender, EventArgs e)
         {
-            Filtrar(dgvRegistrarAlimento, txtBuscarReceta.Text);
-        }
+            // Obtiene el texto de búsqueda del TextBox
+            string filtro = txtBuscarReceta.Text.Trim();
 
-        private void Filtrar(DataGridView dtg, String Filtro)
-        {
-            Filtro = Filtro.ToLower();
-
-            foreach (DataGridViewRow row in dtg.Rows)
+            // 1. Asegúrate de que el DataGridView esté usando el DataTable
+            if (dgvRegistrarAlimento.DataSource is DataTable dataTable)
             {
-                if (!row.IsNewRow)
-                {
-                    bool visible = false;
+                // 2. Obtiene la vista de los datos (DataView)
+                DataView dv = dataTable.DefaultView;
 
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(Filtro))
-                        {
-                            visible = true;
-                            break;
-                        }
-                    }
-                    row.Visible = visible;
+                if (string.IsNullOrEmpty(filtro))
+                {
+                    // Si el campo de búsqueda está vacío, elimina el filtro
+                    dv.RowFilter = string.Empty;
+                }
+                else
+                {
+                    dv.RowFilter = $"Nombre LIKE '%{filtro.Replace("'", "''")}%'";
+
+                    // Nota: El .Replace("'", "''") es crucial para evitar inyecciones SQL
+                    // y errores de sintaxis si el usuario escribe una comilla simple.
                 }
             }
         }
-
-
 
 
         private void CargarReceta()
@@ -151,28 +147,32 @@ namespace FitMeal.Vista
                         DateTime fechaActual = DateTime.Today.Date;
 
 
+
+
                         string sqlRegistroComidaScript = @"
-                    -- Intenta obtener el ProgresoID existente para esta Cédula y Fecha
-                    DECLARE @ProgresoIDExistente INT;
+                -- Intenta obtener el ProgresoID existente para esta Cédula y Fecha
+                DECLARE @ProgresoIDExistente INT;
 
-                    SELECT @ProgresoIDExistente = ProgresoID 
-                    FROM PROGRESO 
-                    WHERE Cedula = @Cedula AND Fecha = @FechaActual;
+                SELECT @ProgresoIDExistente = ProgresoID 
+                FROM PROGRESO 
+                WHERE Cedula = @Cedula AND Fecha = @FechaActual;
 
-                    -- Si NO existe un ProgresoID para hoy, créalo
-                    IF @ProgresoIDExistente IS NULL
-                    BEGIN
-                        INSERT INTO PROGRESO (Cedula, Fecha)
-                        VALUES (@Cedula, @FechaActual);
-                        SET @ProgresoIDExistente = SCOPE_IDENTITY();
-                    END
+                -- Si NO existe un ProgresoID para hoy, créalo
+                IF @ProgresoIDExistente IS NULL
+                BEGIN
+                    INSERT INTO PROGRESO (Cedula, Fecha)
+                    VALUES (@Cedula, @FechaActual);
+                    SET @ProgresoIDExistente = SCOPE_IDENTITY();
+                END
 
-                    -- Inserta el registro de la comida usando el ProgresoID encontrado o creado
-                    INSERT INTO REGISTRO_COMIDAS 
-                    (ProgresoID, RecetalD, Fecha, NombreComida, Categoria, CantidadCalorias)
-                    VALUES 
-                    (@ProgresoIDExistente, @RecetaID, @FechaActual, @NombreComida, @CategoriaComida, @CaloriasComida);
-                ";
+                -- Inserta el registro de la comida usando el ProgresoID encontrado o creado
+                INSERT INTO REGISTRO_COMIDAS 
+                (ProgresoID, RecetaID, Fecha, NombreComida, Categoria, CantidadCalorias)
+                --         
+                VALUES 
+                (@ProgresoIDExistente, @RecetaID, @FechaActual, @NombreComida, @CategoriaComida, @CaloriasComida);
+            ";
+
 
                         SqlCommand cmd = new SqlCommand(sqlRegistroComidaScript, cn.AbrirConexion());
 
