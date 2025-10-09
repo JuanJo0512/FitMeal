@@ -41,8 +41,13 @@
             this.txtBuscarReceta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvRegistrarAlimento = new System.Windows.Forms.DataGridView();
-            this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalCalorias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalProteinas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalCarbohidratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Selec = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrarAlimento)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +93,7 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Miskan", 16.2F);
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.btnPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPerfil.Location = new System.Drawing.Point(-1, 0);
             this.btnPerfil.Name = "btnPerfil";
@@ -190,6 +195,11 @@
             this.dgvRegistrarAlimento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRegistrarAlimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistrarAlimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TipoComida,
+            this.Nombre,
+            this.TotalCalorias,
+            this.TotalProteinas,
+            this.TotalCarbohidratos,
             this.Selec});
             this.dgvRegistrarAlimento.Location = new System.Drawing.Point(332, 163);
             this.dgvRegistrarAlimento.MultiSelect = false;
@@ -199,18 +209,11 @@
             this.dgvRegistrarAlimento.Size = new System.Drawing.Size(718, 357);
             this.dgvRegistrarAlimento.TabIndex = 4;
             // 
-            // Selec
-            // 
-            this.Selec.HeaderText = "Seleccionar";
-            this.Selec.MinimumWidth = 6;
-            this.Selec.Name = "Selec";
-            this.Selec.Width = 125;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Miskan", 10F);
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnGuardar.Location = new System.Drawing.Point(919, 562);
             this.btnGuardar.Name = "btnGuardar";
@@ -219,6 +222,48 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // TipoComida
+            // 
+            this.TipoComida.HeaderText = "Tipo de comida";
+            this.TipoComida.MinimumWidth = 6;
+            this.TipoComida.Name = "TipoComida";
+            this.TipoComida.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // TotalCalorias
+            // 
+            this.TotalCalorias.HeaderText = "Calorias";
+            this.TotalCalorias.MinimumWidth = 6;
+            this.TotalCalorias.Name = "TotalCalorias";
+            this.TotalCalorias.Width = 80;
+            // 
+            // TotalProteinas
+            // 
+            this.TotalProteinas.HeaderText = "Proteinas";
+            this.TotalProteinas.MinimumWidth = 6;
+            this.TotalProteinas.Name = "TotalProteinas";
+            this.TotalProteinas.Width = 80;
+            // 
+            // TotalCarbohidratos
+            // 
+            this.TotalCarbohidratos.HeaderText = "Carbohidratos";
+            this.TotalCarbohidratos.MinimumWidth = 6;
+            this.TotalCarbohidratos.Name = "TotalCarbohidratos";
+            this.TotalCarbohidratos.Width = 110;
+            // 
+            // Selec
+            // 
+            this.Selec.HeaderText = "Seleccionar";
+            this.Selec.MinimumWidth = 6;
+            this.Selec.Name = "Selec";
+            this.Selec.Width = 125;
             // 
             // FrmRegistrarAlimentos
             // 
@@ -254,6 +299,11 @@
         private System.Windows.Forms.DataGridView dgvRegistrarAlimento;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoComida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalCalorias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalProteinas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalCarbohidratos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selec;
     }
 }

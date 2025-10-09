@@ -337,5 +337,11 @@ namespace FitMeal.Vista
             this.Hide();
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            FrmLoggin.UsuarioActivoCedula = "";
+            FrmLoggin.UsuarioActivoNombre = "";
+            FrmLoggin.AbrirForm(new FrmLoggin(), this);
+        }
     }
 }

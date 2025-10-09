@@ -92,7 +92,7 @@ namespace FitMeal.Vista
 
                     if (fechaFin >= DateTime.Now.Date)
                     {
-                        MessageBox.Show("Su plan se cargara en un momento");
+
                         btnGenerarPlan.Enabled = false;
                         btnAprobarPlan.Enabled = false;
                         CargarPlanActivo(planID);

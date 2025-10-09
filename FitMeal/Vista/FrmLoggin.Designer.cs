@@ -37,8 +37,8 @@
             this.btnIngreso = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,7 @@
             // 
             this.txtContraseña.Location = new System.Drawing.Point(288, 217);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(178, 22);
             this.txtContraseña.TabIndex = 4;
             // 
@@ -136,6 +137,16 @@
             this.panel1.Size = new System.Drawing.Size(731, 457);
             this.panel1.TabIndex = 8;
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Location = new System.Drawing.Point(53, 415);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(148, 26);
+            this.btnAdmin.TabIndex = 9;
+            this.btnAdmin.Text = "Modo Administrador";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -149,16 +160,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 372);
             this.panel2.TabIndex = 8;
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(53, 415);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(148, 26);
-            this.btnAdmin.TabIndex = 9;
-            this.btnAdmin.Text = "Modo Administrador";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmLoggin
             // 

@@ -104,7 +104,12 @@ namespace FitMeal.Vista
                 cmd.ExecuteNonQuery();
                 cn.CerrarConexion();
                 MessageBox.Show("Actividad registrada con éxito.", "Éxito");
-
+                chbActividadDiaria.Checked = false;
+                chbActividadesAireLibre.Checked = false;
+                chbCardioAerobico.Checked = false;
+                chbDeportes.Checked = false;
+                chbFlexibilidad.Checked = false;
+                chbFuerza.Checked = false;
 
             }
             catch (Exception ex)

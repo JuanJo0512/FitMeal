@@ -60,6 +60,7 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.cmbMeta = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -305,7 +306,7 @@
             // btnEditarPerfil
             // 
             this.btnEditarPerfil.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnEditarPerfil.Font = new System.Drawing.Font("Miskan", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEditarPerfil.Location = new System.Drawing.Point(333, 484);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
@@ -318,7 +319,7 @@
             // btnPreferencias
             // 
             this.btnPreferencias.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnPreferencias.Font = new System.Drawing.Font("Miskan", 10F);
+            this.btnPreferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnPreferencias.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnPreferencias.Location = new System.Drawing.Point(517, 484);
             this.btnPreferencias.Name = "btnPreferencias";
@@ -331,7 +332,7 @@
             // btnEliminarPerfil
             // 
             this.btnEliminarPerfil.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEliminarPerfil.Font = new System.Drawing.Font("Miskan", 10F);
+            this.btnEliminarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarPerfil.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnEliminarPerfil.Location = new System.Drawing.Point(757, 484);
             this.btnEliminarPerfil.Name = "btnEliminarPerfil";
@@ -370,6 +371,7 @@
             this.txtContraseña.Enabled = false;
             this.txtContraseña.Location = new System.Drawing.Point(474, 407);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(221, 22);
             this.txtContraseña.TabIndex = 39;
             // 
@@ -408,7 +410,7 @@
             this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnGuardar.Location = new System.Drawing.Point(967, 484);
             this.btnGuardar.Name = "btnGuardar";
@@ -417,12 +419,26 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnCerrar.Location = new System.Drawing.Point(850, 555);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(178, 55);
+            this.btnCerrar.TabIndex = 44;
+            this.btnCerrar.Text = "Cerrar Sesion";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1095, 629);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbMeta);
             this.Controls.Add(this.txtPeso);
@@ -490,5 +506,6 @@
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.ComboBox cmbMeta;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

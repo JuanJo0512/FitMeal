@@ -22,77 +22,120 @@ namespace FitMeal.Vista
         DataTable dt;
         SqlDataReader dr;
 
-        private string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
         public FrmRegistrarAlimentos()
         {
             InitializeComponent();
             cn = new cConexion();
-            CargarReceta();
 
         }
 
+        private void Filtrar(DataGridView dtg, String Filtro)
+        {
+            Filtro = Filtro.ToLower();
+
+            foreach (DataGridViewRow row in dtg.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    bool visible = false;
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(Filtro))
+                        {
+                            visible = true;
+                            break;
+                        }
+                    }
+                    row.Visible = visible;
+                }
+            }
+        }
 
         private void txtBuscarReceta_TextChanged(object sender, EventArgs e)
         {
-            // Obtiene el texto de búsqueda del TextBox
-            string filtro = txtBuscarReceta.Text.Trim();
+            Filtrar(dgvRegistrarAlimento, txtBuscarReceta.Text);
+        }
 
-            // 1. Asegúrate de que el DataGridView esté usando el DataTable
-            if (dgvRegistrarAlimento.DataSource is DataTable dataTable)
+        private void VerificarPlanActivo()
+        {
+            try
             {
-                // 2. Obtiene la vista de los datos (DataView)
-                DataView dv = dataTable.DefaultView;
+                string verificar = "select top 1 PlanID, FechaInicio, FechaFin from PLANDIETA where Cedula = @Cedula and estado = 'Activo' order by FechaInicio desc ";
 
-                if (string.IsNullOrEmpty(filtro))
+                cmd = new SqlCommand(verificar, cn.AbrirConexion());
+                cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
                 {
-                    // Si el campo de búsqueda está vacío, elimina el filtro
-                    dv.RowFilter = string.Empty;
+                    DateTime fechaFin = Convert.ToDateTime(dr["FechaFin"]);
+                    int planID = Convert.ToInt32(dr["PlanID"]);
+                    dr.Close();
+                    cn.CerrarConexion();
+
+                    if (fechaFin >= DateTime.Now.Date)
+                    {
+                        CargarReceta(planID);
+                    }
+                    else
+                    {
+                        dr.Close();
+                        cn.CerrarConexion();
+
+                        string vencido = "update PLANDIETA set Estado = 'Finalizado' where PlanID = @PlanID";
+                        SqlCommand cmdFin = new SqlCommand(vencido, cn.AbrirConexion());
+                        cmdFin.Parameters.AddWithValue("@PlanID", planID);
+                        cmdFin.ExecuteNonQuery();
+                        cn.CerrarConexion();
+
+                        MessageBox.Show("Su plan a expirado, genere uno nuevo");
+                    }
                 }
                 else
                 {
-                    dv.RowFilter = $"Nombre LIKE '%{filtro.Replace("'", "''")}%'";
-
-                    // Nota: El .Replace("'", "''") es crucial para evitar inyecciones SQL
-                    // y errores de sintaxis si el usuario escribe una comilla simple.
+                    dr.Close();
+                    cn.CerrarConexion();
+                    MessageBox.Show("No tienes un plan activo. Genera uno nuevo.");
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro al verificar el plan");
+            }
+
         }
 
 
-        private void CargarReceta()
+        private void CargarReceta(int PlanID)
         {
-            // Usamos el DataAdapter y DataTable para una carga de datos más eficiente
-            dt = new DataTable(); // Reiniciamos el DataTable
+            dgvRegistrarAlimento.Rows.Clear();
 
-            string query = @"
-        SELECT 
-            RecetaID, 
-            Categoria, 
-            Nombre, 
-            TotalCalorias, 
-            TotalCarbohidratos, 
-            TotalProteinas
-        FROM RECETA";
+            string llenar = @"select c.Fecha, c.TipoComida, r.Nombre, r.TotalCalorias,r.TotalProteinas, r.TotalCarbohidratos
+              from COMIDA_PLANIFICADA c
+              inner join RECETA r on  c.RecetaID = r.RecetaID
+              where c.PlanID = @PlanID
+              order by c.Fecha, c.TipoComida";
 
-            // Usamos 'using' para asegurar que la conexión y el adaptador se cierren y liberen recursos.
-            using (SqlConnection connection = new SqlConnection(connectionString)) // Usa la cadena de conexión local
-            {
-                try
-                {
-                    connection.Open();
-                    da = new SqlDataAdapter(query, connection);
-                    da.Fill(dt);
+            SqlCommand cmd = new SqlCommand(llenar, cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@PlanID", PlanID);
+            SqlDataReader dr = cmd.ExecuteReader();
 
-                    // Asignar el DataTable como origen de datos.
-                    dgvRegistrarAlimento.DataSource = dt;
+            while (dr.Read())
+            { 
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar las recetas: " + ex.Message, "Error de Base de Datos");
-                }
-                // No necesitamos 'finally' ya que 'using' se encarga de cerrar la conexión.
+                dgvRegistrarAlimento.Rows.Add(
+                    dr["TipoComida"].ToString(),
+                    dr["Nombre"].ToString(),
+                    dr["TotalCalorias"].ToString(),
+                    dr["TotalProteinas"].ToString(),
+                    dr["TotalCarbohidratos"].ToString(),
+                    false
+                );
             }
+
+            dr.Close();
+            cn.CerrarConexion();
         }
 
 
@@ -102,104 +145,115 @@ namespace FitMeal.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Variables de la receta DEBEN declararse fuera del try/catch del bucle
-            int RecetaID = 0;
-            String NombreComida = "";
-            String Categoria = "";
-            decimal calorias = 0;
-
-            // 1. Validar si hay al menos una fila seleccionada (Checkeada)
-            bool algunaRecetaMarcada = false;
-            foreach (DataGridViewRow row in dgvRegistrarAlimento.Rows)
+            try
             {
-                if (!row.IsNewRow && Convert.ToBoolean(row.Cells["Selec"].Value))
+                // 🔹 1. Obtener el Plan activo del usuario
+                int planID;
+                string queryPlan = "select top 1 PlanID from PLANDIETA where Cedula = @Cedula and Estado = 'Activo' order by FechaInicio desc";
+                using (SqlCommand cmdPlan = new SqlCommand(queryPlan, cn.AbrirConexion()))
                 {
-                    algunaRecetaMarcada = true;
-                    break;
+                    cmdPlan.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+                    object result = cmdPlan.ExecuteScalar();
+                    if (result != null)
+                        planID = Convert.ToInt32(result);
                 }
-            }
+                cn.CerrarConexion();
 
-            if (!algunaRecetaMarcada)
-            {
-                MessageBox.Show("Por favor, selecciona al menos una receta para registrar.", "Advertencia");
-                return;
-            }
+                // 🔹 2. Crear (si no existe) un progreso para hoy
+                int progresoID;
+                DateTime fechaHoy = DateTime.Today;
 
-            // 2. Inicia el proceso de guardado para las recetas marcadas
-            foreach (DataGridViewRow row in dgvRegistrarAlimento.Rows)
-            {
-                if (row.IsNewRow || row.Cells["Selec"].Value == null) continue;
+                string queryProgreso = @"
+            if not exists (select 1 from PROGRESO where Cedula = @Cedula and Fecha = @Fecha)
+            begin
+                insert into PROGRESO (Cedula, Fecha) values (@Cedula, @Fecha);
+            end;
+            select ProgresoID from PROGRESO where Cedula = @Cedula and Fecha = @Fecha;";
 
-                bool marcado = Convert.ToBoolean(row.Cells["Selec"].Value);
-
-                if (marcado)
+                using (SqlCommand cmdProgreso = new SqlCommand(queryProgreso, cn.AbrirConexion()))
                 {
-                    try
+                    cmdProgreso.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
+                    cmdProgreso.Parameters.AddWithValue("@Fecha", fechaHoy);
+                    progresoID = Convert.ToInt32(cmdProgreso.ExecuteScalar());
+                }
+                cn.CerrarConexion();
+
+                // 🔹 3. Recorrer las filas marcadas
+                using (SqlConnection con = cn.AbrirConexion())
+                {
+                    foreach (DataGridViewRow row in dgvRegistrarAlimento.Rows)
                     {
-                        // Convertir y Asignar valores a variables declaradas fuera del try.
-                        RecetaID = Convert.ToInt32(row.Cells["RecetaID"].Value); // Usar RecetaID si ese es el DataPropertyName
-                        NombreComida = Convert.ToString(row.Cells["Nombre"].Value); // Usar Nombre si ese es el DataPropertyName
-                        Categoria = Convert.ToString(row.Cells["Categoria"].Value);
-                        calorias = Convert.ToDecimal(row.Cells["TotalCalorias"].Value);
+                        if (row.IsNewRow || row.Cells["Selec"].Value == null)
+                            continue;
 
-                        // Variables de contexto
-                        string cedulaUsuario = FrmLoggin.UsuarioActivoCedula;
-                        DateTime fechaActual = DateTime.Today.Date;
+                        bool marcado = Convert.ToBoolean(row.Cells["Selec"].Value);
+                        if (!marcado) continue;
 
+                        // Obtener datos de la fila
+                        string tipoComida = row.Cells["TipoComida"].Value.ToString();
+                        string nombre = row.Cells["Nombre"].Value.ToString();
+                        decimal calorias = Convert.ToDecimal(row.Cells["TotalCalorias"].Value);
+                        int recetaID = 0;
 
+                        // 🔹 Buscar el RecetaID según el nombre (ya que no está en el datagrid)
+                        string buscarReceta = "select RecetaID from RECETA where Nombre = @Nombre";
+                        using (SqlCommand cmdBuscar = new SqlCommand(buscarReceta, con))
+                        {
+                            cmdBuscar.Parameters.AddWithValue("@Nombre", nombre);
+                            object id = cmdBuscar.ExecuteScalar();
+                            if (id != null) recetaID = Convert.ToInt32(id);
+                        }
 
+                        // 🔹 Verificar si ya se registró esa comida hoy (evitar duplicados)
+                        string existe = @"select count(*) FROM REGISTRO_COMIDAS 
+                                  where ProgresoID = @ProgresoID and RecetaID = @RecetaID and Fecha = @Fecha";
+                        using (SqlCommand cmdExiste = new SqlCommand(existe, con))
+                        {
+                            cmdExiste.Parameters.AddWithValue("@ProgresoID", progresoID);
+                            cmdExiste.Parameters.AddWithValue("@RecetaID", recetaID);
+                            cmdExiste.Parameters.AddWithValue("@Fecha", fechaHoy);
 
-                        string sqlRegistroComidaScript = @"
-                -- Intenta obtener el ProgresoID existente para esta Cédula y Fecha
-                DECLARE @ProgresoIDExistente INT;
+                            int count = Convert.ToInt32(cmdExiste.ExecuteScalar());
+                            if (count > 0) continue;
+                        }
 
-                SELECT @ProgresoIDExistente = ProgresoID 
-                FROM PROGRESO 
-                WHERE Cedula = @Cedula AND Fecha = @FechaActual;
-
-                -- Si NO existe un ProgresoID para hoy, créalo
-                IF @ProgresoIDExistente IS NULL
-                BEGIN
-                    INSERT INTO PROGRESO (Cedula, Fecha)
-                    VALUES (@Cedula, @FechaActual);
-                    SET @ProgresoIDExistente = SCOPE_IDENTITY();
-                END
-
-                -- Inserta el registro de la comida usando el ProgresoID encontrado o creado
-                INSERT INTO REGISTRO_COMIDAS 
-                (ProgresoID, RecetaID, Fecha, NombreComida, Categoria, CantidadCalorias)
-                --         
-                VALUES 
-                (@ProgresoIDExistente, @RecetaID, @FechaActual, @NombreComida, @CategoriaComida, @CaloriasComida);
-            ";
-
-
-                        SqlCommand cmd = new SqlCommand(sqlRegistroComidaScript, cn.AbrirConexion());
-
-                        // Parámetros
-                        cmd.Parameters.AddWithValue("@Cedula", cedulaUsuario);
-                        cmd.Parameters.AddWithValue("@FechaActual", fechaActual);
-                        cmd.Parameters.AddWithValue("@RecetaID", RecetaID);
-                        cmd.Parameters.AddWithValue("@NombreComida", NombreComida);
-                        cmd.Parameters.AddWithValue("@CategoriaComida", Categoria);
-                        cmd.Parameters.AddWithValue("@CaloriasComida", calorias);
-
-                        cmd.ExecuteNonQuery();
-                        cn.CerrarConexion();
+                        // 🔹 Insertar en REGISTRO_COMIDAS
+                        string insert = @"insert into REGISTRO_COMIDAS 
+                                  (ProgresoID, RecetaID, Fecha, NombreComida, Categoria, CantidadCalorias)
+                                  values (@ProgresoID, @RecetaID, @Fecha, @Nombre, @Categoria, @Calorias)";
+                        using (SqlCommand cmdInsert = new SqlCommand(insert, con))
+                        {
+                            cmdInsert.Parameters.AddWithValue("@ProgresoID", progresoID);
+                            cmdInsert.Parameters.AddWithValue("@RecetaID", recetaID);
+                            cmdInsert.Parameters.AddWithValue("@Fecha", fechaHoy);
+                            cmdInsert.Parameters.AddWithValue("@Nombre", nombre);
+                            cmdInsert.Parameters.AddWithValue("@Categoria", tipoComida);
+                            cmdInsert.Parameters.AddWithValue("@Calorias", calorias);
+                            cmdInsert.ExecuteNonQuery();
+                        }
                     }
-                    catch (Exception ex)
+                    // 🔹 Desmarcar todas las casillas después de guardar
+                    foreach (DataGridViewRow row in dgvRegistrarAlimento.Rows)
                     {
-                        MessageBox.Show($"Error al registrar la receta '{NombreComida}': " + ex.Message, "Error de Base de Datos");
-                        cn.CerrarConexion();
-                        return;
+                        if (row.Cells["Selec"].Value != null)
+                            row.Cells["Selec"].Value = false;
                     }
                 }
+                cn.CerrarConexion();
+
+                MessageBox.Show("comidas registradas correctamente.");
             }
-            // Mensaje de éxito después de completar todos los registros
-            MessageBox.Show("Recetas registradas con éxito.", "Éxito");
+            catch (Exception ex)
+            {
+                cn.CerrarConexion();
+                MessageBox.Show("Error al registrar comidas");
+            }
         }
 
-
+        private void FrmRegistrarAlimentos_Load(object sender, EventArgs e)
+        {
+            VerificarPlanActivo();
+        }
 
 
         // -------------- BOTONES DE NAVEGACION ---------------------------------
@@ -246,9 +300,7 @@ namespace FitMeal.Vista
             this.Hide();
         }
 
-        private void FrmRegistrarAlimentos_Load(object sender, EventArgs e)
-        {
-        }
+
 
     }
 }

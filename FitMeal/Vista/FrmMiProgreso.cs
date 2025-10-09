@@ -1,22 +1,29 @@
-﻿using System;
+﻿using FitMeal.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace FitMeal.Vista
 {
     public partial class FrmMiProgreso : Form
     {
+        cConexion cn;
+        SqlCommand cmd;
+        SqlDataAdapter da;
+        DataTable dt;
+        SqlDataReader dr;
         public FrmMiProgreso()
         {
             InitializeComponent();
+            cn = new cConexion();
         }
 
         private void FrmMiProgreso_Load(object sender, EventArgs e)
@@ -39,7 +46,6 @@ namespace FitMeal.Vista
 
         private void CargarGraficoTiempo()
         {
-            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
             string cedula = FrmLoggin.UsuarioActivoCedula;
 
             // Consulta del SQL para que solo aparezcan los ultimos 7 dias en el grafico
@@ -76,15 +82,12 @@ namespace FitMeal.Vista
 
             // Carga de los datos
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
                 // aqui se usa un try catch para tener un error controlado y que al usuario no se le colapse la app
                 // en el try va el proposito del codigo
 
                 try
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, cn.AbrirConexion()))
                     {
                         // Agregamos el parámetro @Cedula para filtrar
                         command.Parameters.AddWithValue("@Cedula", cedula);
@@ -116,7 +119,7 @@ namespace FitMeal.Vista
                     MessageBox.Show($"Error al cargar gráfico: {ex.Message}", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }
+            
 
 
             // Y aqui tambien se agrega una opcion si no hay registros de los ultimos 7 dias
@@ -155,7 +158,6 @@ namespace FitMeal.Vista
 
         private void CargarGraficoConsumo()
         {
-            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=FitMeal2;Integrated Security=True;Encrypt=False";
             string cedula = FrmLoggin.UsuarioActivoCedula;
 
             // Consulta del SQL para que solo aparezcan los ultimos 7 dias en el grafico
@@ -227,12 +229,9 @@ namespace FitMeal.Vista
 
 
             // Conexión y Carga de Datos
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
                 try
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, cn.AbrirConexion()))
                     {
                         command.Parameters.AddWithValue("@Cedula", cedula);
 
@@ -258,7 +257,7 @@ namespace FitMeal.Vista
                     MessageBox.Show($"Error al cargar el gráfico: {ex.Message}", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }
+            
 
             // Configuración Final
             if (serieComidas.Points.Count > 0 || serieQuemadas.Points.Count > 0)
