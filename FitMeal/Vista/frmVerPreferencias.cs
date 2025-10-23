@@ -34,10 +34,10 @@ namespace FitMeal.Vista
             dtgPreferencias.Rows.Clear();
 
             string query = @"
-            SELECT A.AlimentoID, A.Nombre
-            FROM PREF_USUARIO P
-            INNER JOIN ALIMENTO A ON P.AlimentoID = A.AlimentoID
-            WHERE P.Cedula = @Cedula";
+            select A.AlimentoID, A.Nombre
+            from PREF_USUARIO P
+            inner join ALIMENTO A ON P.AlimentoID = A.AlimentoID
+            where P.Cedula = @Cedula";
 
             cmd = new SqlCommand(query, cn.AbrirConexion());
             cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
@@ -60,12 +60,10 @@ namespace FitMeal.Vista
             dtgAlergias.Rows.Clear();
 
             string query = @"
-            SELECT AL.AlergiaID, AL.Nombre AS Alergia, A.Nombre AS Alimento
-            FROM ALERG_USUARIO AU
-            INNER JOIN ALERGIA AL ON AU.AlergiaID = AL.AlergiaID
-            LEFT JOIN ALERG_ALIMENTO AA ON AL.AlergiaID = AA.AlergiaID
-            LEFT JOIN ALIMENTO A ON AA.AlimentoID = A.AlimentoID
-            WHERE AU.Cedula = @Cedula";
+            select AL.AlergiaID, AL.Nombre as Alergia
+            from ALERG_USUARIO au
+            inner join ALERGIA al on au.AlergiaID = al.AlergiaID
+            where au.Cedula = @Cedula";
 
             cmd = new SqlCommand(query, cn.AbrirConexion());
             cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);
@@ -75,13 +73,12 @@ namespace FitMeal.Vista
             {
                 dtgAlergias.Rows.Add(
                     dr["Alergia"].ToString(),
-                    dr["Alimento"] != DBNull.Value ? dr["Alimento"].ToString() : "",
                     dr["AlergiaID"].ToString()
                 );
             }
 
             dr.Close();
-            cn.CerrarConexion(); // cierras manualmente
+            cn.CerrarConexion();
         }
 
         private void btnIngreso_Click(object sender, EventArgs e)
@@ -133,8 +130,6 @@ namespace FitMeal.Vista
 
         private void frmVerPreferencias_Load(object sender, EventArgs e)
         {
-            // Llama a la variable estática directamente desde la clase FrmLoggin
-            // y asigna su valor al texto del Label.
             if (!string.IsNullOrEmpty(FrmLoggin.UsuarioActivoNombre))
             {
                 lblNombre.Text = FrmLoggin.UsuarioActivoNombre;

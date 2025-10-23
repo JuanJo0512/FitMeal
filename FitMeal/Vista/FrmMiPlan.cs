@@ -291,6 +291,7 @@ namespace FitMeal.Vista
 
                         while (drRec.Read())
                         {
+                            
                             int recetaID = Convert.ToInt32(drRec["RecetaID"]);
 
                             //Se evita que ingresen recetas duplicadas a las recetas posibles
@@ -305,6 +306,7 @@ namespace FitMeal.Vista
                                 Convert.ToDecimal(drRec["TotalCarbohidratos"]),
                                 drRec["Descripcion"].ToString()
                             ));
+                            
                         }
 
                         drRec.Close();
@@ -414,9 +416,9 @@ namespace FitMeal.Vista
 
                 // Insertar PLANDIETA y obtener PlanID con SCOPE_IDENTITY (más compatible)
                 string insertarPlan = @"
-            INSERT INTO PLANDIETA (Cedula, FechaInicio, FechaFin, ObjetivoCalorias, Estado)
-            VALUES (@Cedula, @FechaInicio, @FechaFin, @ObjetivoCalorias, 'Activo');
-            SELECT CAST(SCOPE_IDENTITY() AS INT);";
+            insert into PLANDIETA (Cedula, FechaInicio, FechaFin, ObjetivoCalorias, Estado)
+            values (@Cedula, @FechaInicio, @FechaFin, @ObjetivoCalorias, 'Activo');
+            select cast(scope_identity() as int);";
 
                 cmd = new SqlCommand(insertarPlan, cn.AbrirConexion());
                 cmd.Parameters.AddWithValue("@Cedula", FrmLoggin.UsuarioActivoCedula);

@@ -86,7 +86,7 @@
             this.categoriaAlimento,
             this.excluirAlimento});
             this.dtgAlimentos.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlimentos.Location = new System.Drawing.Point(17, 235);
+            this.dtgAlimentos.Location = new System.Drawing.Point(17, 224);
             this.dtgAlimentos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtgAlimentos.Name = "dtgAlimentos";
             this.dtgAlimentos.RowHeadersWidth = 51;
@@ -125,7 +125,7 @@
             // 
             // txtBuscarAlergia
             // 
-            this.txtBuscarAlergia.Location = new System.Drawing.Point(125, 573);
+            this.txtBuscarAlergia.Location = new System.Drawing.Point(125, 554);
             this.txtBuscarAlergia.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBuscarAlergia.Name = "txtBuscarAlergia";
             this.txtBuscarAlergia.Size = new System.Drawing.Size(463, 22);
@@ -137,7 +137,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(13, 571);
+            this.label4.Location = new System.Drawing.Point(13, 552);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 22);
@@ -155,7 +155,7 @@
             this.descripcionAlergia,
             this.checkAlergia});
             this.dtgAlergias.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlergias.Location = new System.Drawing.Point(17, 628);
+            this.dtgAlergias.Location = new System.Drawing.Point(17, 580);
             this.dtgAlergias.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtgAlergias.Name = "dtgAlergias";
             this.dtgAlergias.RowHeadersWidth = 51;
@@ -199,7 +199,7 @@
             this.lblAlergias.AutoSize = true;
             this.lblAlergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlergias.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.lblAlergias.Location = new System.Drawing.Point(13, 495);
+            this.lblAlergias.Location = new System.Drawing.Point(13, 485);
             this.lblAlergias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlergias.Name = "lblAlergias";
             this.lblAlergias.Size = new System.Drawing.Size(549, 44);
@@ -212,10 +212,10 @@
             this.btnguardar.BackColor = System.Drawing.Color.OliveDrab;
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnguardar.Location = new System.Drawing.Point(817, 835);
+            this.btnguardar.Location = new System.Drawing.Point(822, 580);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(235, 86);
+            this.btnguardar.Size = new System.Drawing.Size(222, 68);
             this.btnguardar.TabIndex = 53;
             this.btnguardar.Text = "Guardar y finalizar";
             this.btnguardar.UseVisualStyleBackColor = false;
@@ -226,9 +226,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-
             this.label2.Location = new System.Drawing.Point(13, 183);
-
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 22);
@@ -237,9 +235,7 @@
             // 
             // txtBuscarAlimento
             // 
-
             this.txtBuscarAlimento.Location = new System.Drawing.Point(112, 185);
-
             this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBuscarAlimento.Name = "txtBuscarAlimento";
             this.txtBuscarAlimento.Size = new System.Drawing.Size(463, 22);
@@ -251,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1083, 956);
+            this.ClientSize = new System.Drawing.Size(1083, 860);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txtBuscarAlergia);
             this.Controls.Add(this.label4);
