@@ -141,7 +141,7 @@ namespace FitMeal.Vista
                 area.AxisX.Interval = 1; // Muestra una etiqueta por cada día
 
                 // Eje Y: Tiempo
-                area.AxisY.Title = "Duración (Horas)";
+                area.AxisY.Title = "Duración (Min)";
                 area.AxisY.Minimum = 0;
 
                 // Mostrar el valor exacto encima de cada punto

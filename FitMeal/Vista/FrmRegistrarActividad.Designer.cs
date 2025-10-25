@@ -168,13 +168,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miskan", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label2.Location = new System.Drawing.Point(338, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(480, 45);
+            this.label2.Size = new System.Drawing.Size(449, 45);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Registro Nueva Actividad";
+            this.label2.Text = "REGISTRO NUEVA ACTIVIDAD";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -246,11 +247,11 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Miskan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnGuardar.Location = new System.Drawing.Point(346, 526);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(145, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(133, 47);
             this.btnGuardar.TabIndex = 18;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
