@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -48,6 +48,13 @@
             this.txtTotalCarbohidratos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgAlimentos = new System.Windows.Forms.DataGridView();
+            this.txtTotalCalorias = new System.Windows.Forms.TextBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbTipo2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.nombreAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlimentoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaAlimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,13 +63,6 @@
             this.Carbohidratos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtTotalCalorias = new System.Windows.Forms.TextBox();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.cmbTipo2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtBuscarAlimento = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlimentos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnVolver.Location = new System.Drawing.Point(752, 468);
+            this.btnVolver.Location = new System.Drawing.Point(792, 373);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(170, 44);
             this.btnVolver.TabIndex = 69;
@@ -84,7 +84,7 @@
             this.btnAñadir.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAñadir.Location = new System.Drawing.Point(752, 535);
+            this.btnAñadir.Location = new System.Drawing.Point(792, 440);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(170, 44);
             this.btnAñadir.TabIndex = 68;
@@ -97,7 +97,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnModificar.Location = new System.Drawing.Point(752, 608);
+            this.btnModificar.Location = new System.Drawing.Point(792, 513);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(170, 44);
             this.btnModificar.TabIndex = 67;
@@ -110,7 +110,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnEliminar.Location = new System.Drawing.Point(752, 688);
+            this.btnEliminar.Location = new System.Drawing.Point(792, 593);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(170, 44);
             this.btnEliminar.TabIndex = 66;
@@ -279,84 +279,13 @@
             this.Cantidad,
             this.Seleccionar});
             this.dtgAlimentos.GridColor = System.Drawing.Color.Cornsilk;
-            this.dtgAlimentos.Location = new System.Drawing.Point(21, 479);
+            this.dtgAlimentos.Location = new System.Drawing.Point(21, 414);
             this.dtgAlimentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgAlimentos.Name = "dtgAlimentos";
             this.dtgAlimentos.RowHeadersWidth = 51;
             this.dtgAlimentos.RowTemplate.Height = 24;
             this.dtgAlimentos.Size = new System.Drawing.Size(640, 194);
             this.dtgAlimentos.TabIndex = 73;
-            // 
-            // nombreAlimento
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.nombreAlimento.DefaultCellStyle = dataGridViewCellStyle1;
-            this.nombreAlimento.HeaderText = "Nombre";
-            this.nombreAlimento.MinimumWidth = 6;
-            this.nombreAlimento.Name = "nombreAlimento";
-            this.nombreAlimento.Width = 180;
-            // 
-            // AlimentoID
-            // 
-            this.AlimentoID.HeaderText = "ID";
-            this.AlimentoID.MinimumWidth = 6;
-            this.AlimentoID.Name = "AlimentoID";
-            this.AlimentoID.ReadOnly = true;
-            this.AlimentoID.Visible = false;
-            this.AlimentoID.Width = 125;
-            // 
-            // categoriaAlimento
-            // 
-            this.categoriaAlimento.HeaderText = "Categoria";
-            this.categoriaAlimento.MinimumWidth = 6;
-            this.categoriaAlimento.Name = "categoriaAlimento";
-            this.categoriaAlimento.ReadOnly = true;
-            this.categoriaAlimento.Width = 120;
-            // 
-            // Calorias
-            // 
-            this.Calorias.HeaderText = "Calorias";
-            this.Calorias.MinimumWidth = 6;
-            this.Calorias.Name = "Calorias";
-            this.Calorias.ReadOnly = true;
-            this.Calorias.Width = 80;
-            // 
-            // Proteinas
-            // 
-            this.Proteinas.HeaderText = "Proteinas";
-            this.Proteinas.MinimumWidth = 6;
-            this.Proteinas.Name = "Proteinas";
-            this.Proteinas.ReadOnly = true;
-            this.Proteinas.Width = 80;
-            // 
-            // Carbohidratos
-            // 
-            this.Carbohidratos.HeaderText = "Carbohidratos";
-            this.Carbohidratos.MinimumWidth = 6;
-            this.Carbohidratos.Name = "Carbohidratos";
-            this.Carbohidratos.ReadOnly = true;
-            this.Carbohidratos.Width = 120;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 130;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccion";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Seleccionar.Width = 70;
             // 
             // txtTotalCalorias
             // 
@@ -412,7 +341,7 @@
             // 
             // txtBuscarAlimento
             // 
-            this.txtBuscarAlimento.Location = new System.Drawing.Point(102, 439);
+            this.txtBuscarAlimento.Location = new System.Drawing.Point(102, 374);
             this.txtBuscarAlimento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBuscarAlimento.Name = "txtBuscarAlimento";
             this.txtBuscarAlimento.Size = new System.Drawing.Size(570, 22);
@@ -424,19 +353,88 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label11.Location = new System.Drawing.Point(18, 437);
+            this.label11.Location = new System.Drawing.Point(18, 372);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 22);
             this.label11.TabIndex = 78;
             this.label11.Text = "Buscar: ";
             // 
+            // nombreAlimento
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.nombreAlimento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombreAlimento.HeaderText = "Nombre";
+            this.nombreAlimento.MinimumWidth = 6;
+            this.nombreAlimento.Name = "nombreAlimento";
+            this.nombreAlimento.Width = 180;
+            // 
+            // AlimentoID
+            // 
+            this.AlimentoID.HeaderText = "ID";
+            this.AlimentoID.MinimumWidth = 6;
+            this.AlimentoID.Name = "AlimentoID";
+            this.AlimentoID.ReadOnly = true;
+            this.AlimentoID.Visible = false;
+            this.AlimentoID.Width = 125;
+            // 
+            // categoriaAlimento
+            // 
+            this.categoriaAlimento.HeaderText = "Categoria";
+            this.categoriaAlimento.MinimumWidth = 6;
+            this.categoriaAlimento.Name = "categoriaAlimento";
+            this.categoriaAlimento.ReadOnly = true;
+            this.categoriaAlimento.Width = 120;
+            // 
+            // Calorias
+            // 
+            this.Calorias.HeaderText = "Calorias";
+            this.Calorias.MinimumWidth = 6;
+            this.Calorias.Name = "Calorias";
+            this.Calorias.ReadOnly = true;
+            this.Calorias.Width = 80;
+            // 
+            // Proteinas
+            // 
+            this.Proteinas.HeaderText = "Proteinas";
+            this.Proteinas.MinimumWidth = 6;
+            this.Proteinas.Name = "Proteinas";
+            this.Proteinas.ReadOnly = true;
+            this.Proteinas.Width = 80;
+            // 
+            // Carbohidratos
+            // 
+            this.Carbohidratos.HeaderText = "Carbohidratos";
+            this.Carbohidratos.MinimumWidth = 6;
+            this.Carbohidratos.Name = "Carbohidratos";
+            this.Carbohidratos.ReadOnly = true;
+            this.Carbohidratos.Width = 120;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 130;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccion";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Seleccionar.Width = 70;
+            // 
             // FrmGestionarRecetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1053, 773);
+            this.ClientSize = new System.Drawing.Size(1053, 653);
             this.Controls.Add(this.txtBuscarAlimento);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDescripcion);
@@ -498,6 +496,8 @@
         private System.Windows.Forms.ComboBox cmbTipo2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtBuscarAlimento;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreAlimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlimentoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoriaAlimento;
@@ -506,7 +506,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Carbohidratos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
-        private System.Windows.Forms.TextBox txtBuscarAlimento;
-        private System.Windows.Forms.Label label11;
     }
 }
